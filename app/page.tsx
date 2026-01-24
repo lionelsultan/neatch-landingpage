@@ -158,8 +158,8 @@ function Hero() {
             Nous trouvons les meilleurs consultants pour réaliser vos projets dans les délais, avec la qualité attendue.
           </h1>
           <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed">
-            Nous n'avons aucun consultant sur le banc. Nous sommes impartiaux dans nos choix. Ethique, transparence, qualité et accompagnement sur-mesure pour vos projets
-            de transformation digitale.
+            Nous sommes impartiaux dans nos choix.
+            Ethique, transparence, qualité et accompagnement sur-mesure pour vos projets de transformation digitale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
