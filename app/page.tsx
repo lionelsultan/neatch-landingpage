@@ -55,8 +55,10 @@ function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-brand-500 ${
-                  isScrolled ? "text-neutral-700" : "text-white/90"
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled
+                    ? "text-neutral-700 hover:text-brand-600"
+                    : "text-white hover:text-brand-100"
                 }`}
               >
                 {link.label}
@@ -64,7 +66,7 @@ function Navigation() {
             ))}
             <a
               href="#contact"
-              className="bg-brand-500 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-brand-600 transition-colors btn-lift"
+              className="bg-brand-600 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-brand-700 transition-colors btn-lift"
             >
               Parler de votre besoin
             </a>
@@ -119,7 +121,7 @@ function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-3 text-neutral-700 font-medium hover:text-brand-500 transition-colors"
+                className="block py-3 text-neutral-700 font-medium hover:text-brand-600 transition-colors"
               >
                 {link.label}
               </a>
@@ -127,7 +129,7 @@ function Navigation() {
             <a
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block mt-4 bg-brand-500 text-white text-center px-5 py-3 rounded-lg font-medium hover:bg-brand-600 transition-colors"
+              className="block mt-4 bg-brand-600 text-white text-center px-5 py-3 rounded-lg font-medium hover:bg-brand-700 transition-colors"
             >
               Parler de votre besoin
             </a>
@@ -358,7 +360,7 @@ function Method() {
             <ol className="grid grid-cols-4 gap-8">
               {steps.map((step, idx) => (
                 <li key={idx} className="relative">
-                  <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold text-lg mb-6 relative z-10">
+                  <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold text-lg mb-6 relative z-10">
                     <span aria-hidden="true">{step.number}</span>
                     <span className="sr-only">Étape {idx + 1}</span>
                   </div>
@@ -377,7 +379,7 @@ function Method() {
           {steps.map((step, idx) => (
             <li key={idx} className="flex gap-6">
               <div className="flex-shrink-0">
-                <div className="w-14 h-14 bg-brand-500 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-14 h-14 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold">
                   <span aria-hidden="true">{step.number}</span>
                   <span className="sr-only">Étape {idx + 1}</span>
                 </div>
@@ -501,7 +503,7 @@ function ForClients() {
             </ul>
             <a
               href="#contact"
-              className="inline-flex items-center mt-8 bg-brand-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-600 transition-colors btn-lift"
+              className="inline-flex items-center mt-8 bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors btn-lift"
             >
               Décrire votre besoin
               <svg
@@ -524,7 +526,7 @@ function ForClients() {
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="aspect-square bg-gradient-to-br from-brand-100 to-brand-200 rounded-xl flex items-center justify-center">
                 <svg
-                  className="w-32 h-32 text-brand-500"
+                  className="w-32 h-32 text-brand-800"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -580,7 +582,7 @@ function ForFreelances() {
             <div className="bg-neutral-50 rounded-2xl p-8">
               <div className="aspect-square bg-gradient-to-br from-brand-100 to-brand-200 rounded-xl flex items-center justify-center">
                 <svg
-                  className="w-32 h-32 text-brand-500"
+                  className="w-32 h-32 text-brand-800"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -703,7 +705,7 @@ function Testimonials() {
               className="bg-white rounded-2xl p-8 shadow-sm card-hover"
             >
               <svg
-                className="w-10 h-10 text-brand-200 mb-6"
+                className="w-10 h-10 text-brand-600 mb-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -909,7 +911,7 @@ function ContactForm() {
   return (
     <section id="contact" className="py-20 md:py-28 bg-neutral-50" aria-labelledby="contact-title">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           <div>
             <h2 id="contact-title" className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
               Parlons de votre projet
@@ -921,7 +923,7 @@ function ContactForm() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600">
+                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-800">
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -949,7 +951,7 @@ function ContactForm() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600">
+                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-800">
                   <svg
                     className="w-6 h-6"
                     fill="currentColor"
@@ -975,185 +977,6 @@ function ContactForm() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-lg">
-            {isSubmitted ? (
-              <div className="text-center py-12" role="status" aria-live="polite">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg
-                    className="w-8 h-8 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">
-                  Message envoyé !
-                </h3>
-                <p className="text-neutral-600">
-                  Nous reviendrons vers vous dans les plus brefs délais.
-                </p>
-                <p className="text-sm text-neutral-500 mt-4">
-                  (Formulaire de démonstration non connecté)
-                </p>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate aria-label="Formulaire de contact">
-                <div className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Nom complet <span aria-hidden="true">*</span>
-                      <span className="sr-only">(requis)</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      autoComplete="name"
-                      aria-required="true"
-                      aria-invalid={errors.name ? "true" : "false"}
-                      aria-describedby={errors.name ? "name-error" : undefined}
-                      className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.name
-                          ? "border-red-500 focus:ring-red-500"
-                          : "border-neutral-300 focus:ring-brand-500"
-                      } focus:outline-none focus:ring-2 transition-colors`}
-                      placeholder="Jean Dupont"
-                    />
-                    {errors.name && (
-                      <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">
-                        {errors.name}
-                      </p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Email <span aria-hidden="true">*</span>
-                      <span className="sr-only">(requis)</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      autoComplete="email"
-                      aria-required="true"
-                      aria-invalid={errors.email ? "true" : "false"}
-                      aria-describedby={errors.email ? "email-error" : undefined}
-                      className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.email
-                          ? "border-red-500 focus:ring-red-500"
-                          : "border-neutral-300 focus:ring-brand-500"
-                      } focus:outline-none focus:ring-2 transition-colors`}
-                      placeholder="jean@entreprise.fr"
-                    />
-                    {errors.email && (
-                      <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
-                        {errors.email}
-                      </p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="type"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Vous êtes <span aria-hidden="true">*</span>
-                      <span className="sr-only">(requis)</span>
-                    </label>
-                    <select
-                      id="type"
-                      name="type"
-                      value={formData.type}
-                      onChange={handleChange}
-                      aria-required="true"
-                      aria-invalid={errors.type ? "true" : "false"}
-                      aria-describedby={errors.type ? "type-error" : undefined}
-                      className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.type
-                          ? "border-red-500 focus:ring-red-500"
-                          : "border-neutral-300 focus:ring-brand-500"
-                      } focus:outline-none focus:ring-2 transition-colors bg-white`}
-                    >
-                      <option value="">Sélectionnez une option</option>
-                      <option value="client">
-                        Client - Je cherche des consultants
-                      </option>
-                      <option value="freelance">
-                        Freelance - Je cherche des missions
-                      </option>
-                      <option value="autre">Autre</option>
-                    </select>
-                    {errors.type && (
-                      <p id="type-error" className="mt-1 text-sm text-red-600" role="alert">
-                        {errors.type}
-                      </p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Message <span aria-hidden="true">*</span>
-                      <span className="sr-only">(requis)</span>
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      aria-required="true"
-                      aria-invalid={errors.message ? "true" : "false"}
-                      aria-describedby={errors.message ? "message-error" : undefined}
-                      className={`w-full px-4 py-3 rounded-lg border ${
-                        errors.message
-                          ? "border-red-500 focus:ring-red-500"
-                          : "border-neutral-300 focus:ring-brand-500"
-                      } focus:outline-none focus:ring-2 transition-colors resize-none`}
-                      placeholder="Décrivez votre besoin ou votre projet..."
-                    />
-                    {errors.message && (
-                      <p id="message-error" className="mt-1 text-sm text-red-600" role="alert">
-                        {errors.message}
-                      </p>
-                    )}
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-brand-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-brand-600 transition-colors btn-lift"
-                  >
-                    Envoyer le message
-                  </button>
-
-                  <p className="text-xs text-neutral-500 text-center">
-                    Formulaire de démonstration non connecté à un backend
-                  </p>
-                </div>
-              </form>
-            )}
-          </div>
         </div>
       </div>
     </section>

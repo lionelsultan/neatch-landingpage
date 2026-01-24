@@ -50,20 +50,20 @@ export default function LegalPage() {
               </p>
               <p className="text-neutral-700">
                 <strong>Siège social :</strong>{" "}
-                <span className="text-amber-600">[À compléter]</span>
+                <span className="text-amber-800">[À compléter]</span>
               </p>
               <p className="text-neutral-700">
                 <strong>Email :</strong>{" "}
                 <a
                   href="mailto:contact@neatch.fr"
-                  className="text-brand-500 hover:text-brand-600"
+                  className="text-brand-600 hover:text-brand-700"
                 >
                   contact@neatch.fr
                 </a>
               </p>
               <p className="text-neutral-700">
                 <strong>Directeur de la publication :</strong>{" "}
-                <span className="text-amber-600">[À compléter]</span>
+                <span className="text-amber-800">[À compléter]</span>
               </p>
             </div>
           </section>
@@ -76,11 +76,11 @@ export default function LegalPage() {
             <div className="bg-neutral-50 rounded-xl p-6 space-y-2">
               <p className="text-neutral-700">
                 <strong>Hébergeur :</strong>{" "}
-                <span className="text-amber-600">[À compléter]</span>
+                <span className="text-amber-800">[À compléter]</span>
               </p>
               <p className="text-neutral-700">
                 <strong>Adresse :</strong>{" "}
-                <span className="text-amber-600">[À compléter]</span>
+                <span className="text-amber-800">[À compléter]</span>
               </p>
             </div>
           </section>
@@ -122,7 +122,7 @@ export default function LegalPage() {
               l&apos;adresse :{" "}
               <a
                 href="mailto:contact@neatch.fr"
-                className="text-brand-500 hover:text-brand-600"
+                className="text-brand-600 hover:text-brand-700"
               >
                 contact@neatch.fr
               </a>
