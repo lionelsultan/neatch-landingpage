@@ -55,15 +55,15 @@ export default function LegalPage() {
               <p className="text-neutral-700">
                 <strong>Email :</strong>{" "}
                 <a
-                  href="mailto:contact@neatch.fr"
+                  href="mailto:contact@neatch.com"
                   className="text-brand-600 hover:text-brand-700"
                 >
-                  contact@neatch.fr
+                  contact@neatch.com
                 </a>
               </p>
               <p className="text-neutral-700">
                 <strong>Directeur de la publication :</strong>{" "}
-                <span className="text-amber-800">[À compléter]</span>
+                <span>Lionel SULTAN</span>
               </p>
             </div>
           </section>
@@ -76,7 +76,7 @@ export default function LegalPage() {
             <div className="bg-neutral-50 rounded-xl p-6 space-y-2">
               <p className="text-neutral-700">
                 <strong>Hébergeur :</strong>{" "}
-                <span className="text-amber-800">[À compléter]</span>
+                <span className="text-amber-800">o2switch</span>
               </p>
               <p className="text-neutral-700">
                 <strong>Adresse :</strong>{" "}
@@ -121,10 +121,10 @@ export default function LegalPage() {
               protection de vos données, vous pouvez nous contacter à
               l&apos;adresse :{" "}
               <a
-                href="mailto:contact@neatch.fr"
+                href="mailto:contact@neatch.com"
                 className="text-brand-600 hover:text-brand-700"
               >
-                contact@neatch.fr
+                contact@neatch.com
               </a>
             </p>
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-4">
@@ -218,7 +218,7 @@ export default function LegalPage() {
           {/* Date de mise à jour */}
           <section className="border-t border-neutral-200 pt-8">
             <p className="text-sm text-neutral-500">
-              Dernière mise à jour : Janvier 2025
+              Dernière mise à jour : Janvier 2026
             </p>
           </section>
         </div>

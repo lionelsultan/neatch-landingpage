@@ -155,11 +155,10 @@ function Hero() {
             id="hero-title"
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
           >
-            Conseil digital & mise en relation de consultants, sans lourdeur
-            ESN.
+            Nous trouvons les meilleurs consultants pour réaliser vos projets dans les délais, avec la qualité attendue.
           </h1>
           <p className="text-xl md:text-2xl text-white mb-10 leading-relaxed">
-            Transparence, qualité et accompagnement sur-mesure pour vos projets
+            Nous n'avons aucun consultant sur le banc. Nous sommes impartiaux dans nos choix. Ethique, transparence, qualité et accompagnement sur-mesure pour vos projets
             de transformation digitale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -942,7 +941,7 @@ function ContactForm() {
                 <div>
                   <div className="font-semibold text-neutral-900">Email</div>
                   <a
-                    href="mailto:contact@neatch.fr"
+                    href="mailto:contact@neatch.com"
                     className="text-brand-600 hover:text-brand-700 transition-colors"
                   >
                     contact@neatch.fr
@@ -964,12 +963,12 @@ function ContactForm() {
                 <div>
                   <div className="font-semibold text-neutral-900">LinkedIn</div>
                   <a
-                    href="https://linkedin.com/company/neatch"
+                    href="https://linkedin.com/in/lionelsultan"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-600 hover:text-brand-700 transition-colors"
                   >
-                    Suivez-nous sur LinkedIn
+                    Contactez le fondateur de Neatch sur LinkedIn
                     <span className="sr-only"> (s'ouvre dans un nouvel onglet)</span>
                   </a>
                 </div>
@@ -1063,7 +1062,7 @@ function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/company/neatch"
+                  href="https://linkedin.com/in/lionelsultan"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-neutral-300 hover:text-white transition-colors"
