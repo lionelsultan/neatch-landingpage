@@ -944,7 +944,7 @@ function ContactForm() {
                     href="mailto:contact@neatch.com"
                     className="text-brand-600 hover:text-brand-700 transition-colors"
                   >
-                    contact@neatch.fr
+                    contact@neatch.com
                   </a>
                 </div>
               </div>
@@ -1054,10 +1054,10 @@ function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:contact@neatch.fr"
+                  href="mailto:contact@neatch.com"
                   className="text-neutral-300 hover:text-white transition-colors"
                 >
-                  contact@neatch.fr
+                  contact@neatch.com
                 </a>
               </li>
               <li>
