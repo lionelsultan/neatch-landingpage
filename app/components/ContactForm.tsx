@@ -1,0 +1,134 @@
+"use client";
+
+import { useState } from "react";
+
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    type: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Le nom est requis";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "L'email est requis";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "L'email n'est pas valide";
+    }
+
+    if (!formData.type) {
+      newErrors.type = "Veuillez sélectionner un type";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Le message est requis";
+    } else if (formData.message.trim().length < 20) {
+      newErrors.message = "Le message doit contenir au moins 20 caractères";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (validateForm()) {
+      setIsSubmitted(true);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  return (
+    <section id="contact" className="py-20 md:py-28 bg-neutral-50" aria-labelledby="contact-title">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-1 gap-12">
+          <div>
+            <h2 id="contact-title" className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+              Parlons de votre projet
+            </h2>
+            <p className="text-lg text-neutral-600 mb-8">
+              Que vous soyez client à la recherche de consultants ou freelance
+              souhaitant rejoindre notre vivier, nous sommes à votre écoute.
+            </p>
+
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-800">
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-semibold text-neutral-900">Email</div>
+                  <a
+                    href="mailto:contact@neatch.com"
+                    className="text-brand-600 hover:text-brand-700 transition-colors"
+                  >
+                    contact@neatch.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-800">
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="font-semibold text-neutral-900">LinkedIn</div>
+                  <a
+                    href="https://linkedin.com/in/lionelsultan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-brand-600 hover:text-brand-700 transition-colors"
+                  >
+                    Contactez le fondateur de Neatch sur LinkedIn
+                    <span className="sr-only"> (s'ouvre dans un nouvel onglet)</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,148 +1,7 @@
-"use client";
+import Navigation from "./components/Navigation";
+import FAQ from "./components/FAQ";
+import ContactForm from "./components/ContactForm";
 
-import { useState, useEffect, useId } from "react";
-
-// ============================================================================
-// NAVIGATION COMPONENT (Client)
-// ============================================================================
-function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const mobileMenuId = useId();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#methode", label: "Méthode" },
-    { href: "#clients", label: "Clients" },
-    { href: "#freelances", label: "Freelances" },
-    { href: "#faq", label: "FAQ" },
-    { href: "#contact", label: "Contact" },
-  ];
-
-  return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      }`}
-      aria-label="Navigation principale"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a
-            href="#"
-            className={`text-2xl font-bold transition-colors ${
-              isScrolled ? "text-brand-500" : "text-white"
-            }`}
-            aria-label="Neatch - Accueil"
-          >
-            Neatch
-          </a>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled
-                    ? "text-neutral-700 hover:text-brand-600"
-                    : "text-white hover:text-brand-100"
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              className="bg-brand-600 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-brand-700 transition-colors btn-lift"
-            >
-              Parler de votre besoin
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled
-                ? "text-neutral-700 hover:bg-neutral-100"
-                : "text-white hover:bg-white/10"
-            }`}
-            aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls={mobileMenuId}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div
-            id={mobileMenuId}
-            className="md:hidden bg-white rounded-lg shadow-lg mt-2 py-4 px-4"
-          >
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-3 text-neutral-700 font-medium hover:text-brand-600 transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-            <a
-              href="#contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block mt-4 bg-brand-600 text-white text-center px-5 py-3 rounded-lg font-medium hover:bg-brand-700 transition-colors"
-            >
-              Parler de votre besoin
-            </a>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-}
-
-// ============================================================================
-// HERO SECTION
-// ============================================================================
 function Hero() {
   return (
     <section
@@ -181,9 +40,6 @@ function Hero() {
   );
 }
 
-// ============================================================================
-// SERVICES SECTION
-// ============================================================================
 function Services() {
   const services = [
     {
@@ -307,9 +163,6 @@ function Services() {
   );
 }
 
-// ============================================================================
-// METHOD SECTION (Timeline)
-// ============================================================================
 function Method() {
   const steps = [
     {
@@ -351,10 +204,8 @@ function Method() {
           </p>
         </div>
 
-        {/* Desktop Timeline */}
         <div className="hidden lg:block" aria-label="Étapes de notre méthode">
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute top-8 left-0 right-0 h-0.5 bg-brand-200" aria-hidden="true" />
             <ol className="grid grid-cols-4 gap-8">
               {steps.map((step, idx) => (
@@ -373,7 +224,6 @@ function Method() {
           </div>
         </div>
 
-        {/* Mobile Timeline */}
         <ol className="lg:hidden space-y-8" aria-label="Étapes de notre méthode">
           {steps.map((step, idx) => (
             <li key={idx} className="flex gap-6">
@@ -396,7 +246,6 @@ function Method() {
           ))}
         </ol>
 
-        {/* KPIs */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center" role="list" aria-label="Indicateurs clés">
           <div className="bg-white rounded-xl p-6 shadow-sm" role="listitem">
             <div className="text-3xl font-bold text-brand-600 mb-2">{"<48h"}</div>
@@ -432,9 +281,6 @@ function Method() {
   );
 }
 
-// ============================================================================
-// FOR CLIENTS SECTION
-// ============================================================================
 function ForClients() {
   const benefits = [
     {
@@ -546,9 +392,6 @@ function ForClients() {
   );
 }
 
-// ============================================================================
-// FOR FREELANCES SECTION
-// ============================================================================
 function ForFreelances() {
   const benefits = [
     {
@@ -660,9 +503,6 @@ function ForFreelances() {
   );
 }
 
-// ============================================================================
-// TESTIMONIALS SECTION
-// ============================================================================
 function Testimonials() {
   const testimonials = [
     {
@@ -734,257 +574,6 @@ function Testimonials() {
   );
 }
 
-// ============================================================================
-// FAQ SECTION (Client Component)
-// ============================================================================
-function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const faqs = [
-    {
-      question: "Quelle est la différence avec une ESN traditionnelle ?",
-      answer:
-        "Contrairement aux ESN classiques, nous privilégions la transparence totale sur les tarifs et conditions. Pas de marges cachées, pas d'intermédiaires superflus. Notre modèle repose sur une relation directe et de confiance entre clients et consultants, avec un accompagnement personnalisé.",
-    },
-    {
-      question: "Comment sélectionnez-vous vos consultants ?",
-      answer:
-        "Chaque consultant de notre vivier est évalué sur ses compétences techniques, son expérience terrain et son savoir-être. Nous privilégions la qualité à la quantité et veillons à l'adéquation entre le profil et les besoins spécifiques de chaque mission.",
-    },
-    {
-      question: "Quels types de missions proposez-vous ?",
-      answer:
-        "Nous intervenons sur des missions de conseil digital et de transformation : product management, pilotage de projet, gouvernance IT, amélioration continue, accompagnement au changement. Les formats varient du renfort ponctuel à l'accompagnement long terme.",
-    },
-    {
-      question: "Comment fonctionne votre modèle de rémunération ?",
-      answer:
-        "Notre modèle est transparent : le tarif présenté au client inclut la rémunération du consultant et notre commission d'intermédiation, clairement détaillée. Pas de frais cachés ni de marges obscures.",
-    },
-    {
-      question: "Quels sont vos délais de mise à disposition ?",
-      answer:
-        "Nous nous engageons à une première réponse sous 48h en moyenne. Le délai de présentation de profils dépend de la spécificité du besoin, mais notre vivier pré-qualifié permet généralement des propositions rapides.",
-    },
-    {
-      question: "Proposez-vous un suivi pendant les missions ?",
-      answer:
-        "Oui, absolument. Nous assurons des points réguliers avec le client et le consultant tout au long de la mission pour garantir la satisfaction mutuelle et ajuster si nécessaire.",
-    },
-  ];
-
-  return (
-    <section id="faq" className="py-20 md:py-28 bg-white" aria-labelledby="faq-title">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 id="faq-title" className="text-3xl md:text-4xl font-bold text-neutral-900 mb-4">
-            Questions fréquentes
-          </h2>
-          <p className="text-lg text-neutral-600">
-            Tout ce que vous devez savoir sur notre accompagnement
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => {
-            const panelId = `faq-panel-${idx}`;
-            const buttonId = `faq-button-${idx}`;
-            const isOpen = openIndex === idx;
-
-            return (
-              <div
-                key={idx}
-                className="border border-neutral-200 rounded-xl overflow-hidden"
-              >
-                <h3>
-                  <button
-                    id={buttonId}
-                    onClick={() => setOpenIndex(isOpen ? null : idx)}
-                    className="w-full flex items-center justify-between p-6 text-left hover:bg-neutral-50 transition-colors"
-                    aria-expanded={isOpen}
-                    aria-controls={panelId}
-                  >
-                    <span className="font-semibold text-neutral-900 pr-4">
-                      {faq.question}
-                    </span>
-                    <svg
-                      className={`w-5 h-5 text-brand-500 flex-shrink-0 transition-transform duration-200 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-                </h3>
-                <div
-                  id={panelId}
-                  role="region"
-                  aria-labelledby={buttonId}
-                  className="accordion-content"
-                  data-open={isOpen}
-                  hidden={!isOpen}
-                >
-                  <div>
-                    <div className="px-6 pb-6 text-neutral-600">
-                      {faq.answer}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ============================================================================
-// CONTACT FORM SECTION (Client Component)
-// ============================================================================
-function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    type: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = "Le nom est requis";
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = "L'email est requis";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = "L'email n'est pas valide";
-    }
-
-    if (!formData.type) {
-      newErrors.type = "Veuillez sélectionner un type";
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = "Le message est requis";
-    } else if (formData.message.trim().length < 20) {
-      newErrors.message = "Le message doit contenir au moins 20 caractères";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (validateForm()) {
-      setIsSubmitted(true);
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
-
-  return (
-    <section id="contact" className="py-20 md:py-28 bg-neutral-50" aria-labelledby="contact-title">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-1 gap-12">
-          <div>
-            <h2 id="contact-title" className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
-              Parlons de votre projet
-            </h2>
-            <p className="text-lg text-neutral-600 mb-8">
-              Que vous soyez client à la recherche de consultants ou freelance
-              souhaitant rejoindre notre vivier, nous sommes à votre écoute.
-            </p>
-
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-800">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-semibold text-neutral-900">Email</div>
-                  <a
-                    href="mailto:contact@neatch.com"
-                    className="text-brand-600 hover:text-brand-700 transition-colors"
-                  >
-                    contact@neatch.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-800">
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-semibold text-neutral-900">LinkedIn</div>
-                  <a
-                    href="https://linkedin.com/in/lionelsultan"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-brand-600 hover:text-brand-700 transition-colors"
-                  >
-                    Contactez le fondateur de Neatch sur LinkedIn
-                    <span className="sr-only"> (s'ouvre dans un nouvel onglet)</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ============================================================================
-// FOOTER
-// ============================================================================
 function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -1094,9 +683,6 @@ function Footer() {
   );
 }
 
-// ============================================================================
-// MAIN PAGE
-// ============================================================================
 export default function Home() {
   return (
     <>
