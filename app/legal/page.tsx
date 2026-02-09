@@ -50,7 +50,7 @@ export default function LegalPage() {
               </p>
               <p className="text-neutral-700">
                 <strong>Siège social :</strong>{" "}
-                <span className="text-amber-800">[À compléter]</span>
+                <span className="text-amber-800">À renseigner avant publication</span>
               </p>
               <p className="text-neutral-700">
                 <strong>Email :</strong>{" "}
@@ -80,7 +80,9 @@ export default function LegalPage() {
               </p>
               <p className="text-neutral-700">
                 <strong>Adresse :</strong>{" "}
-                <span className="text-amber-800">[À compléter]</span>
+                <span className="text-amber-800">
+                  222-224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France
+                </span>
               </p>
             </div>
           </section>
