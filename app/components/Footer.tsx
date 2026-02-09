@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -8,9 +10,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <a href="/" className="text-2xl font-bold text-white mb-4 block" aria-label="Neatch - Accueil">
+            <Link href="/" className="text-2xl font-bold text-white mb-4 block" aria-label="Neatch - Accueil">
               Neatch
-            </a>
+            </Link>
             <p className="text-neutral-300 max-w-md">
               Conseil digital et mise en relation de consultants. Nous
               accompagnons les entreprises dans leur transformation avec

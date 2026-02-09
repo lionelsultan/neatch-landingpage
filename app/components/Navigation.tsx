@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useEffect, useId } from "react";
 
 export default function Navigation() {
@@ -35,7 +36,7 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a
+          <Link
             href="/"
             className={`text-2xl font-bold transition-colors ${
               isScrolled ? "text-brand-500" : "text-white"
@@ -43,7 +44,7 @@ export default function Navigation() {
             aria-label="Neatch - Accueil"
           >
             Neatch
-          </a>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (

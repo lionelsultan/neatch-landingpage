@@ -61,7 +61,7 @@ export default function ContactForm() {
                     className="text-brand-600 hover:text-brand-700 transition-colors"
                   >
                     Contactez le fondateur de Neatch sur LinkedIn
-                    <span className="sr-only"> (s'ouvre dans un nouvel onglet)</span>
+                    <span className="sr-only"> (s&apos;ouvre dans un nouvel onglet)</span>
                   </a>
                 </div>
               </div>
