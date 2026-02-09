@@ -246,3 +246,182 @@ body {
     background-size: 120% 120%, 140% 140%, 130% 130%, 120% 120%;
   }
 }
+
+/* Founder LinkedIn premium button */
+.founder-link-aura {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 0.005em;
+  font-weight: 600;
+  background: linear-gradient(135deg, #005f78 0%, #007f9c 52%, #0098b7 100%);
+  border: 1px solid rgba(185, 242, 250, 0.32);
+  box-shadow:
+    inset 0 1px 0 rgba(235, 254, 255, 0.24),
+    0 8px 20px -12px rgba(0, 95, 120, 0.6),
+    0 0 0 1px rgba(0, 95, 120, 0.1);
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 0.9rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.24s ease,
+    background 0.24s ease,
+    border-color 0.24s ease;
+}
+
+.founder-link-aura::before,
+.founder-link-aura::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.founder-link-aura::before {
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    112deg,
+    rgba(255, 255, 255, 0) 8%,
+    rgba(255, 255, 255, 0.46) 34%,
+    rgba(157, 227, 255, 0.34) 50%,
+    rgba(255, 255, 255, 0.38) 64%,
+    rgba(255, 255, 255, 0) 92%
+  );
+  transform: translateX(-130%) skewX(-14deg);
+}
+
+.founder-link-aura::after {
+  inset: 1px;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(217, 252, 255, 0.24), transparent 38%),
+    radial-gradient(circle at 88% 90%, rgba(129, 216, 255, 0.24), transparent 42%);
+  filter: blur(1px);
+}
+
+.founder-link-aura:hover,
+.founder-link-aura:focus-visible {
+  color: #ffffff;
+  border-color: rgba(224, 248, 251, 0.62);
+  background: linear-gradient(135deg, #006984 0%, #008dae 48%, #00a7c9 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(244, 255, 255, 0.34),
+    0 0 0 1px rgba(142, 223, 255, 0.42),
+    0 10px 24px -12px rgba(0, 105, 132, 0.7),
+    0 0 18px rgba(89, 211, 255, 0.32);
+  transform: translateY(-1px) scale(1.01);
+  animation: founder-button-breathe 2.1s ease-in-out infinite;
+}
+
+.founder-link-aura-send {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -1px;
+  color: #e8fcff;
+  opacity: 0.95;
+  text-shadow: 0 0 4px rgba(210, 251, 255, 0.25);
+  transition: color 0.2s ease, text-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.founder-link-aura-send-mail,
+.founder-link-aura-send-plane {
+  position: absolute;
+  inset: 0;
+  transform-origin: center;
+}
+
+.founder-link-aura-send-mail {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+  transition: opacity 0.2s ease, transform 0.24s ease;
+}
+
+.founder-link-aura-send-plane {
+  opacity: 0;
+  transform: translate(-2px, 2px) scale(0.82) rotate(-10deg);
+  transition: opacity 0.16s ease, transform 0.3s ease;
+}
+
+.founder-link-aura:hover .founder-link-aura-send,
+.founder-link-aura:focus-visible .founder-link-aura-send {
+  color: #b7eaff;
+  opacity: 1;
+  text-shadow:
+    0 0 4px rgba(157, 227, 255, 0.5),
+    0 0 10px rgba(93, 192, 245, 0.3);
+}
+
+.founder-link-aura:hover .founder-link-aura-send-mail,
+.founder-link-aura:focus-visible .founder-link-aura-send-mail {
+  opacity: 0;
+  transform: translate(-4px, -2px) scale(0.84) rotate(-8deg);
+}
+
+.founder-link-aura:hover .founder-link-aura-send-plane,
+.founder-link-aura:focus-visible .founder-link-aura-send-plane {
+  opacity: 1;
+  transform: translate(2px, -1px) scale(1) rotate(0deg);
+  animation: founder-send-flight 0.75s cubic-bezier(0.2, 0.8, 0.25, 1) 1 forwards;
+}
+
+.founder-link-aura:hover::before,
+.founder-link-aura:focus-visible::before {
+  opacity: 1;
+  animation: founder-button-sheen 1.25s cubic-bezier(0.25, 0.9, 0.3, 1) 1;
+}
+
+.founder-link-aura:hover::after,
+.founder-link-aura:focus-visible::after {
+  opacity: 1;
+}
+
+@keyframes founder-button-sheen {
+  0% {
+    transform: translateX(-130%) skewX(-14deg);
+  }
+  100% {
+    transform: translateX(145%) skewX(-14deg);
+  }
+}
+
+@keyframes founder-button-breathe {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 1px 0 rgba(244, 255, 255, 0.32),
+      0 0 0 1px rgba(142, 223, 255, 0.34),
+      0 9px 22px -12px rgba(0, 105, 132, 0.62),
+      0 0 14px rgba(93, 192, 245, 0.26);
+  }
+  50% {
+    box-shadow:
+      inset 0 1px 0 rgba(248, 255, 255, 0.4),
+      0 0 0 1px rgba(142, 223, 255, 0.5),
+      0 11px 26px -12px rgba(0, 105, 132, 0.76),
+      0 0 20px rgba(93, 192, 245, 0.36);
+  }
+}
+
+@keyframes founder-send-flight {
+  0% {
+    transform: translate(-2px, 2px) scale(0.82) rotate(-10deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  45% {
+    transform: translate(2px, -1px) scale(1.02) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(14px, -10px) scale(0.78) rotate(16deg);
+    opacity: 0;
+  }
+}

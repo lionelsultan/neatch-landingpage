@@ -58,8 +58,31 @@ export default function ContactForm() {
                     href="https://linkedin.com/in/lionelsultan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand-600 hover:text-brand-700 transition-colors"
+                    className="founder-link-aura inline-flex items-center gap-2.5 rounded-xl px-5 py-2.5 text-white"
                   >
+                    <span className="founder-link-aura-send" aria-hidden="true">
+                      <svg
+                        className="founder-link-aura-send-mail h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <rect x="3.75" y="5.5" width="16.5" height="13" rx="2.25" />
+                        <path d="M4.5 7.25 12 12.5l7.5-5.25" />
+                      </svg>
+                      <svg
+                        className="founder-link-aura-send-plane h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M2 20.5 22 12 2 3.5l2.8 6.9L14.2 12l-9.4 1.6L2 20.5z" />
+                      </svg>
+                    </span>
                     Contactez le fondateur de Neatch sur LinkedIn
                     <span className="sr-only"> (s&apos;ouvre dans un nouvel onglet)</span>
                   </a>
