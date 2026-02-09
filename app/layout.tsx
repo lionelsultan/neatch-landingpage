@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Neatch | Conseil digital & mise en relation de consultants",
+  title: "Neatch",
   description:
     "Neatch accompagne les entreprises dans leur transformation digitale et met en relation clients et consultants freelances avec transparence et qualité.",
   keywords: [
