@@ -62,7 +62,7 @@ export default function Navigation() {
             ))}
             <a
               href="#contact"
-              className="bg-brand-600 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-brand-700 transition-colors btn-lift"
+              className="bg-brand-600 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-brand-700 transition-colors btn-lift btn-glow"
             >
               Parler de votre besoin
             </a>
@@ -123,7 +123,7 @@ export default function Navigation() {
             <a
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block mt-4 bg-brand-600 text-white text-center px-5 py-3 rounded-lg font-medium hover:bg-brand-700 transition-colors"
+              className="block mt-4 bg-brand-600 text-white text-center px-5 py-3 rounded-lg font-medium hover:bg-brand-700 transition-colors btn-glow"
             >
               Parler de votre besoin
             </a>

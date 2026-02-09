@@ -24,13 +24,13 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center bg-white text-brand-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-50 transition-colors btn-lift"
+              className="inline-flex items-center justify-center bg-white text-brand-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-brand-50 transition-colors btn-lift btn-glow"
             >
               Demander un échange
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
+              className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors btn-glow"
             >
               Découvrir nos services
             </a>
@@ -349,7 +349,7 @@ function ForClients() {
             </ul>
             <a
               href="#contact"
-              className="inline-flex items-center mt-8 bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors btn-lift"
+              className="inline-flex items-center mt-8 bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors btn-lift btn-glow"
             >
               Décrire votre besoin
               <svg
@@ -479,7 +479,7 @@ function ForFreelances() {
             </ul>
             <a
               href="#contact"
-              className="inline-flex items-center mt-8 border-2 border-brand-500 text-brand-600 px-6 py-3 rounded-lg font-semibold hover:bg-brand-50 transition-colors"
+              className="inline-flex items-center mt-8 border-2 border-brand-500 text-brand-600 px-6 py-3 rounded-lg font-semibold hover:bg-brand-50 transition-colors btn-glow"
             >
               Rejoindre le vivier
               <svg
