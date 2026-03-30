@@ -7,34 +7,39 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "Quelle est la différence avec une ESN traditionnelle ?",
+      question: "Sur quels sujets Neatch intervient-elle le plus souvent ?",
       answer:
-        "Contrairement aux ESN classiques, nous privilégions la transparence totale sur les tarifs et conditions. Pas de marges cachées, pas d'intermédiaires superflus. Notre modèle repose sur une relation directe et de confiance entre clients et consultants, avec un accompagnement personnalisé.",
+        "Principalement sur des enjeux de transformation IT, de gouvernance agile, de Product Management et de sécurisation du delivery. L’intervention peut porter sur le cadrage d’un programme, la coordination multi-équipes, la remise en maîtrise d’une trajectoire ou l’alignement entre business et IT. Neatch peut aussi aider ses clients finaux à recruter des chefs de projet, Product Owners, Scrum Masters et Product Managers.",
     },
     {
-      question: "Comment sélectionnez-vous vos consultants ?",
+      question: "À quel moment faire appel à vous ?",
       answer:
-        "Chaque consultant de notre vivier est évalué sur ses compétences techniques, son expérience terrain et son savoir-être. Nous privilégions la qualité à la quantité et veillons à l'adéquation entre le profil et les besoins spécifiques de chaque mission.",
+        "Le bon moment est souvent celui où un programme ralentit, où les décisions deviennent difficiles, où les dépendances s’accumulent ou quand l’organisation a besoin d’un cadre plus solide pour exécuter. L’objectif est de remettre rapidement de la lisibilité et du rythme.",
     },
     {
-      question: "Quels types de missions proposez-vous ?",
+      question: "Intervenez-vous au niveau stratégique ou opérationnel ?",
       answer:
-        "Nous intervenons sur des missions de conseil digital et de transformation : product management, pilotage de projet, gouvernance IT, amélioration continue, accompagnement au changement. Les formats varient du renfort ponctuel à l'accompagnement long terme.",
+        "Les deux. La valeur de l’intervention vient précisément de la capacité à relier vision stratégique, gouvernance et exécution opérationnelle. Le travail peut aller du cadrage de la cible à l’animation concrète des rituels, arbitrages et plans d’action.",
     },
     {
-      question: "Comment fonctionne votre modèle de rémunération ?",
+      question: "Travaillez-vous uniquement avec des grands groupes ?",
       answer:
-        "Notre modèle est transparent : le tarif présenté au client inclut la rémunération du consultant et notre commission d'intermédiation, clairement détaillée. Pas de frais cachés ni de marges obscures.",
+        "Non. L’expérience a été construite dans des environnements exigeants, allant des grands groupes internationaux aux structures plus agiles. Ce qui compte est surtout le niveau d’enjeu, la complexité du contexte et la volonté d’avancer vite et proprement.",
     },
     {
-      question: "Quels sont vos délais de mise à disposition ?",
+      question: "Avez-vous une approche ou un cadre méthodologique particulier ?",
       answer:
-        "Nous nous engageons à une première réponse sous 48h en moyenne. Le délai de présentation de profils dépend de la spécificité du besoin, mais notre vivier pré-qualifié permet généralement des propositions rapides.",
+        "Oui. L’approche s’appuie sur des pratiques éprouvées de gouvernance produit, de pilotage de programme et d’agilité à l’échelle, notamment dans des contextes inspirés de SAFe. Le cadre reste toujours adapté à la réalité du client, sans dogmatisme.",
     },
     {
-      question: "Proposez-vous un suivi pendant les missions ?",
+      question: "Comment démarre une collaboration ?",
       answer:
-        "Oui, absolument. Nous assurons des points réguliers avec le client et le consultant tout au long de la mission pour garantir la satisfaction mutuelle et ajuster si nécessaire.",
+        "La collaboration démarre par un échange de cadrage pour comprendre le contexte, les enjeux, les points de friction et les résultats attendus. À partir de là, une proposition d’intervention claire est définie, avec un mode de pilotage adapté.",
+    },
+    {
+      question: "Pouvez-vous aussi aider à recruter des profils produit ou delivery ?",
+      answer:
+        "Oui. En complément du conseil, Neatch peut accompagner les clients finaux dans le recrutement de profils clés comme les chefs de projet, Product Owners, Scrum Masters et Product Managers, en fonction du contexte et du niveau d’exigence de la mission ou du poste.",
     },
   ];
 
@@ -46,7 +51,7 @@ export default function FAQ() {
             Questions fréquentes
           </h2>
           <p className="text-lg text-neutral-600">
-            Tout ce que vous devez savoir sur notre accompagnement
+            Les points les plus souvent abordés lors des premiers échanges
           </p>
         </div>
 
@@ -94,9 +99,9 @@ export default function FAQ() {
                   id={panelId}
                   role="region"
                   aria-labelledby={buttonId}
+                  aria-hidden={!isOpen}
                   className="accordion-content"
                   data-open={isOpen}
-                  hidden={!isOpen}
                 >
                   <div>
                     <div className="px-6 pb-6 text-neutral-600">

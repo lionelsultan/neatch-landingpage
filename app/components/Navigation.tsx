@@ -12,15 +12,18 @@ export default function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { href: "#services", label: "Services" },
-    { href: "#methode", label: "Méthode" },
-    { href: "#clients", label: "Clients" },
-    { href: "#freelances", label: "Freelances" },
+    { href: "#services", label: "Interventions" },
+    { href: "#methode", label: "Approche" },
+    { href: "#situations", label: "Contextes" },
+    { href: "#fondateur", label: "Fondateur" },
+    { href: "#references", label: "Références" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
   ];
@@ -64,7 +67,7 @@ export default function Navigation() {
               href="#contact"
               className="bg-brand-600 text-white px-5 py-2.5 rounded-lg font-medium text-sm hover:bg-brand-700 transition-colors btn-lift btn-glow"
             >
-              Parler de votre besoin
+              Échanger avec Neatch
             </a>
           </div>
 
@@ -125,7 +128,7 @@ export default function Navigation() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="block mt-4 bg-brand-600 text-white text-center px-5 py-3 rounded-lg font-medium hover:bg-brand-700 transition-colors btn-glow"
             >
-              Parler de votre besoin
+              Échanger avec Neatch
             </a>
           </div>
         )}

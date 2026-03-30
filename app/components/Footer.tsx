@@ -14,9 +14,8 @@ export default function Footer() {
               Neatch
             </Link>
             <p className="text-neutral-300 max-w-md">
-              Conseil digital et mise en relation de consultants. Nous
-              accompagnons les entreprises dans leur transformation avec
-              transparence et qualité.
+              Conseil indépendant en transformation IT, Product Management,
+              gouvernance agile et sécurisation du delivery.
             </p>
           </div>
 
@@ -28,7 +27,7 @@ export default function Footer() {
                   href="#services"
                   className="text-neutral-300 hover:text-white transition-colors"
                 >
-                  Services
+                  Interventions
                 </a>
               </li>
               <li>
@@ -36,23 +35,31 @@ export default function Footer() {
                   href="#methode"
                   className="text-neutral-300 hover:text-white transition-colors"
                 >
-                  Méthode
+                  Approche
                 </a>
               </li>
               <li>
                 <a
-                  href="#clients"
+                  href="#situations"
                   className="text-neutral-300 hover:text-white transition-colors"
                 >
-                  Clients
+                  Contextes
                 </a>
               </li>
               <li>
                 <a
-                  href="#freelances"
+                  href="#fondateur"
                   className="text-neutral-300 hover:text-white transition-colors"
                 >
-                  Freelances
+                  Fondateur
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#references"
+                  className="text-neutral-300 hover:text-white transition-colors"
+                >
+                  Références
                 </a>
               </li>
               <li>
@@ -77,6 +84,7 @@ export default function Footer() {
                   contact@neatch.com
                 </a>
               </li>
+              <li className="text-neutral-300">06 11 08 44 09</li>
               <li>
                 <a
                   href="https://linkedin.com/in/lionelsultan"

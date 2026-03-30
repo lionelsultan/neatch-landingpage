@@ -26,7 +26,10 @@ export default function LegalPage() {
         </div>
       </nav>
 
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <main
+        id="main-content"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+      >
         <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8">
           Mentions légales
         </h1>
@@ -220,7 +223,7 @@ export default function LegalPage() {
           {/* Date de mise à jour */}
           <section className="border-t border-neutral-200 pt-8">
             <p className="text-sm text-neutral-500">
-              Dernière mise à jour : Janvier 2026
+              Dernière mise à jour : 30 mars 2026
             </p>
           </section>
         </div>
