@@ -85,7 +85,7 @@ function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
           <div>
             <p className="mb-5 inline-flex rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-sm font-semibold text-neutral-700 shadow-sm">
-              Lionel Sultan, freelance senior derrière Neatch
+              Consultant senior pour missions IT exigeantes
             </p>
             <h1
               id="hero-title"
