@@ -329,7 +329,9 @@ function Situations() {
 
 function Founder() {
   const highlights = [
-    "Accenture, EY Fabernovel, EDF Renouvelables, CHANEL, Hoppen, Christian Dior Couture.",
+    "Accenture : Société Générale Banque de Détail, conception du logiciel d'octroi de crédit utilisé en agence, spécifications fonctionnelles, UX/UI et prototypes HTML.",
+    "Accenture : Société Générale CIB / APTP, construction d'une plateforme de back-office post-trading, spécifications, transcodage API, XML ISO 20022 et cartographies applicatives.",
+    "Accenture : BNP Paribas, Crédit Agricole Consumer Finance et BNP Paribas Cash Management, missions d'analyse fonctionnelle, recette, KYC, processus DSI, KPI ITIL et recommandations.",
     "Interface entre business, produit, architecture, IT, management et équipes terrain.",
     "Capacité à évaluer les consultants parce que j'ai moi-même fait ces missions sur le terrain.",
   ];
@@ -338,12 +340,46 @@ function Founder() {
     <section id="fondateur" className="notion-section bg-stone-50" aria-labelledby="fondateur-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="founder-note">
-            <div className="text-5xl font-black text-neutral-950">LS</div>
-            <div className="mt-8 space-y-2 text-sm text-neutral-600">
-              <p>Freelance senior</p>
-              <p>Fondateur de Neatch</p>
-              <p>Sourcing et qualification de consultants</p>
+          <div className="founder-note overflow-hidden bg-white p-0">
+            <div className="border-b border-neutral-200 bg-neutral-950 p-6 text-white">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wide text-neutral-400">
+                    Neatch
+                  </p>
+                  <h3 className="mt-3 text-3xl font-black leading-none">
+                    Lionel Sultan
+                  </h3>
+                </div>
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-white/15 bg-white text-lg font-black text-neutral-950">
+                  LS
+                </div>
+              </div>
+            </div>
+            <div className="p-6">
+              <div className="space-y-2 text-sm font-semibold text-neutral-800">
+                <p>Fondateur de Neatch</p>
+                <p>Consultant senior IT &amp; produit</p>
+                <p>Sourcing de profils freelances qualifiés</p>
+              </div>
+              <div className="mt-8 space-y-3 border-t border-neutral-200 pt-6 text-sm">
+                <a
+                  href="mailto:contact@neatch.com"
+                  className="block font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950"
+                >
+                  contact@neatch.com
+                </a>
+                <a
+                  href="https://linkedin.com/in/lionelsultan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950"
+                >
+                  linkedin.com/in/lionelsultan
+                  <span className="sr-only"> (s&apos;ouvre dans un nouvel onglet)</span>
+                </a>
+                <p className="text-neutral-600">neatch.com</p>
+              </div>
             </div>
           </div>
           <div>
@@ -376,12 +412,42 @@ function Founder() {
 
 function References() {
   const references = [
-    ["Christian Dior Couture", "Release Train Engineer | depuis 2021"],
-    ["CHANEL", "Senior Project Manager"],
-    ["EDF Renouvelables", "Senior Product Owner / Project Manager"],
-    ["Hoppen / Exolis", "Product Manager, PO, PM, Agile Coach"],
-    ["EY Fabernovel", "Senior Digital Consultant"],
-    ["Accenture", "Consultant intégration, management et stratégie"],
+    {
+      company: "Christian Dior Couture",
+      role: "Release Train Engineer | depuis 2021",
+      detail:
+        "Domaine Supply & Business Units, 12 équipes, Scrum Master / Coach Agile, Product Manager Merchandise Planning et projet Supply Chain Anaplan.",
+    },
+    {
+      company: "CHANEL",
+      role: "Senior Project Manager | CRM IT Europe",
+      detail:
+        "Application mobile Salesforce Service Cloud pour plus de 400 utilisateurs en France et à l'international, conception, recette, déploiement et budget de plus de 700 k€.",
+    },
+    {
+      company: "EDF Renouvelables",
+      role: "Chef de Projet AMOA Senior | DSIN Groupe",
+      detail:
+        "Salesforce Sales Cloud, K2, Xamarin, application mobile terrain, SAP Plant Maintenance / Cordova et chantiers applicatifs liés à l'acquisition de Futuren.",
+    },
+    {
+      company: "Hoppen / Exolis",
+      role: "Directeur de Projet, Product Manager, Scrum Master / Coach Agile",
+      detail:
+        "Solutions de télésuivi COVID pour les ARS Normandie et Corse, déploiement en moins de deux semaines, conduite du changement et roadmap produit Engage.",
+    },
+    {
+      company: "EY Fabernovel",
+      role: "Senior Consultant",
+      detail:
+        "Product Owner pour le lancement e-commerce Unilever, audit technique de startups MNH et stratégie digitale / refonte SI pour Keep Cool.",
+    },
+    {
+      company: "Accenture",
+      role: "Consultant Senior",
+      detail:
+        "Société Générale, SGCIB / APTP, BNP Paribas, Crédit Agricole Consumer Finance : crédit, post-trading, KYC, processus DSI, API / XML et KPI ITIL.",
+    },
   ];
 
   return (
@@ -394,12 +460,15 @@ function References() {
         <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm">
           <div className="grid grid-cols-[1fr_1.35fr] border-b border-neutral-200 bg-stone-50 px-4 py-3 text-sm font-semibold text-neutral-500">
             <span>Organisation</span>
-            <span>Rôle</span>
+            <span>Rôle &amp; mission</span>
           </div>
-          {references.map(([company, role]) => (
-            <div key={company} className="grid grid-cols-[1fr_1.35fr] border-b border-neutral-100 px-4 py-4 last:border-b-0">
-              <span className="font-semibold text-neutral-950">{company}</span>
-              <span className="text-neutral-700">{role}</span>
+          {references.map((reference) => (
+            <div key={reference.company} className="grid gap-3 border-b border-neutral-100 px-4 py-5 last:border-b-0 md:grid-cols-[1fr_1.35fr]">
+              <span className="font-semibold text-neutral-950">{reference.company}</span>
+              <span className="text-neutral-700">
+                <span className="block font-semibold text-neutral-950">{reference.role}</span>
+                <span className="mt-1 block leading-7">{reference.detail}</span>
+              </span>
             </div>
           ))}
         </div>
