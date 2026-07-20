@@ -8,17 +8,16 @@ export const metadata: Metadata = {
 
 export default function LegalPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation simple */}
-      <nav className="bg-white border-b border-neutral-200">
+    <div className="min-h-screen bg-stone-50 text-neutral-950">
+      <nav className="border-b border-neutral-200 bg-white/90 backdrop-blur-xl">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="text-2xl font-bold text-brand-500">
+            <Link href="/" className="text-2xl font-black text-neutral-950">
               Neatch
             </Link>
             <Link
               href="/"
-              className="text-sm text-neutral-600 hover:text-brand-500 transition-colors"
+              className="text-sm font-semibold text-neutral-600 transition-colors hover:text-neutral-950"
             >
               ← Retour à l&apos;accueil
             </Link>
@@ -30,17 +29,19 @@ export default function LegalPage() {
         id="main-content"
         className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
       >
-        <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8">
+        <p className="mb-3 text-sm font-bold uppercase tracking-wide text-neutral-500">
+          Neatch E.U.R.L.
+        </p>
+        <h1 className="mb-10 text-4xl font-black leading-tight text-neutral-950 md:text-5xl">
           Mentions légales
         </h1>
 
         <div className="prose prose-neutral max-w-none">
-          {/* Éditeur du site */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Éditeur du site
             </h2>
-            <div className="bg-neutral-50 rounded-xl p-6 space-y-2">
+            <div className="rounded-lg border border-neutral-200 bg-white p-6 shadow-sm space-y-2">
               <p className="text-neutral-700">
                 <strong>Raison sociale :</strong> NEATCH E.U.R.L.
               </p>
@@ -52,47 +53,41 @@ export default function LegalPage() {
                 <strong>SIREN :</strong> 831282066
               </p>
               <p className="text-neutral-700">
-                <strong>Siège social :</strong>{" "}
-                <span className="text-amber-800">À renseigner avant publication</span>
-              </p>
-              <p className="text-neutral-700">
                 <strong>Email :</strong>{" "}
                 <a
                   href="mailto:contact@neatch.com"
-                  className="text-brand-600 hover:text-brand-700"
+                  className="font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950"
                 >
                   contact@neatch.com
                 </a>
               </p>
               <p className="text-neutral-700">
                 <strong>Directeur de la publication :</strong>{" "}
-                <span>Lionel SULTAN</span>
+                <span>Lionel Sultan</span>
               </p>
             </div>
           </section>
 
-          {/* Hébergement */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Hébergement
             </h2>
-            <div className="bg-neutral-50 rounded-xl p-6 space-y-2">
+            <div className="rounded-lg border border-neutral-200 bg-white p-6 shadow-sm space-y-2">
               <p className="text-neutral-700">
                 <strong>Hébergeur :</strong>{" "}
-                <span className="text-amber-800">o2switch</span>
+                <span>o2switch</span>
               </p>
               <p className="text-neutral-700">
                 <strong>Adresse :</strong>{" "}
-                <span className="text-amber-800">
+                <span>
                   222-224 Boulevard Gustave Flaubert, 63000 Clermont-Ferrand, France
                 </span>
               </p>
             </div>
           </section>
 
-          {/* Propriété intellectuelle */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Propriété intellectuelle
             </h2>
             <p className="text-neutral-600 leading-relaxed">
@@ -109,9 +104,8 @@ export default function LegalPage() {
             </p>
           </section>
 
-          {/* Données personnelles */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Protection des données personnelles
             </h2>
             <p className="text-neutral-600 leading-relaxed">
@@ -127,39 +121,25 @@ export default function LegalPage() {
               l&apos;adresse :{" "}
               <a
                 href="mailto:contact@neatch.com"
-                className="text-brand-600 hover:text-brand-700"
+                className="font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950"
               >
                 contact@neatch.com
               </a>
             </p>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-4">
-              <p className="text-amber-800">
-                <strong>Note :</strong> La politique de confidentialité
-                détaillée sera ajoutée ultérieurement.
-              </p>
-            </div>
           </section>
 
-          {/* Cookies */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">Cookies</h2>
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">Cookies</h2>
             <p className="text-neutral-600 leading-relaxed">
               Ce site peut utiliser des cookies pour améliorer l&apos;expérience
               utilisateur. Les cookies sont de petits fichiers texte stockés sur
               votre appareil qui permettent d&apos;analyser le trafic et de
               personnaliser le contenu.
             </p>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-4">
-              <p className="text-amber-800">
-                <strong>Note :</strong> La politique de cookies détaillée sera
-                ajoutée ultérieurement.
-              </p>
-            </div>
           </section>
 
-          {/* CGU */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Conditions générales d&apos;utilisation
             </h2>
             <p className="text-neutral-600 leading-relaxed">
@@ -168,17 +148,10 @@ export default function LegalPage() {
               ci-après. Ces conditions d&apos;utilisation sont susceptibles
               d&apos;être modifiées ou complétées à tout moment.
             </p>
-            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-4">
-              <p className="text-amber-800">
-                <strong>Note :</strong> Les conditions générales d&apos;utilisation
-                détaillées seront ajoutées ultérieurement.
-              </p>
-            </div>
           </section>
 
-          {/* Limitation de responsabilité */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Limitation de responsabilité
             </h2>
             <p className="text-neutral-600 leading-relaxed">
@@ -197,9 +170,8 @@ export default function LegalPage() {
             </p>
           </section>
 
-          {/* Liens hypertextes */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Liens hypertextes
             </h2>
             <p className="text-neutral-600 leading-relaxed">
@@ -209,9 +181,8 @@ export default function LegalPage() {
             </p>
           </section>
 
-          {/* Droit applicable */}
           <section className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+            <h2 className="text-2xl font-bold text-neutral-950 mb-4">
               Droit applicable
             </h2>
             <p className="text-neutral-600 leading-relaxed">
@@ -220,19 +191,17 @@ export default function LegalPage() {
             </p>
           </section>
 
-          {/* Date de mise à jour */}
           <section className="border-t border-neutral-200 pt-8">
             <p className="text-sm text-neutral-500">
-              Dernière mise à jour : 30 mars 2026
+              Dernière mise à jour : 20 juillet 2026
             </p>
           </section>
         </div>
       </main>
 
-      {/* Footer simple */}
-      <footer className="bg-neutral-900 text-white py-8">
+      <footer className="border-t border-neutral-200 bg-white py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-neutral-400 text-sm">
+          <p className="text-sm text-neutral-600">
             &copy; {new Date().getFullYear()} Neatch E.U.R.L. Tous droits
             réservés. | SIREN : 831282066
           </p>
