@@ -91,7 +91,7 @@ function Hero() {
               id="hero-title"
               className="max-w-4xl text-5xl font-black leading-[0.95] tracking-normal text-neutral-950 sm:text-6xl lg:text-7xl"
             >
-              Le bon consultant pour une mission qui compte.
+              Trouvez l&apos;expert qui fera avancer votre mission.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
               Neatch est ma structure de freelance. J&apos;interviens directement sur
