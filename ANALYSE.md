@@ -2,9 +2,10 @@
 
 ## Stack technique
 
-- **Next.js 15.5.9** avec App Router + **React 19** + **TypeScript 5.7** (strict)
+- **Next.js 15.5.20** avec App Router
+- **React 19** + **TypeScript** en mode strict
 - **Tailwind CSS 3.4** pour le styling utilitaire
-- **PostCSS + Autoprefixer** pour la compatibilité navigateurs
+- **OpenNext Cloudflare** et **Wrangler** pour les builds/deploys Cloudflare
 
 ---
 
@@ -12,15 +13,16 @@
 
 ```
 app/
-├── page.tsx          — Page principale (24KB, 6 sections)
-├── layout.tsx        — Root layout + métadonnées SEO
-├── globals.css       — Animations CSS personnalisées
-├── legal/page.tsx    — Page mentions légales
+├── page.tsx             — Landing page principale
+├── layout.tsx           — Root layout + métadonnées SEO
+├── globals.css          — Design system utilitaire et styles globaux
+├── icon.svg             — Favicon Neatch
+├── legal/page.tsx       — Mentions légales
 └── components/
-    ├── Navigation.tsx — Navbar responsive avec scroll detection
-    ├── FAQ.tsx        — Accordion animé
-    ├── ContactForm.tsx— Email + LinkedIn animé
-    └── Footer.tsx     — Footer 4 colonnes
+    ├── Navigation.tsx   — Navbar responsive avec scroll detection
+    ├── FAQ.tsx          — Accordéon FAQ
+    ├── ContactForm.tsx  — Bloc contact email + LinkedIn
+    └── Footer.tsx       — Footer navigation, contact et positionnement
 ```
 
 ---
@@ -29,42 +31,47 @@ app/
 
 | Aspect | Choix |
 |--------|-------|
-| Composants | Server components par défaut, `"use client"` uniquement si interactif |
-| State | Hooks React (`useState`, `useEffect`) — pas de store externe |
-| Données | Hard-codées inline (pas de CMS) |
-| Routing | App Router Next.js (file-based) |
+| Composants | Server components par défaut, `"use client"` uniquement pour Navigation, FAQ et Footer |
+| State | Hooks React locaux, pas de store externe |
+| Données | Contenu éditorial hard-codé dans les composants |
+| Routing | App Router Next.js |
+| Styling | Tailwind + classes globales `notion-*` |
 | Responsive | Mobile-first, breakpoints `sm/md/lg` |
 
 ---
 
 ## Sections de la page principale
 
-1. **Hero** — gradient animé 10s + 2 CTAs
-2. **Services** — 2 piliers, 8 services avec icônes SVG
-3. **Méthode** — timeline 4 étapes (Cadrage → Sélection → Démarrage → Amélioration), layout différent desktop/mobile
-4. **Pour les clients** — fond teal, 3 bénéfices
-5. **Pour les freelances** — 3 bénéfices miroir
-6. **Témoignages** — 3 cards avec citations
+1. **Hero** — proposition de valeur, CTA et aperçu de qualification.
+2. **Missions** — mission directe, sélection et filtre terrain.
+3. **Méthode** — compréhension, recherche, qualification, présentation.
+4. **Partenaires** — positionnement auprès des plateformes et cabinets.
+5. **Contextes** — situations où le choix du consultant est critique.
+6. **Profil** — carte de visite de Lionel Sultan et expérience Accenture détaillée.
+7. **Références** — organisations, rôles et missions extraites du CV.
+8. **FAQ** — réponses aux objections principales.
+9. **Contact** — email et LinkedIn.
 
 ---
 
 ## Points forts
 
-- Accessibilité soignée (ARIA labels, skip-link, hierarchy de headings, `prefers-reduced-motion`)
-- SEO complet (Open Graph, robots, locale fr_FR)
-- Animations premium (glow button, breathing shadow LinkedIn, hero gradient)
-- TypeScript strict sans compromis
-- Déployable statiquement sur Vercel sans backend
+- Accessibilité correcte : skip-link, ARIA labels, headings, `prefers-reduced-motion`.
+- SEO de base présent : métadonnées, Open Graph, locale `fr_FR`, robots.
+- Identité visuelle cohérente : palette neutre, favicon aligné, pages légales harmonisées.
+- Build statique validé sur Next.js.
+- Contenu aligné sur le CV et sur le positionnement freelance senior / qualification de consultants.
 
 ---
 
 ## Points d'attention
 
-- **Formulaire de contact absent** — `ContactForm.tsx` affiche uniquement l'email/LinkedIn, aucun backend
-- **Contenu hard-codé** — pas de CMS, toutes modifications passent par le code
-- **Page légale incomplète** — sections avec placeholders en amber (adresse siège, politique de confidentialité détaillée, CGU complètes)
-- **Pas d'analytics** — aucun tracking configuré
-- **Mono-langue** — uniquement français
+- **Dépendances** — `npm audit` est propre ; garder ce contrôle dans la routine de maintenance, en particulier après mises à jour Next.js / Wrangler.
+- **Lint** — migration effectuée vers l'ESLint CLI (`eslint .`) avec configuration flat compatible Next.
+- **Browserslist** — `caniuse-lite` mis à jour après l'audit.
+- **Contenu hard-codé** — chaque modification éditoriale passe par le code.
+- **Pas d'analytics** — aucun tracking configuré.
+- **Mono-langue** — uniquement français.
 
 ---
 
@@ -73,4 +80,5 @@ app/
 - Société : **Neatch E.U.R.L.** (SIREN 831282066)
 - Fondateur : Lionel Sultan
 - Contact : contact@neatch.com
-- Hébergeur : o2switch (Clermont-Ferrand)
+- LinkedIn : linkedin.com/in/lionelsultan
+- Hébergeur : o2switch, Clermont-Ferrand

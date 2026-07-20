@@ -15,7 +15,7 @@ export default function Footer() {
             </Link>
             <p className="max-w-md text-neutral-600">
               Structure de Lionel Sultan, freelance senior en conseil IT,
-              Gestion de projets IT, Product Management, agile delivery,
+              gestion de projet, Product Management, agile delivery,
               stratégie digitale et qualification de consultants.
             </p>
           </div>
