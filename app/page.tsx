@@ -94,9 +94,10 @@ function Hero() {
               Trouvez l&apos;expert qui fera avancer votre mission.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
-              Neatch est ma structure de freelance. J&apos;interviens directement sur
-              des sujets IT, produit et delivery exigeants, et j&apos;aide aussi mes
-              clients comme les plateformes à faire émerger les bons consultants.
+              Je suis Lionel Sultan, et Neatch est ma structure de freelance.
+              J&apos;interviens directement sur des sujets IT, produit et delivery
+              exigeants, et j&apos;aide aussi mes clients comme les plateformes à faire
+              émerger les bons consultants.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#contact" className="notion-button notion-button-primary">
