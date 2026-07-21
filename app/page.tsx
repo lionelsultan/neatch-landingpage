@@ -36,7 +36,7 @@ function WorkspacePreview() {
               Qualification consultant
             </p>
             <h2 className="mt-1 text-xl font-bold text-neutral-950">
-              Recherche d'un Product Owner (secteur Retail / Luxe)
+              Recherche d&apos;un Product Owner (secteur Retail / Luxe)
             </h2>
           </div>
           <div className="rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700">
