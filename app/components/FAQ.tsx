@@ -9,7 +9,7 @@ export default function FAQ() {
     {
       question: "Neatch est-elle une agence ou un cabinet de conseil ?",
       answer:
-        "Non. Neatch est la structure de Lionel Sultan, freelance expérimenté. Le client échange donc avec la personne qui connaît le terrain, intervient elle-même sur certaines missions et qualifie les consultants avant de les recommander.",
+        "Non. Neatch est la structure de Lionel Sultan. Le client échange avec la personne qui intervient directement sur les sujets IT, produit et delivery. Quand un renfort externe est nécessaire, je peux aussi identifier et qualifier les bons consultants avant recommandation.",
     },
     {
       question: "Sur quels sujets pouvez-vous intervenir directement ?",
@@ -19,7 +19,7 @@ export default function FAQ() {
     {
       question: "Quelle est la valeur ajoutée pour trouver un consultant ?",
       answer:
-        "La valeur vient du travail de recherche et de qualification en amont : LinkedIn, plateformes freelance, réseau personnel, premiers échanges, entretiens de qualification et lecture terrain du profil. Le client ne reçoit pas une pile de CV, mais une sélection courte de consultants déjà filtrés.",
+        "C'est une promesse complémentaire à mon intervention personnelle. La valeur vient du travail de recherche et de qualification en amont : LinkedIn, plateformes freelance, réseau personnel, premiers échanges, entretiens de qualification et lecture terrain du profil. Le client ne reçoit pas une pile de CV, mais une sélection courte de consultants déjà filtrés.",
     },
     {
       question: "Comment travaillez-vous avec des plateformes comme Malt ou Freelance Republik ?",
@@ -34,12 +34,12 @@ export default function FAQ() {
     {
       question: "Comment qualifiez-vous les consultants ?",
       answer:
-        "Je regarde l’expérience réelle, la capacité à comprendre le contexte, la posture avec les équipes, le niveau de séniorité, la clarté de communication et les situations déjà vécues. Mon expérience de mission me permet de challenger les réponses au-delà du CV.",
+        "Je regarde l’expérience réelle, la capacité à comprendre le contexte, la posture avec les équipes, le niveau d'autonomie, la clarté de communication et les situations déjà vécues. Mon expérience de mission me permet de challenger les réponses au-delà du CV.",
     },
     {
       question: "Comment démarre une collaboration ?",
       answer:
-        "Elle démarre par un échange de cadrage pour comprendre le besoin : mission directe, recherche de consultant, niveau d’urgence, contexte, livrables attendus et contraintes. Ensuite, je propose un mode d’intervention ou une démarche de sourcing claire.",
+        "Elle démarre par un échange de cadrage pour comprendre le besoin : intervention personnelle, contexte, niveau d’urgence, livrables attendus et contraintes. Ensuite, je propose un mode d’intervention clair ou, si le sujet demande de renforcer l’équipe, une démarche d’identification ciblée.",
     },
     {
       question: "Pourquoi passer par vous plutôt que chercher directement ?",

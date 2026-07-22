@@ -9,9 +9,10 @@ export default function ContactForm() {
               Parlons de votre contexte
             </h2>
             <p className="mb-8 text-lg leading-8 text-neutral-300">
-              Client final, plateforme ou cabinet de freelances : si vous avez besoin
-              d&apos;un consultant qualifié pour une mission produit, projet, agile ou
-              delivery, prenons un temps d&apos;échange.
+              Si vous avez un sujet IT, produit, projet, agile ou delivery à cadrer,
+              piloter ou sécuriser, prenons un temps d&apos;échange. Et si votre besoin
+              porte sur un renfort d&apos;équipe, je peux aussi vous aider à identifier
+              les bons profils.
             </p>
 
             <div className="grid gap-4 md:grid-cols-2">

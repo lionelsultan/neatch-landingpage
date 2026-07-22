@@ -57,7 +57,7 @@ export default function Image() {
                 lineHeight: 0.96,
               }}
             >
-              Trouvez le bon expert pour faire avancer vos projets IT.
+              J&apos;interviens personnellement pour sécuriser vos missions IT.
             </div>
             <div
               style={{
@@ -67,8 +67,8 @@ export default function Image() {
                 lineHeight: 1.35,
               }}
             >
-              Lionel Sultan accompagne vos missions critiques et qualifie les
-              consultants capables de les tenir.
+              Lionel Sultan pilote les sujets IT, produit et delivery, puis aide
+              à identifier les bons renforts quand le contexte l&apos;exige.
             </div>
           </div>
           <div

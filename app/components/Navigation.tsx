@@ -19,7 +19,7 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#services", label: "Missions" },
+    { href: "#principes", label: "Principes" },
     { href: "#methode", label: "Méthode" },
     { href: "#references", label: "Références" },
     { href: "#faq", label: "FAQ" },

@@ -65,7 +65,7 @@ function WorkspacePreview() {
             {[
               ["Recherche LinkedIn, plateformes et réseau", "Fait", "bg-emerald-100 text-emerald-900"],
               ["Entretiens de qualification par Lionel", "En cours", "bg-blue-100 text-blue-900"],
-              ["Adéquation contexte, posture, séniorité", "À valider", "bg-amber-100 text-amber-900"],
+              ["Adéquation contexte, posture, expérience", "À valider", "bg-amber-100 text-amber-900"],
             ].map(([task, state, tone]) => (
               <div key={task} className="flex items-center justify-between gap-3 rounded-md border border-neutral-100 bg-stone-50 px-3 py-2">
                 <span className="text-sm text-neutral-800">{task}</span>
@@ -92,12 +92,13 @@ function Hero() {
               id="hero-title"
               className="max-w-4xl text-4xl font-black leading-[0.98] tracking-normal text-neutral-950 sm:text-6xl lg:text-7xl"
             >
-              Trouvez le bon expert pour faire avancer vos projets IT.
+              J&apos;interviens personnellement pour sécuriser vos missions IT.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
-              Neatch est la structure de Lionel Sultan, consultant expérimenté. J&apos;interviens
-              directement sur vos sujets IT, produit et delivery, et je qualifie aussi les
-              freelances capables de tenir vos missions quand le bon profil n&apos;est pas moi.
+              Neatch est la structure de Lionel Sultan. J&apos;interviens directement sur vos
+              enjeux IT, produit et delivery : cadrage, pilotage, gouvernance, arbitrages
+              et remise en mouvement des équipes. En complément, j&apos;aide mes clients à
+              identifier les bons renforts au bon moment et au bon endroit.
             </p>
             <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-neutral-200 bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
               <Image
@@ -122,8 +123,8 @@ function Hero() {
                 Échanger sur votre contexte
                 <ArrowIcon />
               </a>
-              <a href="#services" className="notion-button notion-button-secondary">
-                Voir les missions
+              <a href="#principes" className="notion-button notion-button-secondary">
+                Principes fondateurs
               </a>
             </div>
           </div>
@@ -134,37 +135,37 @@ function Hero() {
   );
 }
 
-function Services() {
-  const services = [
+function Principles() {
+  const principles = [
     {
-      tag: "Mission directe",
-      title: "Prendre en main les sujets exposés",
+      tag: "Prestation personnelle",
+      title: "Intervenir là où la mission doit avancer",
       description:
-        "Transformation IT, Product Management, gouvernance agile, coordination multi-équipes et sécurisation du delivery avec une lecture très terrain.",
+        "J'interviens directement sur les sujets exposés : transformation IT, Product Management, gouvernance agile, coordination multi-équipes et sécurisation du delivery.",
     },
     {
-      tag: "Sélection",
-      title: "Identifier le consultant adapté",
+      tag: "Exigence terrain",
+      title: "Cadrer, arbitrer et remettre du rythme",
       description:
-        "Recherche sur LinkedIn, plateformes freelance comme Malt ou Freelance Republik, et réseau personnel pour repérer des profils pertinents, disponibles et crédibles.",
+        "Ma valeur vient de la compréhension rapide du contexte, de la capacité à clarifier les priorités et de décisions concrètes avec les équipes.",
     },
     {
-      tag: "Filtre terrain",
-      title: "Présenter uniquement des profils qualifiés",
+      tag: "Renfort ciblé",
+      title: "Identifier les bons profils au bon moment",
       description:
-        "Chaque consultant passe par mes entretiens : compréhension du parcours, posture, séniorité, adéquation au contexte client et capacité réelle d'exécution.",
+        "Quand il faut compléter une équipe cliente, j'aide à repérer, qualifier et recommander les consultants capables de renforcer le dispositif au bon endroit.",
     },
   ];
 
   return (
-    <section id="services" className="notion-section scroll-reveal bg-white" aria-labelledby="services-title">
+    <section id="principes" className="notion-section scroll-reveal bg-white" aria-labelledby="principes-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
-          <p className="section-kicker">Missions</p>
-          <h2 id="services-title">Un point d&apos;entrée expert, pas une agence.</h2>
+          <p className="section-kicker">Principes fondateurs</p>
+          <h2 id="principes-title">Une prestation personnelle d&apos;abord, un renfort ciblé ensuite.</h2>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
-          {services.map((service) => (
+          {principles.map((service) => (
             <article key={service.title} className="notion-card motion-card">
               <span className="notion-chip">{service.tag}</span>
               <h3 className="mt-5 text-2xl font-bold leading-tight text-neutral-950">
@@ -203,10 +204,11 @@ function Audiences() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Pour qui</p>
-          <h2 id="audiences-title">Trois contextes, un même filtre terrain.</h2>
+          <h2 id="audiences-title">Trois contextes, une même exigence terrain.</h2>
           <p>
-            Neatch intervient quand le besoin dépasse une recherche de CV : il faut
-            comprendre la mission, évaluer la posture et réduire le risque de casting.
+            Neatch intervient d&apos;abord pour traiter les sujets IT, produit et delivery
+            qui demandent de l&apos;expérience terrain, puis pour aider à renforcer les
+            équipes quand le contexte l&apos;exige.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
@@ -229,7 +231,7 @@ function Method() {
     {
       number: "01",
       title: "Comprendre",
-      description: "Clarifier le contexte, les enjeux, le niveau d'urgence et le type de profil nécessaire.",
+      description: "Clarifier le contexte, les enjeux, le niveau d'urgence et le mode d'intervention utile.",
       image: {
         src: "/field/workshop-campaign.jpg",
         alt: "Workshop convivial autour d'une table de travail",
@@ -238,7 +240,7 @@ function Method() {
     {
       number: "02",
       title: "Chercher",
-      description: "Explorer LinkedIn, les plateformes freelance et mon réseau, puis faire remonter les bons profils vers la mission.",
+      description: "Si un renfort est nécessaire, explorer LinkedIn, les plateformes freelance et mon réseau pour faire émerger les bons profils.",
     },
     {
       number: "03",
@@ -284,10 +286,11 @@ function Method() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="section-heading mb-0">
             <p className="section-kicker">Méthode</p>
-            <h2 id="methode-title">Le travail invisible qui évite les mauvais castings.</h2>
+            <h2 id="methode-title">Le travail invisible qui sécurise l&apos;intervention.</h2>
             <p>
-              La valeur vient du temps passé à chercher, trier, appeler et challenger
-              les profils avant qu&apos;ils arrivent chez le client.
+              La valeur vient du cadrage initial, de la lecture terrain, puis du temps
+              passé à chercher, trier, appeler et challenger les profils lorsqu&apos;un
+              renfort externe est nécessaire.
             </p>
             <div className="mt-7 grid grid-cols-3 gap-2" aria-label="Illustrations de missions terrain">
               {fieldPhotos.map((photo) => (
@@ -620,7 +623,7 @@ export default function Home() {
       <Navigation />
       <main id="main-content">
         <Hero />
-        <Services />
+        <Principles />
         <Audiences />
         <Method />
         <Partners />
