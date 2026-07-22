@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.neatch.com"),
   title: "Neatch | Conseil IT, Product & Delivery",
   description:
-    "Neatch est la structure de Lionel Sultan pour intervenir personnellement sur les missions IT, produit et delivery, avec une aide ciblée à l'identification de renforts.",
+    "Neatch est la structure de Lionel Sultan pour cadrer, piloter et sécuriser les missions IT, produit et delivery dans des contextes exigeants.",
   keywords: [
     "transformation IT",
     "product management",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Neatch | Conseil IT, Product & Delivery",
     description:
-      "Lionel Sultan intervient personnellement sur les missions IT, produit et delivery, puis aide à identifier les bons renforts quand le contexte l'exige.",
+      "Lionel Sultan intervient personnellement pour cadrer, piloter et sécuriser les missions IT, produit et delivery.",
     url: "/",
     siteName: "Neatch",
     locale: "fr_FR",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Neatch | Conseil IT, Product & Delivery",
     description:
-      "Structure de Lionel Sultan pour intervenir personnellement sur les missions IT, produit et delivery.",
+      "Cadrage, pilotage, gouvernance et delivery par Lionel Sultan.",
   },
   robots: {
     index: true,

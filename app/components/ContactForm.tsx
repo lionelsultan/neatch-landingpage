@@ -10,9 +10,9 @@ export default function ContactForm() {
             </h2>
             <p className="mb-8 text-lg leading-8 text-neutral-300">
               Si vous avez un sujet IT, produit, projet, agile ou delivery à cadrer,
-              piloter ou sécuriser, prenons un temps d&apos;échange. Et si votre besoin
-              porte sur un renfort d&apos;équipe, je peux aussi vous aider à identifier
-              les bons profils.
+              piloter ou sécuriser, prenons un temps d&apos;échange. Nous clarifierons
+              le contexte, les enjeux, le niveau d&apos;urgence et le mode d&apos;intervention
+              le plus utile.
             </p>
 
             <div className="grid gap-4 md:grid-cols-2">

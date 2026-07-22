@@ -9,7 +9,7 @@ export default function FAQ() {
     {
       question: "Neatch est-elle une agence ou un cabinet de conseil ?",
       answer:
-        "Non. Neatch est la structure de Lionel Sultan. Le client échange avec la personne qui intervient directement sur les sujets IT, produit et delivery. Quand un renfort externe est nécessaire, je peux aussi identifier et qualifier les bons consultants avant recommandation.",
+        "Neatch est d'abord ma structure d'intervention personnelle. Le client échange avec la personne qui cadre, pilote et sécurise la mission. L'identification de consultants existe aussi, mais comme activité complémentaire quand une équipe doit être renforcée.",
     },
     {
       question: "Sur quels sujets pouvez-vous intervenir directement ?",
@@ -17,9 +17,9 @@ export default function FAQ() {
         "J’interviens sur des enjeux de transformation IT, gouvernance agile, Product Management, coordination multi-équipes et sécurisation du delivery. La mission peut porter sur le cadrage, l’orchestration, les arbitrages ou la remise en maîtrise d’une trajectoire.",
     },
     {
-      question: "Quelle est la valeur ajoutée pour trouver un consultant ?",
+      question: "Pouvez-vous aussi aider à identifier un consultant ?",
       answer:
-        "C'est une promesse complémentaire à mon intervention personnelle. La valeur vient du travail de recherche et de qualification en amont : LinkedIn, plateformes freelance, réseau personnel, premiers échanges, entretiens de qualification et lecture terrain du profil. Le client ne reçoit pas une pile de CV, mais une sélection courte de consultants déjà filtrés.",
+        "Oui, lorsque le besoin consiste à renforcer une équipe cliente. La valeur vient du travail de recherche et de qualification en amont : LinkedIn, plateformes freelance, réseau personnel, premiers échanges, entretiens de qualification et lecture terrain du profil. Le client ne reçoit pas une pile de CV, mais une sélection courte de consultants déjà filtrés.",
     },
     {
       question: "Comment travaillez-vous avec des plateformes comme Malt ou Freelance Republik ?",
@@ -39,12 +39,12 @@ export default function FAQ() {
     {
       question: "Comment démarre une collaboration ?",
       answer:
-        "Elle démarre par un échange de cadrage pour comprendre le besoin : intervention personnelle, contexte, niveau d’urgence, livrables attendus et contraintes. Ensuite, je propose un mode d’intervention clair ou, si le sujet demande de renforcer l’équipe, une démarche d’identification ciblée.",
+        "Elle démarre par un échange de cadrage pour comprendre le contexte, le niveau d’urgence, les livrables attendus, les contraintes et les points de décision. Ensuite, je propose un mode d’intervention clair. Si le sujet demande de renforcer l’équipe, j'ajoute une démarche d’identification ciblée.",
     },
     {
-      question: "Pourquoi passer par vous plutôt que chercher directement ?",
+      question: "Pourquoi passer par vous pour identifier un consultant ?",
       answer:
-        "Parce que la recherche prend du temps et que le mauvais casting coûte cher. Je fais le travail fastidieux de repérage, de tri et d’entretiens, puis je recommande uniquement des profils que je considère capables de tenir la mission.",
+        "Parce que la recherche prend du temps et que le mauvais casting coûte cher. Je fais le travail de repérage, de tri et d’entretiens, puis je recommande uniquement des profils que je considère capables de tenir la mission.",
     },
   ];
 

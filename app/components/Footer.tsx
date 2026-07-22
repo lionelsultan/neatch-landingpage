@@ -15,8 +15,8 @@ export default function Footer() {
             </Link>
             <p className="max-w-md text-neutral-600">
               Structure de Lionel Sultan pour intervenir personnellement sur
-              les enjeux IT, produit et delivery, avec une aide ciblée à
-              l&apos;identification de renforts quand le contexte l&apos;exige.
+              les enjeux IT, produit et delivery : cadrage, pilotage,
+              gouvernance, arbitrages et sécurisation de l&apos;exécution.
             </p>
           </div>
 
@@ -41,34 +41,18 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#partenaires"
-                  className="text-neutral-600 transition-colors hover:text-neutral-950"
-                >
-                  Partenaires
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#situations"
-                  className="text-neutral-600 transition-colors hover:text-neutral-950"
-                >
-                  Contextes
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#fondateur"
-                  className="text-neutral-600 transition-colors hover:text-neutral-950"
-                >
-                  Profil
-                </a>
-              </li>
-              <li>
-                <a
                   href="#references"
                   className="text-neutral-600 transition-colors hover:text-neutral-950"
                 >
                   Références
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#identification"
+                  className="text-neutral-600 transition-colors hover:text-neutral-950"
+                >
+                  Identification
                 </a>
               </li>
               <li>

@@ -67,8 +67,8 @@ export default function Image() {
                 lineHeight: 1.35,
               }}
             >
-              Lionel Sultan pilote les sujets IT, produit et delivery, puis aide
-              à identifier les bons renforts quand le contexte l&apos;exige.
+              Cadrage, pilotage, gouvernance et delivery pour remettre de la
+              clarté dans les contextes exposés.
             </div>
           </div>
           <div

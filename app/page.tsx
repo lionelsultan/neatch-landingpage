@@ -18,9 +18,9 @@ const ArrowIcon = ({ className = "h-4 w-4" }: { className?: string }) => (
 
 function WorkspacePreview() {
   const roadmap = [
-    { label: "Mission", value: "Product Owner", tone: "bg-blue-100 text-blue-900" },
-    { label: "Sourcing", value: "42 profils lus", tone: "bg-amber-100 text-amber-900" },
-    { label: "Shortlist", value: "3 validés", tone: "bg-emerald-100 text-emerald-900" },
+    { label: "Cadrage", value: "Enjeux clarifiés", tone: "bg-blue-100 text-blue-900" },
+    { label: "Pilotage", value: "Risques suivis", tone: "bg-amber-100 text-amber-900" },
+    { label: "Delivery", value: "Trajectoire tenue", tone: "bg-emerald-100 text-emerald-900" },
   ];
 
   return (
@@ -34,14 +34,14 @@ function WorkspacePreview() {
         <div className="mb-5 flex items-center justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-              Qualification consultant
+              Intervention terrain
             </p>
             <h3 className="mt-1 text-xl font-bold text-neutral-950">
-              Recherche d&apos;un Product Owner (secteur Retail / Luxe)
+              Pilotage d&apos;une mission IT, produit &amp; delivery
             </h3>
           </div>
           <div className="rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700">
-            Fourchette TJM recherché : 800-850
+            Cadrage, arbitrages, exécution
           </div>
         </div>
 
@@ -58,14 +58,14 @@ function WorkspacePreview() {
 
         <div className="mt-5 rounded-lg border border-neutral-200 bg-white p-4">
           <div className="mb-3 flex items-center justify-between">
-            <h3 className="font-semibold text-neutral-950">Filtre terrain</h3>
-            <span className="text-xs text-neutral-500">Avant présentation client</span>
+            <h3 className="font-semibold text-neutral-950">Points de vigilance</h3>
+            <span className="text-xs text-neutral-500">Suivi de mission</span>
           </div>
           <div className="space-y-3">
             {[
-              ["Recherche LinkedIn, plateformes et réseau", "Fait", "bg-emerald-100 text-emerald-900"],
-              ["Entretiens de qualification par Lionel", "En cours", "bg-blue-100 text-blue-900"],
-              ["Adéquation contexte, posture, expérience", "À valider", "bg-amber-100 text-amber-900"],
+              ["Objectifs, contraintes et dépendances", "Cadré", "bg-emerald-100 text-emerald-900"],
+              ["Coordination métier, produit et IT", "En cours", "bg-blue-100 text-blue-900"],
+              ["Décisions, risques et trajectoire", "Suivi", "bg-amber-100 text-amber-900"],
             ].map(([task, state, tone]) => (
               <div key={task} className="flex items-center justify-between gap-3 rounded-md border border-neutral-100 bg-stone-50 px-3 py-2">
                 <span className="text-sm text-neutral-800">{task}</span>
@@ -95,10 +95,10 @@ function Hero() {
               J&apos;interviens personnellement pour sécuriser vos missions IT.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
-              Neatch est la structure de Lionel Sultan. J&apos;interviens directement sur vos
-              enjeux IT, produit et delivery : cadrage, pilotage, gouvernance, arbitrages
-              et remise en mouvement des équipes. En complément, j&apos;aide mes clients à
-              identifier les bons renforts au bon moment et au bon endroit.
+              Neatch est la structure de Lionel Sultan. J&apos;accompagne les organisations
+              sur leurs sujets IT, produit et delivery quand il faut cadrer vite,
+              remettre de la clarté, piloter l&apos;exécution et faire avancer les équipes
+              dans des contextes exposés.
             </p>
             <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-neutral-200 bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
               <Image
@@ -150,10 +150,10 @@ function Principles() {
         "Ma valeur vient de la compréhension rapide du contexte, de la capacité à clarifier les priorités et de décisions concrètes avec les équipes.",
     },
     {
-      tag: "Renfort ciblé",
-      title: "Identifier les bons profils au bon moment",
+      tag: "Culture delivery",
+      title: "Faire le lien entre stratégie et exécution",
       description:
-        "Quand il faut compléter une équipe cliente, j'aide à repérer, qualifier et recommander les consultants capables de renforcer le dispositif au bon endroit.",
+        "J'aide à traduire les enjeux en trajectoire praticable, avec une attention constante aux dépendances, aux équipes et aux décisions qui bloquent.",
     },
   ];
 
@@ -162,7 +162,7 @@ function Principles() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Principes fondateurs</p>
-          <h2 id="principes-title">Une prestation personnelle d&apos;abord, un renfort ciblé ensuite.</h2>
+          <h2 id="principes-title">Une expertise personnelle, directement mobilisable.</h2>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {principles.map((service) => (
@@ -183,19 +183,19 @@ function Principles() {
 function Audiences() {
   const audiences = [
     {
-      title: "Client final",
+      title: "Direction métier ou produit",
       description:
-        "Vous avez une mission critique à cadrer, relancer ou sécuriser, avec besoin d'un interlocuteur capable de comprendre vite le contexte métier et IT.",
+        "Vous devez clarifier une trajectoire, prioriser, structurer une roadmap ou remettre du lien entre besoin métier, produit et exécution.",
     },
     {
-      title: "Plateforme freelance",
+      title: "DSI ou direction de programme",
       description:
-        "Vous voulez faire émerger les bons profils de votre écosystème sur des besoins exigeants, avec une qualification terrain avant présentation.",
+        "Vous avez besoin d'un interlocuteur capable de comprendre les contraintes IT, les dépendances applicatives et les arbitrages de delivery.",
     },
     {
-      title: "Cabinet ou partenaire",
+      title: "Equipe projet ou transformation",
       description:
-        "Vous cherchez un relais expérimenté pour qualifier une mission, challenger une shortlist ou recommander un consultant que vous pouvez assumer.",
+        "Vous voulez sécuriser une mission sensible, relancer une dynamique ou mettre de l'ordre dans un dispositif devenu trop flou.",
     },
   ];
 
@@ -206,9 +206,9 @@ function Audiences() {
           <p className="section-kicker">Pour qui</p>
           <h2 id="audiences-title">Trois contextes, une même exigence terrain.</h2>
           <p>
-            Neatch intervient d&apos;abord pour traiter les sujets IT, produit et delivery
-            qui demandent de l&apos;expérience terrain, puis pour aider à renforcer les
-            équipes quand le contexte l&apos;exige.
+            Neatch intervient quand une mission demande une lecture terrain, une
+            capacité de structuration et une présence capable de faire avancer les
+            décisions avec les équipes.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
@@ -231,7 +231,7 @@ function Method() {
     {
       number: "01",
       title: "Comprendre",
-      description: "Clarifier le contexte, les enjeux, le niveau d'urgence et le mode d'intervention utile.",
+      description: "Clarifier le contexte, les enjeux, les irritants, les contraintes et les décisions à obtenir.",
       image: {
         src: "/field/workshop-campaign.jpg",
         alt: "Workshop convivial autour d'une table de travail",
@@ -239,13 +239,13 @@ function Method() {
     },
     {
       number: "02",
-      title: "Chercher",
-      description: "Si un renfort est nécessaire, explorer LinkedIn, les plateformes freelance et mon réseau pour faire émerger les bons profils.",
+      title: "Structurer",
+      description: "Transformer un contexte complexe en trajectoire lisible : priorités, gouvernance, rôles, dépendances et points de décision.",
     },
     {
       number: "03",
-      title: "Qualifier",
-      description: "Mener les entretiens, tester la posture terrain et vérifier l'adéquation avec la mission.",
+      title: "Piloter",
+      description: "Animer les échanges utiles, suivre les risques, faire circuler l'information et maintenir le rythme d'exécution.",
       image: {
         src: "/field/entretien-rodeo.jpg",
         alt: "Entretien professionnel dans une salle de réunion",
@@ -253,16 +253,16 @@ function Method() {
     },
     {
       number: "04",
-      title: "Présenter",
-      description: "Transmettre une shortlist utile : peu de profils, mais des profils que j'assume de recommander.",
+      title: "Sécuriser",
+      description: "Rendre les arbitrages visibles, stabiliser les livrables et aider les équipes à tenir une trajectoire crédible.",
     },
   ];
 
   const indicators = [
     ["15 ans", "d'expérience terrain"],
     ["8+ ans", "à la tête de Neatch"],
-    ["1 filtre", "entretiens menés par Lionel"],
-    ["Allié", "clients, plateformes, freelances"],
+    ["Produit", "roadmap, cadrage, priorisation"],
+    ["Delivery", "pilotage, gouvernance, arbitrages"],
   ];
 
   const fieldPhotos = [
@@ -288,9 +288,9 @@ function Method() {
             <p className="section-kicker">Méthode</p>
             <h2 id="methode-title">Le travail invisible qui sécurise l&apos;intervention.</h2>
             <p>
-              La valeur vient du cadrage initial, de la lecture terrain, puis du temps
-              passé à chercher, trier, appeler et challenger les profils lorsqu&apos;un
-              renfort externe est nécessaire.
+              La valeur vient de la capacité à comprendre vite, structurer sans alourdir,
+              faire parler les bons interlocuteurs et transformer les décisions en
+              exécution concrète.
             </p>
             <div className="mt-7 grid grid-cols-3 gap-2" aria-label="Illustrations de missions terrain">
               {fieldPhotos.map((photo) => (
@@ -349,47 +349,47 @@ function Method() {
   );
 }
 
-function Partners() {
-  const partnerPoints = [
+function ConsultantIdentification() {
+  const identificationPoints = [
     {
-      title: "Je fais émerger vos freelances",
+      title: "Repérer les bons profils",
       description:
-        "Quand un profil pertinent existe déjà sur Malt, Freelance Republik ou une autre plateforme, mon rôle est de l'identifier et de le pousser vers la bonne mission.",
+        "Quand une mission nécessite un renfort, je peux chercher dans mon réseau, sur LinkedIn ou sur les plateformes spécialisées pour faire émerger des consultants adaptés au contexte.",
     },
     {
-      title: "Je ne court-circuite pas la relation",
+      title: "Qualifier avant de recommander",
       description:
-        "Le cadre commercial reste clair : plateforme, client, freelance et apporteur d'affaires savent quel rôle chacun joue dans la mise en relation.",
+        "Je challenge l'expérience, la posture, l'autonomie, la compréhension du besoin et la capacité réelle d'exécution avant toute mise en relation.",
     },
     {
-      title: "Un modèle d'apport transparent",
+      title: "Respecter les canaux existants",
       description:
-        "La rémunération correspond au sourcing, au tri, aux entretiens et à la recommandation, sans me substituer au canal qui porte le freelance.",
+        "Si le bon profil vient d'une plateforme ou d'un partenaire, le cadre reste lisible : chacun garde son rôle, avec une logique d'apport transparente.",
     },
   ];
 
   return (
-    <section id="partenaires" className="notion-section scroll-reveal bg-white" aria-labelledby="partenaires-title">
+    <section id="identification" className="notion-section scroll-reveal bg-white" aria-labelledby="identification-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="dark-panel rounded-2xl border border-neutral-200 bg-neutral-950 p-6 text-white shadow-sm sm:p-8 lg:p-10">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
               <p className="mb-3 text-sm font-bold uppercase tracking-wide text-neutral-400">
-                Plateformes & partenaires
+                Activité complémentaire
               </p>
-              <h2 id="partenaires-title" className="text-4xl font-black leading-tight md:text-5xl">
-                Un allié pour faire monter vos freelances sur les bonnes missions.
+              <h2 id="identification-title" className="text-4xl font-black leading-tight md:text-5xl">
+                Identifier les bons consultants quand il faut renforcer une équipe.
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-300">
-                Pour les plateformes et acteurs du freelancing, Neatch est un relais de
-                qualification. Je rapproche les besoins clients des bons profils, y compris
-                ceux déjà présents chez vous, avec une logique d&apos;apport d&apos;affaires
-                transparente.
+                Cette activité vient en complément de mon expertise personnelle. Quand
+                mon client a besoin d&apos;élargir le dispositif, je l&apos;aide à identifier
+                des consultants crédibles, disponibles et cohérents avec le moment de
+                la mission.
               </p>
             </div>
 
             <div className="grid gap-3">
-              {partnerPoints.map((point) => (
+              {identificationPoints.map((point) => (
                 <article key={point.title} className="rounded-lg border border-white/10 bg-white/[0.06] p-5">
                   <h3 className="text-xl font-bold text-white">{point.title}</h3>
                   <p className="mt-2 leading-7 text-neutral-300">{point.description}</p>
@@ -401,148 +401,16 @@ function Partners() {
           <div className="mt-8 grid gap-3 border-t border-white/10 pt-6 text-sm text-neutral-300 md:grid-cols-3">
             <div>
               <span className="block font-bold text-white">Pour le client</span>
-              moins de bruit, plus de profils réellement qualifiés.
+              moins de bruit, plus de profils réellement utiles.
             </div>
             <div>
-              <span className="block font-bold text-white">Pour la plateforme</span>
-              un freelance de son écosystème positionné sur une mission pertinente.
+              <span className="block font-bold text-white">Pour l&apos;équipe</span>
+              un renfort positionné au bon moment et au bon endroit.
             </div>
             <div>
-              <span className="block font-bold text-white">Pour le freelance</span>
-              une opportunité mieux cadrée, portée par une recommandation terrain.
+              <span className="block font-bold text-white">Pour le consultant</span>
+              une mission mieux cadrée, portée par une recommandation terrain.
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Situations() {
-  const situations = [
-    "Vous avez besoin d'un profil produit, projet, agile ou delivery vraiment opérationnel.",
-    "Vous voulez éviter de perdre du temps avec des candidats mal ciblés ou trop théoriques.",
-    "Vous cherchez quelqu'un capable de comprendre vite un contexte complexe et exposé.",
-  ];
-
-  return (
-    <section id="situations" className="notion-section bg-white" aria-labelledby="situations-title">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-neutral-200 bg-[#fbf7ee] p-6 sm:p-8 lg:p-10">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
-              <p className="section-kicker">Contextes</p>
-              <h2 id="situations-title" className="text-4xl font-black leading-tight text-neutral-950 md:text-5xl">
-                Quand le choix du consultant devient critique.
-              </h2>
-              <p className="mt-5 text-lg leading-8 text-neutral-700">
-                J&apos;interviens quand la mission exige plus qu&apos;un CV : une posture,
-                une expérience terrain, une capacité à naviguer entre business, produit,
-                IT et management.
-              </p>
-              <a href="#contact" className="notion-button notion-button-primary mt-7">
-                Partager votre situation
-                <ArrowIcon />
-              </a>
-            </div>
-            <ul className="space-y-3" role="list">
-              {situations.map((situation) => (
-                <li key={situation} className="notion-row">
-                  <span className="notion-checkbox" aria-hidden="true" />
-                  <span>{situation}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Founder() {
-  const highlights = [
-    "Accenture : Société Générale Banque de Détail, conception du logiciel d'octroi de crédit utilisé en agence, spécifications fonctionnelles, UX/UI et prototypes HTML.",
-    "Accenture : Société Générale CIB / APTP, construction d'une plateforme de back-office post-trading, spécifications, transcodage API, XML ISO 20022 et cartographies applicatives.",
-    "Accenture : BNP Paribas, Crédit Agricole Consumer Finance et BNP Paribas Cash Management, missions d'analyse fonctionnelle, recette, KYC, processus DSI, KPI ITIL et recommandations.",
-    "Interface entre business, produit, architecture, IT, management et équipes terrain.",
-    "Capacité à évaluer les consultants parce que j'ai moi-même fait ces missions sur le terrain.",
-  ];
-
-  return (
-    <section id="fondateur" className="notion-section bg-stone-50" aria-labelledby="fondateur-title">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="founder-note overflow-hidden bg-white p-0">
-            <div className="border-b border-neutral-200 bg-neutral-950 p-6 text-white">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-neutral-400">
-                    Neatch
-                  </p>
-                  <h3 className="mt-3 text-3xl font-black leading-none">
-                    Lionel Sultan
-                  </h3>
-                </div>
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border border-white/15 bg-neutral-200 shadow-sm">
-                  <Image
-                    src="/lionel-sultan.png"
-                    alt="Portrait de Lionel Sultan"
-                    width={800}
-                    height={800}
-                    priority={false}
-                    className="h-full w-full object-cover object-[center_35%]"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="p-6">
-              <div className="space-y-2 text-sm font-semibold text-neutral-800">
-                <p>Fondateur de Neatch</p>
-                <p>Consultant IT &amp; produit expérimenté</p>
-                <p>Sourcing de profils freelances qualifiés</p>
-              </div>
-              <div className="mt-8 space-y-3 border-t border-neutral-200 pt-6 text-sm">
-                <a
-                  href="mailto:contact@neatch.com"
-                  className="block font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950"
-                >
-                  contact@neatch.com
-                </a>
-                <a
-                  href="https://linkedin.com/in/lionelsultan"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950"
-                >
-                  linkedin.com/in/lionelsultan
-                  <span className="sr-only"> (s&apos;ouvre dans un nouvel onglet)</span>
-                </a>
-                <p className="text-neutral-600">neatch.com</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <p className="section-kicker">Profil</p>
-            <h2 id="fondateur-title" className="text-4xl font-black leading-tight text-neutral-950 md:text-5xl">
-              Neatch, c&apos;est Lionel Sultan.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-neutral-700">
-              Je suis freelance, avec une forte expérience du terrain en transformation IT,
-              produit, gouvernance agile et delivery. Cette expérience me permet d&apos;intervenir
-              directement, mais aussi de reconnaître les consultants capables d&apos;aider mes clients.
-            </p>
-            <ul className="mt-7 space-y-3" role="list">
-              {highlights.map((highlight) => (
-                <li key={highlight} className="notion-row bg-white">
-                  <span className="notion-bullet" aria-hidden="true" />
-                  <span>{highlight}</span>
-                </li>
-              ))}
-            </ul>
-            <a href="#contact" className="notion-button notion-button-secondary mt-7">
-              Contacter Lionel Sultan
-            </a>
           </div>
         </div>
       </div>
@@ -626,10 +494,8 @@ export default function Home() {
         <Principles />
         <Audiences />
         <Method />
-        <Partners />
-        <Situations />
-        <Founder />
         <References />
+        <ConsultantIdentification />
         <FAQ />
         <ContactForm />
       </main>
