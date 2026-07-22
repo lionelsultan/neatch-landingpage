@@ -116,11 +116,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-neutral-200 pt-8 md:flex-row">
-          <p className="text-sm text-neutral-600">
-            &copy; {currentYear} Neatch E.U.R.L. Tous droits réservés.
-          </p>
-          <p className="text-sm text-neutral-500">SIREN : 831282066</p>
+        <div className="flex flex-col gap-3 border-t border-neutral-200 pt-8 text-sm text-neutral-600 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-2">
+            <p>&copy; {currentYear} Neatch E.U.R.L. Tous droits réservés.</p>
+            <p className="text-neutral-500">
+              Ce site ne dépose aucun cookie de suivi et limite la collecte de
+              données au strict nécessaire.
+            </p>
+          </div>
+          <p className="text-neutral-500">SIREN : 831282066</p>
         </div>
       </div>
     </footer>
