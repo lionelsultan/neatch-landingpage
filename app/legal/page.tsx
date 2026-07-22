@@ -53,6 +53,9 @@ export default function LegalPage() {
                 <strong>SIREN :</strong> 831282066
               </p>
               <p className="text-neutral-700">
+                <strong>SIRET du siège :</strong> 83128206600024
+              </p>
+              <p className="text-neutral-700">
                 <strong>Email :</strong>{" "}
                 <a
                   href="mailto:contact@neatch.com"
@@ -131,10 +134,9 @@ export default function LegalPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-neutral-950 mb-4">Cookies</h2>
             <p className="text-neutral-600 leading-relaxed">
-              Ce site peut utiliser des cookies pour améliorer l&apos;expérience
-              utilisateur. Les cookies sont de petits fichiers texte stockés sur
-              votre appareil qui permettent d&apos;analyser le trafic et de
-              personnaliser le contenu.
+              Ce site ne dépose pas de cookies de mesure d&apos;audience, de
+              personnalisation ou de publicité. Si des outils de mesure ou services
+              tiers sont ajoutés ultérieurement, cette information sera mise à jour.
             </p>
           </section>
 

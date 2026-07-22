@@ -14,7 +14,7 @@ export default function Footer() {
               Neatch
             </Link>
             <p className="max-w-md text-neutral-600">
-              Structure de Lionel Sultan, freelance senior en conseil IT,
+              Structure de Lionel Sultan, freelance expérimenté en conseil IT,
               gestion de projet, Product Management, agile delivery,
               stratégie digitale et qualification de consultants.
             </p>

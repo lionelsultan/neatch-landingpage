@@ -2,10 +2,10 @@
 
 ## Stack technique
 
-- **Next.js 15.5.20** avec App Router
+- **Next.js 15.5.21** avec App Router
 - **React 19** + **TypeScript** en mode strict
 - **Tailwind CSS 3.4** pour le styling utilitaire
-- **OpenNext Cloudflare** et **Wrangler** pour les builds/deploys Cloudflare
+- **OpenNext Cloudflare 1.20** et **Wrangler 4.113** pour les builds/deploys Cloudflare
 
 ---
 
@@ -18,6 +18,9 @@ app/
 ├── globals.css          — Design system utilitaire et styles globaux
 ├── icon.svg             — Favicon Neatch
 ├── legal/page.tsx       — Mentions légales
+├── opengraph-image.tsx  — Image Open Graph générée
+├── robots.ts            — Robots.txt
+├── sitemap.ts           — Sitemap XML
 └── components/
     ├── Navigation.tsx   — Navbar responsive avec scroll detection
     ├── FAQ.tsx          — Accordéon FAQ
@@ -60,13 +63,13 @@ app/
 - SEO de base présent : métadonnées, Open Graph, locale `fr_FR`, robots.
 - Identité visuelle cohérente : palette neutre, favicon aligné, pages légales harmonisées.
 - Build statique validé sur Next.js.
-- Contenu aligné sur le CV et sur le positionnement freelance senior / qualification de consultants.
+- Contenu aligné sur le CV et sur le positionnement freelance expérimenté / qualification de consultants.
 
 ---
 
 ## Points d'attention
 
-- **Dépendances** — `npm audit` est propre ; garder ce contrôle dans la routine de maintenance, en particulier après mises à jour Next.js / Wrangler.
+- **Dépendances** — `npm audit --omit=dev` est propre. Les dépendances transitives sensibles sont verrouillées par overrides (`next > postcss` et `sharp`) tant que Next et Wrangler n'intègrent pas directement les versions corrigées.
 - **Lint** — migration effectuée vers l'ESLint CLI (`eslint .`) avec configuration flat compatible Next.
 - **Browserslist** — `caniuse-lite` mis à jour après l'audit.
 - **Contenu hard-codé** — chaque modification éditoriale passe par le code.

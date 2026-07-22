@@ -9,7 +9,7 @@ export default function FAQ() {
     {
       question: "Neatch est-elle une agence ou un cabinet de conseil ?",
       answer:
-        "Non. Neatch est la structure de Lionel Sultan, freelance senior. Le client échange donc avec la personne qui connaît le terrain, intervient elle-même sur certaines missions et qualifie les consultants avant de les recommander.",
+        "Non. Neatch est la structure de Lionel Sultan, freelance expérimenté. Le client échange donc avec la personne qui connaît le terrain, intervient elle-même sur certaines missions et qualifie les consultants avant de les recommander.",
     },
     {
       question: "Sur quels sujets pouvez-vous intervenir directement ?",

@@ -21,9 +21,6 @@ export default function Navigation() {
   const navLinks = [
     { href: "#services", label: "Missions" },
     { href: "#methode", label: "Méthode" },
-    { href: "#partenaires", label: "Partenaires" },
-    { href: "#situations", label: "Contextes" },
-    { href: "#fondateur", label: "Profil" },
     { href: "#references", label: "Références" },
     { href: "#faq", label: "FAQ" },
     { href: "#contact", label: "Contact" },
@@ -46,7 +43,7 @@ export default function Navigation() {
             Neatch
           </Link>
 
-          <div className="hidden items-center gap-7 lg:flex">
+          <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
               <a
                 key={link.href}

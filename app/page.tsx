@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navigation from "./components/Navigation";
 import FAQ from "./components/FAQ";
 import ContactForm from "./components/ContactForm";
@@ -35,9 +36,9 @@ function WorkspacePreview() {
             <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
               Qualification consultant
             </p>
-            <h2 className="mt-1 text-xl font-bold text-neutral-950">
+            <h3 className="mt-1 text-xl font-bold text-neutral-950">
               Recherche d&apos;un Product Owner (secteur Retail / Luxe)
-            </h2>
+            </h3>
           </div>
           <div className="rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700">
             Fourchette TJM recherché : 800-850
@@ -80,26 +81,43 @@ function WorkspacePreview() {
 
 function Hero() {
   return (
-    <section className="hero-paper pt-28 md:pt-34" aria-labelledby="hero-title">
-      <div className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 md:pb-24 lg:px-8">
+    <section className="hero-paper pt-24 md:pt-32" aria-labelledby="hero-title">
+      <div className="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 md:pb-24 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
           <div>
             <p className="mb-5 inline-flex rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-sm font-semibold text-neutral-700 shadow-sm">
-              Consultant senior pour missions IT exigeantes
+              Conseil IT, produit et delivery
             </p>
             <h1
               id="hero-title"
-              className="max-w-4xl text-5xl font-black leading-[0.95] tracking-normal text-neutral-950 sm:text-6xl lg:text-7xl"
+              className="max-w-4xl text-4xl font-black leading-[0.98] tracking-normal text-neutral-950 sm:text-6xl lg:text-7xl"
             >
-              Trouvez les experts qui feront avancer vos projets.
+              Trouvez le bon expert pour faire avancer vos projets IT.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
-              Je suis Lionel Sultan, et Neatch est ma structure de freelance.
-              J&apos;interviens directement sur des sujets IT, produit et delivery
-              exigeants, et j&apos;aide aussi mes clients comme les plateformes à faire
-              émerger les bons consultants.
+              Neatch est la structure de Lionel Sultan, consultant expérimenté. J&apos;interviens
+              directement sur vos sujets IT, produit et delivery, et je qualifie aussi les
+              freelances capables de tenir vos missions quand le bon profil n&apos;est pas moi.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-neutral-200 bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
+              <Image
+                src="/lionel-sultan.png"
+                alt="Portrait de Lionel Sultan"
+                width={48}
+                height={48}
+                priority
+                className="h-12 w-12 rounded-md object-cover object-[center_35%]"
+              />
+              <div>
+                <p className="text-sm font-bold leading-tight text-neutral-950">
+                  Lionel Sultan
+                </p>
+                <p className="mt-0.5 text-xs font-semibold text-neutral-500">
+                  Conseil IT, produit &amp; delivery
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <a href="#contact" className="notion-button notion-button-primary">
                 Échanger sur votre contexte
                 <ArrowIcon />
@@ -120,15 +138,15 @@ function Services() {
   const services = [
     {
       tag: "Mission directe",
-      title: "Intervenir moi-même sur vos sujets complexes",
+      title: "Prendre en main les sujets exposés",
       description:
-        "Transformation IT, Product Management, gouvernance agile, coordination multi-équipes et sécurisation du delivery avec une expérience senior du terrain.",
+        "Transformation IT, Product Management, gouvernance agile, coordination multi-équipes et sécurisation du delivery avec une lecture très terrain.",
     },
     {
       tag: "Sélection",
-      title: "Trouver les consultants capables d'aider",
+      title: "Identifier le consultant adapté",
       description:
-        "Recherche fastidieuse sur LinkedIn, plateformes freelance comme Malt ou Freelance Republik, et réseau personnel pour identifier des profils pertinents, disponibles et crédibles.",
+        "Recherche sur LinkedIn, plateformes freelance comme Malt ou Freelance Republik, et réseau personnel pour repérer des profils pertinents, disponibles et crédibles.",
     },
     {
       tag: "Filtre terrain",
@@ -143,7 +161,7 @@ function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Missions</p>
-          <h2 id="services-title">Un freelance senior, pas une agence.</h2>
+          <h2 id="services-title">Un point d&apos;entrée expert, pas une agence.</h2>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {services.map((service) => (
@@ -153,6 +171,51 @@ function Services() {
                 {service.title}
               </h3>
               <p className="mt-4 leading-7 text-neutral-700">{service.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Audiences() {
+  const audiences = [
+    {
+      title: "Client final",
+      description:
+        "Vous avez une mission critique à cadrer, relancer ou sécuriser, avec besoin d'un interlocuteur capable de comprendre vite le contexte métier et IT.",
+    },
+    {
+      title: "Plateforme freelance",
+      description:
+        "Vous voulez faire émerger les bons profils de votre écosystème sur des besoins exigeants, avec une qualification terrain avant présentation.",
+    },
+    {
+      title: "Cabinet ou partenaire",
+      description:
+        "Vous cherchez un relais expérimenté pour qualifier une mission, challenger une shortlist ou recommander un consultant que vous pouvez assumer.",
+    },
+  ];
+
+  return (
+    <section id="audiences" className="notion-section bg-stone-50" aria-labelledby="audiences-title">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="section-heading">
+          <p className="section-kicker">Pour qui</p>
+          <h2 id="audiences-title">Trois contextes, un même filtre terrain.</h2>
+          <p>
+            Neatch intervient quand le besoin dépasse une recherche de CV : il faut
+            comprendre la mission, évaluer la posture et réduire le risque de casting.
+          </p>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {audiences.map((audience) => (
+            <article key={audience.title} className="notion-card min-h-0">
+              <h3 className="text-2xl font-bold leading-tight text-neutral-950">
+                {audience.title}
+              </h3>
+              <p className="mt-4 leading-7 text-neutral-700">{audience.description}</p>
             </article>
           ))}
         </div>
@@ -176,6 +239,21 @@ function Method() {
     ["Allié", "clients, plateformes, freelances"],
   ];
 
+  const fieldPhotos = [
+    {
+      src: "/field/la-defense-bureau.jpg",
+      alt: "Bureau de mission avec vue sur La Défense",
+    },
+    {
+      src: "/field/poste-travail.png",
+      alt: "Poste de travail utilisé pour piloter les missions",
+    },
+    {
+      src: "/field/bureau-vue-paris.jpg",
+      alt: "Espace de travail avec vue sur Paris",
+    },
+  ];
+
   return (
     <section id="methode" className="notion-section bg-stone-50" aria-labelledby="methode-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -187,6 +265,21 @@ function Method() {
               La valeur vient du temps passé à chercher, trier, appeler et challenger
               les profils avant qu&apos;ils arrivent chez le client.
             </p>
+            <div className="mt-7 grid grid-cols-3 gap-2" aria-label="Illustrations de missions terrain">
+              {fieldPhotos.map((photo) => (
+                <figure key={photo.src} className="overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm">
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(min-width: 1024px) 120px, 30vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </figure>
+              ))}
+            </div>
           </div>
           <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-sm">
             <ol className="divide-y divide-neutral-200" aria-label="Étapes de notre approche">
@@ -229,9 +322,9 @@ function Partners() {
         "Le cadre commercial reste clair : plateforme, client, freelance et apporteur d'affaires savent quel rôle chacun joue dans la mise en relation.",
     },
     {
-      title: "Je prends ma commission d'apport",
+      title: "Un modèle d'apport transparent",
       description:
-        "La valeur que j'apporte est le sourcing, le tri, les entretiens et la recommandation. Je suis rémunéré pour cet apport, sans me substituer au canal qui porte le freelance.",
+        "La rémunération correspond au sourcing, au tri, aux entretiens et à la recommandation, sans me substituer au canal qui porte le freelance.",
     },
   ];
 
@@ -351,15 +444,22 @@ function Founder() {
                     Lionel Sultan
                   </h3>
                 </div>
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-white/15 bg-white text-lg font-black text-neutral-950">
-                  LS
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border border-white/15 bg-neutral-200 shadow-sm">
+                  <Image
+                    src="/lionel-sultan.png"
+                    alt="Portrait de Lionel Sultan"
+                    width={800}
+                    height={800}
+                    priority={false}
+                    className="h-full w-full object-cover object-[center_35%]"
+                  />
                 </div>
               </div>
             </div>
             <div className="p-6">
               <div className="space-y-2 text-sm font-semibold text-neutral-800">
                 <p>Fondateur de Neatch</p>
-                <p>Consultant senior IT &amp; produit</p>
+                <p>Consultant IT &amp; produit expérimenté</p>
                 <p>Sourcing de profils freelances qualifiés</p>
               </div>
               <div className="mt-8 space-y-3 border-t border-neutral-200 pt-6 text-sm">
@@ -420,13 +520,13 @@ function References() {
     },
     {
       company: "CHANEL",
-      role: "Senior Project Manager | CRM IT Europe",
+      role: "Project Manager confirmé | CRM IT Europe",
       detail:
         "Application mobile Salesforce Service Cloud pour plus de 400 utilisateurs en France et à l'international, conception, recette, déploiement et budget de plus de 700 k€.",
     },
     {
       company: "EDF Renouvelables",
-      role: "Chef de Projet AMOA Senior | DSIN Groupe",
+      role: "Chef de Projet AMOA confirmé | DSIN Groupe",
       detail:
         "Salesforce Sales Cloud, K2, Xamarin, application mobile terrain, SAP Plant Maintenance / Cordova et chantiers applicatifs liés à l'acquisition de Futuren.",
     },
@@ -438,13 +538,13 @@ function References() {
     },
     {
       company: "EY Fabernovel",
-      role: "Senior Consultant",
+      role: "Consultant confirmé",
       detail:
         "Product Owner pour le lancement e-commerce Unilever, audit technique de startups MNH et stratégie digitale / refonte SI pour Keep Cool.",
     },
     {
       company: "Accenture",
-      role: "Consultant Senior",
+      role: "Consultant confirmé",
       detail:
         "Société Générale, SGCIB / APTP, BNP Paribas, Crédit Agricole Consumer Finance : crédit, post-trading, KYC, processus DSI, API / XML et KPI ITIL.",
     },
@@ -484,6 +584,7 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <Services />
+        <Audiences />
         <Method />
         <Partners />
         <Situations />

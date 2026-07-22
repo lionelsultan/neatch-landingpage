@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Neatch",
+  metadataBase: new URL("https://www.neatch.com"),
+  title: "Neatch | Conseil IT, Product & Delivery",
   description:
-    "Neatch accompagne les organisations sur des enjeux de transformation IT, Product Management, gouvernance agile, delivery et recrutement de profils clés côté client final.",
+    "Neatch, structure de Lionel Sultan, accompagne les organisations sur les missions IT, Product Management, gouvernance agile, delivery et qualification de consultants freelances.",
   keywords: [
     "transformation IT",
     "product management",
@@ -18,12 +19,23 @@ export const metadata: Metadata = {
     "recrutement",
   ],
   authors: [{ name: "Neatch E.U.R.L." }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Neatch | Transformation IT, Product Management et delivery",
+    title: "Neatch | Conseil IT, Product & Delivery",
     description:
-      "Neatch accompagne les organisations sur des enjeux de transformation IT, Product Management, gouvernance agile, delivery et recrutement de profils clés côté client final.",
+      "Neatch accompagne les missions IT, Product Management, gouvernance agile, delivery et la qualification de consultants freelances.",
+    url: "/",
+    siteName: "Neatch",
     locale: "fr_FR",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Neatch | Conseil IT, Product & Delivery",
+    description:
+      "Structure de Lionel Sultan pour sécuriser les missions IT, produit et delivery.",
   },
   robots: {
     index: true,
