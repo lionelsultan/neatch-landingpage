@@ -24,7 +24,7 @@ function WorkspacePreview() {
   ];
 
   return (
-    <div className="notion-window" aria-label="Aperçu d'un espace de pilotage Neatch">
+    <div className="notion-window motion-float" aria-label="Aperçu d'un espace de pilotage Neatch">
       <div className="notion-window-bar">
         <span />
         <span />
@@ -47,7 +47,7 @@ function WorkspacePreview() {
 
         <div className="grid gap-3 sm:grid-cols-3">
           {roadmap.map((item) => (
-            <div key={item.label} className="rounded-lg border border-neutral-200 bg-neutral-50 p-3">
+            <div key={item.label} className="mini-status-card rounded-lg border border-neutral-200 bg-neutral-50 p-3">
               <div className="text-xs text-neutral-500">{item.label}</div>
               <div className={`mt-2 inline-flex rounded-md px-2 py-1 text-xs font-semibold ${item.tone}`}>
                 {item.value}
@@ -84,7 +84,7 @@ function Hero() {
     <section className="hero-paper pt-24 md:pt-32" aria-labelledby="hero-title">
       <div className="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 md:pb-24 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
-          <div>
+          <div className="hero-copy">
             <p className="mb-5 inline-flex rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-sm font-semibold text-neutral-700 shadow-sm">
               Conseil IT, produit et delivery
             </p>
@@ -157,7 +157,7 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="notion-section bg-white" aria-labelledby="services-title">
+    <section id="services" className="notion-section scroll-reveal bg-white" aria-labelledby="services-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Missions</p>
@@ -165,7 +165,7 @@ function Services() {
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {services.map((service) => (
-            <article key={service.title} className="notion-card">
+            <article key={service.title} className="notion-card motion-card">
               <span className="notion-chip">{service.tag}</span>
               <h3 className="mt-5 text-2xl font-bold leading-tight text-neutral-950">
                 {service.title}
@@ -199,7 +199,7 @@ function Audiences() {
   ];
 
   return (
-    <section id="audiences" className="notion-section bg-stone-50" aria-labelledby="audiences-title">
+    <section id="audiences" className="notion-section scroll-reveal bg-stone-50" aria-labelledby="audiences-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Pour qui</p>
@@ -211,7 +211,7 @@ function Audiences() {
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {audiences.map((audience) => (
-            <article key={audience.title} className="notion-card min-h-0">
+            <article key={audience.title} className="notion-card motion-card min-h-0">
               <h3 className="text-2xl font-bold leading-tight text-neutral-950">
                 {audience.title}
               </h3>
@@ -226,10 +226,34 @@ function Audiences() {
 
 function Method() {
   const steps = [
-    ["01", "Comprendre", "Clarifier le contexte, les enjeux, le niveau d'urgence et le type de profil nécessaire."],
-    ["02", "Chercher", "Explorer LinkedIn, les plateformes freelance et mon réseau, puis faire remonter les bons profils vers la mission."],
-    ["03", "Qualifier", "Mener les entretiens, tester la posture terrain et vérifier l'adéquation avec la mission."],
-    ["04", "Présenter", "Transmettre une shortlist utile : peu de profils, mais des profils que j'assume de recommander."],
+    {
+      number: "01",
+      title: "Comprendre",
+      description: "Clarifier le contexte, les enjeux, le niveau d'urgence et le type de profil nécessaire.",
+      image: {
+        src: "/field/workshop-campaign.jpg",
+        alt: "Workshop convivial autour d'une table de travail",
+      },
+    },
+    {
+      number: "02",
+      title: "Chercher",
+      description: "Explorer LinkedIn, les plateformes freelance et mon réseau, puis faire remonter les bons profils vers la mission.",
+    },
+    {
+      number: "03",
+      title: "Qualifier",
+      description: "Mener les entretiens, tester la posture terrain et vérifier l'adéquation avec la mission.",
+      image: {
+        src: "/field/entretien-rodeo.jpg",
+        alt: "Entretien professionnel dans une salle de réunion",
+      },
+    },
+    {
+      number: "04",
+      title: "Présenter",
+      description: "Transmettre une shortlist utile : peu de profils, mais des profils que j'assume de recommander.",
+    },
   ];
 
   const indicators = [
@@ -255,7 +279,7 @@ function Method() {
   ];
 
   return (
-    <section id="methode" className="notion-section bg-stone-50" aria-labelledby="methode-title">
+    <section id="methode" className="notion-section scroll-reveal bg-stone-50" aria-labelledby="methode-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="section-heading mb-0">
@@ -267,7 +291,7 @@ function Method() {
             </p>
             <div className="mt-7 grid grid-cols-3 gap-2" aria-label="Illustrations de missions terrain">
               {fieldPhotos.map((photo) => (
-                <figure key={photo.src} className="overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm">
+                <figure key={photo.src} className="method-photo overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={photo.src}
@@ -283,12 +307,25 @@ function Method() {
           </div>
           <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-sm">
             <ol className="divide-y divide-neutral-200" aria-label="Étapes de notre approche">
-              {steps.map(([number, title, description]) => (
-                <li key={number} className="grid gap-4 py-5 sm:grid-cols-[72px_1fr]">
-                  <div className="font-mono text-sm font-bold text-neutral-400">{number}</div>
-                  <div>
-                    <h3 className="text-xl font-bold text-neutral-950">{title}</h3>
-                    <p className="mt-1 text-neutral-700">{description}</p>
+              {steps.map((step) => (
+                <li key={step.number} className="method-step grid gap-4 py-5 sm:grid-cols-[72px_1fr]">
+                  <div className="font-mono text-sm font-bold text-neutral-400">{step.number}</div>
+                  <div className="grid gap-4 sm:grid-cols-[1fr_auto] sm:items-start">
+                    <div>
+                      <h3 className="text-xl font-bold text-neutral-950">{step.title}</h3>
+                      <p className="mt-1 text-neutral-700">{step.description}</p>
+                    </div>
+                    {step.image ? (
+                      <div className="method-thumb relative h-20 w-32 overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100">
+                        <Image
+                          src={step.image.src}
+                          alt={step.image.alt}
+                          fill
+                          sizes="(min-width: 640px) 128px, 100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                    ) : null}
                   </div>
                 </li>
               ))}
@@ -298,7 +335,7 @@ function Method() {
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="list" aria-label="Indicateurs clés">
           {indicators.map(([value, label]) => (
-            <div key={label} className="metric-tile" role="listitem">
+            <div key={label} className="metric-tile motion-card" role="listitem">
               <div className="text-3xl font-black text-neutral-950">{value}</div>
               <div className="mt-1 text-sm text-neutral-600">{label}</div>
             </div>
@@ -329,9 +366,9 @@ function Partners() {
   ];
 
   return (
-    <section id="partenaires" className="notion-section bg-white" aria-labelledby="partenaires-title">
+    <section id="partenaires" className="notion-section scroll-reveal bg-white" aria-labelledby="partenaires-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-neutral-200 bg-neutral-950 p-6 text-white shadow-sm sm:p-8 lg:p-10">
+        <div className="dark-panel rounded-2xl border border-neutral-200 bg-neutral-950 p-6 text-white shadow-sm sm:p-8 lg:p-10">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div>
               <p className="mb-3 text-sm font-bold uppercase tracking-wide text-neutral-400">
