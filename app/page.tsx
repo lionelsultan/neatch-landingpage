@@ -37,7 +37,7 @@ function WorkspacePreview() {
               Intervention terrain
             </p>
             <h3 className="mt-1 text-xl font-bold text-neutral-950">
-              Pilotage d&apos;une mission IT, produit &amp; delivery
+              Pilotage d&apos;une mission Discovery &amp; Delivery
             </h3>
           </div>
           <div className="rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700">
@@ -92,13 +92,12 @@ function Hero() {
               id="hero-title"
               className="max-w-4xl text-4xl font-black leading-[0.98] tracking-normal text-neutral-950 sm:text-6xl lg:text-7xl"
             >
-              J&apos;interviens personnellement pour sécuriser vos missions IT.
+              Votre projet, sécurisé de bout en bout.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
-              Neatch est la structure de Lionel Sultan. J&apos;accompagne les organisations
-              sur leurs sujets IT, produit et delivery quand il faut cadrer vite,
-              remettre de la clarté, piloter l&apos;exécution et faire avancer les équipes
-              dans des contextes exposés.
+              J&apos;accompagne, en tant que freelance, les organisations sur la gestion de
+              leurs projets digitaux, quand il faut cadrer vite, remettre de la clarté,
+              piloter l&apos;exécution et faire avancer les équipes dans des contextes complexes.
             </p>
             <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-neutral-200 bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
               <Image

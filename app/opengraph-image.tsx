@@ -57,7 +57,7 @@ export default function Image() {
                 lineHeight: 0.96,
               }}
             >
-              J&apos;interviens personnellement pour sécuriser vos missions IT.
+              Votre projet, sécurisé de bout en bout.
             </div>
             <div
               style={{
