@@ -418,42 +418,226 @@ function ConsultantIdentification() {
 }
 
 function References() {
+  const referenceStats = [
+    { value: "26", label: "assignments documentés" },
+    { value: "6", label: "secteurs couverts" },
+    { value: "12", label: "équipes coordonnées chez Dior" },
+    { value: "Millions €", label: "de budgets pilotés" },
+  ];
+
   const references = [
     {
       company: "Christian Dior Couture",
-      role: "Release Train Engineer | depuis 2021",
-      detail:
-        "Domaine Supply & Business Units, 12 équipes, Scrum Master / Coach Agile, Product Manager Merchandise Planning et projet Supply Chain Anaplan.",
+      industry: "Luxury fashion",
+      period: "Depuis 2021",
+      role: "Release Train Engineer, Scrum Master, Product Management, Agile coaching",
+      context: "Domaine Supply & Business Units, avec un dispositif de 12 équipes produit et IT.",
+      assignments: [
+        "Release Train Engineer pour le domaine Supply & Business Units",
+        "Scrum Master pour Pricing Management et Distribution Planning",
+        "Product Management pour Merchandise Planning et Distribution Planning",
+        "Coaching agile des équipes Merchandise Planning et SCM Distribution Planning",
+      ],
+      outcomes: [
+        "Gouvernance de delivery structurée",
+        "Risques, dépendances et arbitrages rendus visibles",
+        "Trajectoire produit et supply mieux coordonnée",
+      ],
     },
     {
       company: "CHANEL",
-      role: "Project Manager confirmé | CRM IT Europe",
-      detail:
-        "Application mobile Salesforce Service Cloud pour plus de 400 utilisateurs en France et à l'international, conception, recette, déploiement et budget de plus de 700 k€.",
+      industry: "Luxury fashion",
+      period: "CRM IT Europe",
+      role: "Project Manager confirmé",
+      context: "Déploiement international d'une application mobile CRM pour les équipes en boutique.",
+      assignments: [
+        "Conception et rollout d'une application Salesforce Service Cloud",
+        "Pilotage projet, recette, coordination IT et métiers",
+        "Suivi budgétaire d'un programme de plus de 700 k€",
+      ],
+      outcomes: [
+        "Plus de 400 utilisateurs adressés en France et à l'international",
+        "Déploiement cadré avec les équipes terrain",
+        "Delivery sécurisé sur un contexte retail exigeant",
+      ],
     },
     {
       company: "EDF Renouvelables",
-      role: "Chef de Projet AMOA confirmé | DSIN Groupe",
-      detail:
-        "Salesforce Sales Cloud, K2, Xamarin, application mobile terrain, SAP Plant Maintenance / Cordova et chantiers applicatifs liés à l'acquisition de Futuren.",
+      industry: "Energy",
+      period: "DSIN Groupe",
+      role: "Chef de Projet AMOA confirmé",
+      context: "Portefeuille d'applications métier pour les équipes terrain, maintenance et développement foncier.",
+      assignments: [
+        "Blueprint, design, build et rollout d'un produit pour les Land Development Project Managers",
+        "Nouvelles fonctionnalités pour une application mobile de maintenance éolienne",
+        "Formalisation des besoins métier, wireframing et cadrage applicatif",
+        "Chantiers Salesforce Sales Cloud, K2, Xamarin, SAP Plant Maintenance / Cordova",
+      ],
+      outcomes: [
+        "Besoins métier transformés en trajectoires produit lisibles",
+        "Applications terrain mieux alignées avec les usages opérationnels",
+        "Coordination renforcée entre métiers, IT et équipes de delivery",
+      ],
     },
     {
       company: "Hoppen / Exolis",
+      industry: "Healthcare",
+      period: "Pandémie COVID-19",
       role: "Directeur de Projet, Product Manager, Scrum Master / Coach Agile",
-      detail:
-        "Solutions de télésuivi COVID pour les ARS Normandie et Corse, déploiement en moins de deux semaines, conduite du changement et roadmap produit Engage.",
+      context: "Mise en place rapide de solutions de télésuivi dans un contexte sanitaire contraint.",
+      assignments: [
+        "Software product design et rollout pour le Contact Tracing COVID-19",
+        "Coaching agile pour construire et déployer dans des délais courts",
+        "Roadmap produit Engage et conduite du changement",
+      ],
+      outcomes: [
+        "Déploiements réalisés en moins de deux semaines",
+        "Solutions mises à disposition des ARS Normandie et Corse",
+        "Rythme projet maintenu dans un contexte d'urgence",
+      ],
     },
     {
       company: "EY Fabernovel",
+      industry: "Retail, services, organisations internationales",
+      period: "Consulting digital",
       role: "Consultant confirmé",
-      detail:
-        "Product Owner pour le lancement e-commerce Unilever, audit technique de startups MNH et stratégie digitale / refonte SI pour Keep Cool.",
+      context: "Missions de stratégie digitale, cadrage produit et design de nouveaux services.",
+      assignments: [
+        "Product Owner pour le lancement e-commerce T.O. by Lipton chez Unilever",
+        "Design d'une stratégie digitale pour la DSI de Keep Cool",
+        "Conception d'un produit logiciel pour l'organisation quotidienne des délégations de l'OECD",
+        "Design d'un nouveau programme de fidélité pour La Maison Plisson",
+      ],
+      outcomes: [
+        "Offres digitales cadrées depuis les besoins jusqu'aux parcours",
+        "Roadmaps et arbitrages rendus exploitables par les équipes",
+        "Passage de l'intention stratégique au produit livrable",
+      ],
     },
     {
-      company: "Accenture",
-      role: "Consultant confirmé",
-      detail:
-        "Société Générale, SGCIB / APTP, BNP Paribas, Crédit Agricole Consumer Finance : crédit, post-trading, KYC, processus DSI, API / XML et KPI ITIL.",
+      company: "Société Générale Banque de Détail",
+      industry: "Financial services",
+      period: "Accenture | 2012",
+      role: "Conception du logiciel d'octroi de crédit utilisé en agence bancaire",
+      context: "Refonte d'un parcours d'octroi de crédit en agence, avec enjeux métier, ergonomie et coordination projet.",
+      assignments: [
+        "Analyse des enjeux business et rédaction des spécifications fonctionnelles",
+        "Étude des scénarios métiers, cinématiques et parcours utilisateur",
+        "Pilotage des ateliers métiers, UX et UI designers",
+        "Management d'une équipe de 4 consultants pour le benchmark et les prototypes HTML",
+      ],
+      outcomes: [
+        "Parcours utilisateur optimisé pour les équipes en agence",
+        "Prototypes HTML produits pour sécuriser les choix fonctionnels",
+        "Suivi projet, allocation des ressources et pilotage budgétaire structurés",
+      ],
+    },
+    {
+      company: "Société Générale CIB / APTP",
+      industry: "Financial services",
+      period: "Accenture | 2013-2015",
+      role: "Construction d'une plateforme de back office post-trading",
+      context: "Branchement d'une plateforme de back office sur les flux du front office et coordination avec des équipes techniques anglophones.",
+      assignments: [
+        "Recueil et analyse des besoins",
+        "Rédaction des spécifications et revues avec l'Indian Delivery Center",
+        "Conception du document de transcodage des messages entrants SGCIB vers le bus APTP",
+        "Standardisation des messages XML en provenance du front office, norme ISO 20022",
+      ],
+      outcomes: [
+        "Interfaces API et flux XML clarifiés pour les équipes techniques",
+        "Cartographies d'architecture applicative et fonctionnelle produites",
+        "Coordination renforcée entre métier, architecture et delivery offshore",
+      ],
+    },
+    {
+      company: "BNP Paribas BNL",
+      industry: "Financial services",
+      period: "Accenture | 2016",
+      role: "Optimisation de l'espace physique au sein des agences bancaires",
+      context: "Mission de stratégie et innovation autour de l'expérience agence et des initiatives retail comparables.",
+      assignments: [
+        "Étude approfondie des initiatives de la concurrence",
+        "Benchmark des pratiques retail transposables au réseau bancaire",
+        "Formalisation de recommandations stratégiques pour l'optimisation des espaces",
+      ],
+      outcomes: [
+        "Quarante recommandations stratégiques élaborées",
+        "Vision benchmark structurée pour orienter les arbitrages",
+        "Pistes d'optimisation concrètes pour les agences du groupe",
+      ],
+    },
+    {
+      company: "Crédit Agricole Consumer Finance",
+      industry: "Financial services",
+      period: "Accenture | 2013",
+      role: "Chef de projet Organisation / refonte des processus de la DSI",
+      context: "Transformation des processus opérationnels de la DSI et mise en place d'indicateurs de pilotage.",
+      assignments: [
+        "Analyse et modélisation des processus opérationnels de la DSI",
+        "Élaboration et mise en place de nouveaux KPI sur la base d'ITIL",
+        "Suivi et coordination du chantier de transformation",
+        "Cadrage d'un cahier des charges pour la mise à jour du logiciel de gestion des achats",
+      ],
+      outcomes: [
+        "Processus DSI clarifiés et modélisés",
+        "Indicateurs de pilotage mieux alignés avec les pratiques ITIL",
+        "Chantier de transformation suivi avec une trajectoire lisible",
+      ],
+    },
+    {
+      company: "Crédit Agricole Consumer Finance",
+      industry: "Financial services",
+      period: "Accenture | 2011",
+      role: "Responsable d'étude sur la gestion des partenariats",
+      context: "Analyse des synergies possibles entre les partenariats Sofinco et Finaref.",
+      assignments: [
+        "Modélisation des processus AS-IS",
+        "Identification des enjeux métiers stratégiques",
+        "Étude comparative des écosystèmes applicatifs Sofinco et Finaref",
+        "Analyse fonctionnelle approfondie des applicatifs existants",
+      ],
+      outcomes: [
+        "Synergies potentielles identifiées entre deux périmètres applicatifs",
+        "Lecture fonctionnelle consolidée de l'existant",
+        "Base d'arbitrage produite pour les décisions d'organisation",
+      ],
+    },
+    {
+      company: "BNP Paribas BGL",
+      industry: "Financial services",
+      period: "Accenture | 2011",
+      role: "Business Analyst pour une solution d'octroi de crédit aux personnes morales",
+      context: "Cadrage fonctionnel, ergonomie et recette d'une solution bancaire d'octroi de crédit.",
+      assignments: [
+        "Analyse des enjeux business",
+        "Rédaction d'une partie des spécifications fonctionnelles",
+        "Étude des fonctionnalités, de l'ergonomie et des scénarios métiers",
+        "Élaboration de la stratégie de tests et participation à la recette",
+      ],
+      outcomes: [
+        "Spécifications et scénarios métiers formalisés",
+        "Stratégie de recette structurée",
+        "Qualité fonctionnelle sécurisée avant mise à disposition",
+      ],
+    },
+    {
+      company: "BNP Paribas Cash Management",
+      industry: "Financial services",
+      period: "Accenture | 2016",
+      role: "Implémentation des processus de KYC et d'intégration des clients",
+      context: "Optimisation des processus KYC et cadrage fonctionnel autour de l'implémentation de JIRA.",
+      assignments: [
+        "Revue intégrale des processus existants",
+        "Optimisation des processus KYC et d'intégration client",
+        "Rédaction des spécifications fonctionnelles pour l'implémentation de JIRA",
+      ],
+      outcomes: [
+        "Processus KYC revus et rationalisés",
+        "Besoins fonctionnels rendus exploitables pour l'outillage",
+        "Coordination entre équipes métier, IT et delivery",
+        "Socle de mise en œuvre clarifié pour JIRA",
+      ],
     },
   ];
 
@@ -462,21 +646,74 @@ function References() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Références</p>
-          <h2 id="references-title">Des contextes où la qualité de pilotage compte.</h2>
+          <h2 id="references-title">Une base d&apos;expériences structurée par contexte, rôle et impact.</h2>
+          <p>
+            Les références sont organisées comme une base de missions : secteur,
+            rôle tenu, contexte d&apos;intervention, assignments clés et résultats observables.
+          </p>
         </div>
-        <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm">
-          <div className="grid grid-cols-[1fr_1.35fr] border-b border-neutral-200 bg-stone-50 px-4 py-3 text-sm font-semibold text-neutral-500">
-            <span>Organisation</span>
-            <span>Rôle &amp; mission</span>
-          </div>
-          {references.map((reference) => (
-            <div key={reference.company} className="grid gap-3 border-b border-neutral-100 px-4 py-5 last:border-b-0 md:grid-cols-[1fr_1.35fr]">
-              <span className="font-semibold text-neutral-950">{reference.company}</span>
-              <span className="text-neutral-700">
-                <span className="block font-semibold text-neutral-950">{reference.role}</span>
-                <span className="mt-1 block leading-7">{reference.detail}</span>
-              </span>
+
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {referenceStats.map((stat) => (
+            <div key={stat.label} className="rounded-lg border border-neutral-200 bg-stone-50 p-4">
+              <div className="text-3xl font-black leading-none text-neutral-950">{stat.value}</div>
+              <div className="mt-2 text-sm font-semibold text-neutral-600">{stat.label}</div>
             </div>
+          ))}
+        </div>
+
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          {references.map((reference) => (
+            <article key={reference.company} className="notion-card motion-card min-h-0">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <p className="text-sm font-extrabold uppercase tracking-wide text-neutral-500">
+                    {reference.industry}
+                  </p>
+                  <h3 className="mt-2 text-2xl font-black leading-tight text-neutral-950">
+                    {reference.company}
+                  </h3>
+                </div>
+                <span className="inline-flex w-fit rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-bold text-neutral-600">
+                  {reference.period}
+                </span>
+              </div>
+
+              <div className="mt-5 rounded-lg border border-neutral-200 bg-stone-50 p-4">
+                <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">Rôle</p>
+                <p className="mt-2 font-bold leading-6 text-neutral-950">{reference.role}</p>
+                <p className="mt-3 leading-7 text-neutral-700">{reference.context}</p>
+              </div>
+
+              <div className="mt-5 grid gap-5 md:grid-cols-2">
+                <div>
+                  <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">
+                    Assignments clés
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-neutral-700">
+                    {reference.assignments.map((assignment) => (
+                      <li key={assignment} className="flex gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-950" />
+                        <span>{assignment}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">
+                    Résultats / impact
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm leading-6 text-neutral-700">
+                    {reference.outcomes.map((outcome) => (
+                      <li key={outcome} className="flex gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" />
+                        <span>{outcome}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>
