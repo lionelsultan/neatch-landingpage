@@ -47,7 +47,7 @@ export default function Image() {
                 width: 380,
               }}
             >
-              Conseil IT, produit et delivery
+              Strategy, Product, GenAI, Project management
             </div>
             <div
               style={{

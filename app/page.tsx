@@ -86,7 +86,7 @@ function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="hero-copy">
             <p className="mb-5 inline-flex rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-sm font-semibold text-neutral-700 shadow-sm">
-              Conseil IT, produit et delivery
+              Strategy, Product, GenAI, Project management
             </p>
             <h1
               id="hero-title"
@@ -113,7 +113,7 @@ function Hero() {
                   Lionel Sultan
                 </p>
                 <p className="mt-0.5 text-xs font-semibold text-neutral-500">
-                  Conseil IT, produit &amp; delivery
+                  Strategy, Product, GenAI, Project management
                 </p>
               </div>
             </div>
