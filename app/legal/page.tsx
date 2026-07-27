@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import BrandLogo from "../components/BrandLogo";
 
 export const metadata: Metadata = {
   title: "Mentions légales | Neatch",
@@ -12,8 +13,12 @@ export default function LegalPage() {
       <nav className="border-b border-neutral-200 bg-white/90 backdrop-blur-xl">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="text-2xl font-black text-neutral-950">
-              Neatch
+            <Link
+              href="/"
+              className="inline-flex items-center transition-opacity hover:opacity-80"
+              aria-label="Neatch - Accueil"
+            >
+              <BrandLogo className="h-7 w-auto mix-blend-multiply sm:h-8" />
             </Link>
             <Link
               href="/"

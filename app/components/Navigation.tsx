@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useId } from "react";
+import BrandLogo from "./BrandLogo";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,10 +38,10 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="text-2xl font-black text-neutral-950 transition-colors"
+            className="inline-flex items-center transition-opacity hover:opacity-80"
             aria-label="Neatch - Accueil"
           >
-            Neatch
+            <BrandLogo className="h-7 w-auto mix-blend-multiply sm:h-8" />
           </Link>
 
           <div className="hidden items-center gap-8 lg:flex">

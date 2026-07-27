@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,8 +11,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
-            <Link href="/" className="mb-4 block text-2xl font-black text-neutral-950" aria-label="Neatch - Accueil">
-              Neatch
+            <Link
+              href="/"
+              className="mb-5 inline-flex transition-opacity hover:opacity-80"
+              aria-label="Neatch - Accueil"
+            >
+              <BrandLogo variant="lockup" className="h-24 w-auto mix-blend-multiply" />
             </Link>
             <p className="max-w-md text-neutral-600">
               Structure de Lionel Sultan pour intervenir personnellement sur
