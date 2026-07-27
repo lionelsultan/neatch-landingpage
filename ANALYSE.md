@@ -69,7 +69,7 @@ app/
 
 ## Points d'attention
 
-- **Dépendances** — `npm audit --omit=dev` est propre. Les dépendances transitives sensibles sont verrouillées par overrides (`next > postcss` et `sharp`) tant que Next et Wrangler n'intègrent pas directement les versions corrigées.
+- **Dépendances** — `npm audit --omit=dev` signale 6 vulnérabilités high (`brace-expansion`, DoS) via `@opennextjs/cloudflare > @opennextjs/aws > @node-minify/core`. C'est une dépendance de build (minification côté outillage), pas un chemin exposé aux utilisateurs finaux ; aucun correctif non-breaking n'est disponible pour l'instant. Les dépendances transitives sensibles restantes sont verrouillées par overrides (`next > postcss` et `sharp`) tant que Next et Wrangler n'intègrent pas directement les versions corrigées.
 - **Lint** — migration effectuée vers l'ESLint CLI (`eslint .`) avec configuration flat compatible Next.
 - **Browserslist** — `caniuse-lite` mis à jour après l'audit.
 - **Contenu hard-codé** — chaque modification éditoriale passe par le code.

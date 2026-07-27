@@ -24,7 +24,7 @@ function WorkspacePreview() {
   ];
 
   return (
-    <div className="notion-window motion-float" aria-label="Aperçu d'un espace de pilotage Neatch">
+    <div className="notion-window motion-float" aria-label="Aperçu d’un espace de pilotage Neatch">
       <div className="notion-window-bar">
         <span />
         <span />
@@ -37,7 +37,7 @@ function WorkspacePreview() {
               Intervention terrain
             </p>
             <h3 className="mt-1 text-xl font-bold text-neutral-950">
-              Pilotage d&apos;une mission Discovery &amp; Delivery
+              Pilotage d’une mission Discovery &amp; Delivery
             </h3>
           </div>
           <div className="rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700">
@@ -95,9 +95,9 @@ function Hero() {
               Votre projet, sécurisé de bout en bout.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
-              J&apos;accompagne, en tant que freelance, les organisations sur la gestion de
+              J’accompagne, en tant que freelance, les organisations sur la gestion de
               leurs projets digitaux, quand il faut cadrer vite, remettre de la clarté,
-              piloter l&apos;exécution et faire avancer les équipes dans des contextes complexes.
+              piloter l’exécution et faire avancer les équipes dans des contextes complexes.
             </p>
             <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-neutral-200 bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
               <Image
@@ -140,7 +140,7 @@ function Principles() {
       tag: "Prestation personnelle",
       title: "Intervenir là où la mission doit avancer",
       description:
-        "J'interviens directement sur les sujets exposés : transformation IT, Product Management, gouvernance agile, coordination multi-équipes et sécurisation du delivery.",
+        "J’interviens directement sur les sujets exposés : transformation IT, Product Management, gouvernance agile, coordination multi-équipes et sécurisation du delivery.",
     },
     {
       tag: "Exigence terrain",
@@ -152,7 +152,7 @@ function Principles() {
       tag: "Culture delivery",
       title: "Faire le lien entre stratégie et exécution",
       description:
-        "J'aide à traduire les enjeux en trajectoire praticable, avec une attention constante aux dépendances, aux équipes et aux décisions qui bloquent.",
+        "J’aide à traduire les enjeux en trajectoire praticable, avec une attention constante aux dépendances, aux équipes et aux décisions qui bloquent.",
     },
   ];
 
@@ -189,12 +189,12 @@ function Audiences() {
     {
       title: "DSI ou direction de programme",
       description:
-        "Vous avez besoin d'un interlocuteur capable de comprendre les contraintes IT, les dépendances applicatives et les arbitrages de delivery.",
+        "Vous avez besoin d’un interlocuteur capable de comprendre les contraintes IT, les dépendances applicatives et les arbitrages de delivery.",
     },
     {
       title: "Equipe projet ou transformation",
       description:
-        "Vous voulez sécuriser une mission sensible, relancer une dynamique ou mettre de l'ordre dans un dispositif devenu trop flou.",
+        "Vous voulez sécuriser une mission sensible, relancer une dynamique ou mettre de l’ordre dans un dispositif devenu trop flou.",
     },
   ];
 
@@ -233,7 +233,7 @@ function Method() {
       description: "Clarifier le contexte, les enjeux, les irritants, les contraintes et les décisions à obtenir.",
       image: {
         src: "/field/workshop-campaign.jpg",
-        alt: "Workshop convivial autour d'une table de travail",
+        alt: "Workshop convivial autour d’une table de travail",
       },
     },
     {
@@ -244,7 +244,7 @@ function Method() {
     {
       number: "03",
       title: "Piloter",
-      description: "Animer les échanges utiles, suivre les risques, faire circuler l'information et maintenir le rythme d'exécution.",
+      description: "Animer les échanges utiles, suivre les risques, faire circuler l’information et maintenir le rythme d’exécution.",
       image: {
         src: "/field/entretien-rodeo.jpg",
         alt: "Entretien professionnel dans une salle de réunion",
@@ -258,7 +258,7 @@ function Method() {
   ];
 
   const indicators = [
-    ["15 ans", "d'expérience terrain"],
+    ["15 ans", "d’expérience terrain"],
     ["8+ ans", "à la tête de Neatch"],
     ["Produit", "roadmap, cadrage, priorisation"],
     ["Delivery", "pilotage, gouvernance, arbitrages"],
@@ -285,7 +285,7 @@ function Method() {
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="section-heading mb-0">
             <p className="section-kicker">Méthode</p>
-            <h2 id="methode-title">Le travail invisible qui sécurise l&apos;intervention.</h2>
+            <h2 id="methode-title">Le travail invisible qui sécurise l’intervention.</h2>
             <p>
               La valeur vient de la capacité à comprendre vite, structurer sans alourdir,
               faire parler les bons interlocuteurs et transformer les décisions en
@@ -358,12 +358,12 @@ function ConsultantIdentification() {
     {
       title: "Qualifier avant de recommander",
       description:
-        "Je challenge l'expérience, la posture, l'autonomie, la compréhension du besoin et la capacité réelle d'exécution avant toute mise en relation.",
+        "Je challenge l’expérience, la posture, l’autonomie, la compréhension du besoin et la capacité réelle d’exécution avant toute mise en relation.",
     },
     {
       title: "Respecter les canaux existants",
       description:
-        "Si le bon profil vient d'une plateforme ou d'un partenaire, le cadre reste lisible : chacun garde son rôle, avec une logique d'apport transparente.",
+        "Si le bon profil vient d’une plateforme ou d’un partenaire, le cadre reste lisible : chacun garde son rôle, avec une logique d’apport transparente.",
     },
   ];
 
@@ -381,7 +381,7 @@ function ConsultantIdentification() {
               </h2>
               <p className="mt-5 text-lg leading-8 text-neutral-300">
                 Cette activité vient en complément de mon expertise personnelle. Quand
-                mon client a besoin d&apos;élargir le dispositif, je l&apos;aide à identifier
+                mon client a besoin d’élargir le dispositif, je l’aide à identifier
                 des consultants crédibles, disponibles et cohérents avec le moment de
                 la mission.
               </p>
@@ -403,7 +403,7 @@ function ConsultantIdentification() {
               moins de bruit, plus de profils réellement utiles.
             </div>
             <div>
-              <span className="block font-bold text-white">Pour l&apos;équipe</span>
+              <span className="block font-bold text-white">Pour l’équipe</span>
               un renfort positionné au bon moment et au bon endroit.
             </div>
             <div>
@@ -449,14 +449,14 @@ function References() {
       industry: "Luxury fashion",
       period: "CRM IT Europe",
       role: "Project Manager confirmé",
-      context: "Déploiement international d'une application mobile CRM pour les équipes en boutique.",
+      context: "Déploiement international d’une application mobile CRM pour les équipes en boutique.",
       assignments: [
-        "Conception et rollout d'une application Salesforce Service Cloud",
+        "Conception et rollout d’une application Salesforce Service Cloud",
         "Pilotage projet, recette, coordination IT et métiers",
-        "Suivi budgétaire d'un programme de plus de 700 k€",
+        "Suivi budgétaire d’un programme de plus de 700 k€",
       ],
       outcomes: [
-        "Plus de 400 utilisateurs adressés en France et à l'international",
+        "Plus de 400 utilisateurs adressés en France et à l’international",
         "Déploiement cadré avec les équipes terrain",
         "Delivery sécurisé sur un contexte retail exigeant",
       ],
@@ -466,9 +466,9 @@ function References() {
       industry: "Energy",
       period: "DSIN Groupe",
       role: "Chef de Projet AMOA confirmé",
-      context: "Portefeuille d'applications métier pour les équipes terrain, maintenance et développement foncier.",
+      context: "Portefeuille d’applications métier pour les équipes terrain, maintenance et développement foncier.",
       assignments: [
-        "Blueprint, design, build et rollout d'un produit pour les Land Development Project Managers",
+        "Blueprint, design, build et rollout d’un produit pour les Land Development Project Managers",
         "Nouvelles fonctionnalités pour une application mobile de maintenance éolienne",
         "Formalisation des besoins métier, wireframing et cadrage applicatif",
         "Chantiers Salesforce Sales Cloud, K2, Xamarin, SAP Plant Maintenance / Cordova",
@@ -493,7 +493,7 @@ function References() {
       outcomes: [
         "Déploiements réalisés en moins de deux semaines",
         "Solutions mises à disposition des ARS Normandie et Corse",
-        "Rythme projet maintenu dans un contexte d'urgence",
+        "Rythme projet maintenu dans un contexte d’urgence",
       ],
     },
     {
@@ -504,27 +504,27 @@ function References() {
       context: "Missions de stratégie digitale, cadrage produit et design de nouveaux services.",
       assignments: [
         "Product Owner pour le lancement e-commerce T.O. by Lipton chez Unilever",
-        "Design d'une stratégie digitale pour la DSI de Keep Cool",
-        "Conception d'un produit logiciel pour l'organisation quotidienne des délégations de l'OECD",
-        "Design d'un nouveau programme de fidélité pour La Maison Plisson",
+        "Design d’une stratégie digitale pour la DSI de Keep Cool",
+        "Conception d’un produit logiciel pour l’organisation quotidienne des délégations de l’OECD",
+        "Design d’un nouveau programme de fidélité pour La Maison Plisson",
       ],
       outcomes: [
-        "Offres digitales cadrées depuis les besoins jusqu'aux parcours",
+        "Offres digitales cadrées depuis les besoins jusqu’aux parcours",
         "Roadmaps et arbitrages rendus exploitables par les équipes",
-        "Passage de l'intention stratégique au produit livrable",
+        "Passage de l’intention stratégique au produit livrable",
       ],
     },
     {
       company: "Société Générale Banque de Détail",
       industry: "Financial services",
       period: "Accenture | 2012",
-      role: "Conception du logiciel d'octroi de crédit utilisé en agence bancaire",
-      context: "Refonte d'un parcours d'octroi de crédit en agence, avec enjeux métier, ergonomie et coordination projet.",
+      role: "Conception du logiciel d’octroi de crédit utilisé en agence bancaire",
+      context: "Refonte d’un parcours d’octroi de crédit en agence, avec enjeux métier, ergonomie et coordination projet.",
       assignments: [
         "Analyse des enjeux business et rédaction des spécifications fonctionnelles",
         "Étude des scénarios métiers, cinématiques et parcours utilisateur",
         "Pilotage des ateliers métiers, UX et UI designers",
-        "Management d'une équipe de 4 consultants pour le benchmark et les prototypes HTML",
+        "Management d’une équipe de 4 consultants pour le benchmark et les prototypes HTML",
       ],
       outcomes: [
         "Parcours utilisateur optimisé pour les équipes en agence",
@@ -536,17 +536,17 @@ function References() {
       company: "Société Générale CIB / APTP",
       industry: "Financial services",
       period: "Accenture | 2013-2015",
-      role: "Construction d'une plateforme de back office post-trading",
-      context: "Branchement d'une plateforme de back office sur les flux du front office et coordination avec des équipes techniques anglophones.",
+      role: "Construction d’une plateforme de back office post-trading",
+      context: "Branchement d’une plateforme de back office sur les flux du front office et coordination avec des équipes techniques anglophones.",
       assignments: [
         "Recueil et analyse des besoins",
-        "Rédaction des spécifications et revues avec l'Indian Delivery Center",
+        "Rédaction des spécifications et revues avec l’Indian Delivery Center",
         "Conception du document de transcodage des messages entrants SGCIB vers le bus APTP",
         "Standardisation des messages XML en provenance du front office, norme ISO 20022",
       ],
       outcomes: [
         "Interfaces API et flux XML clarifiés pour les équipes techniques",
-        "Cartographies d'architecture applicative et fonctionnelle produites",
+        "Cartographies d’architecture applicative et fonctionnelle produites",
         "Coordination renforcée entre métier, architecture et delivery offshore",
       ],
     },
@@ -554,17 +554,17 @@ function References() {
       company: "BNP Paribas BNL",
       industry: "Financial services",
       period: "Accenture | 2016",
-      role: "Optimisation de l'espace physique au sein des agences bancaires",
-      context: "Mission de stratégie et innovation autour de l'expérience agence et des initiatives retail comparables.",
+      role: "Optimisation de l’espace physique au sein des agences bancaires",
+      context: "Mission de stratégie et innovation autour de l’expérience agence et des initiatives retail comparables.",
       assignments: [
         "Étude approfondie des initiatives de la concurrence",
         "Benchmark des pratiques retail transposables au réseau bancaire",
-        "Formalisation de recommandations stratégiques pour l'optimisation des espaces",
+        "Formalisation de recommandations stratégiques pour l’optimisation des espaces",
       ],
       outcomes: [
         "Quarante recommandations stratégiques élaborées",
         "Vision benchmark structurée pour orienter les arbitrages",
-        "Pistes d'optimisation concrètes pour les agences du groupe",
+        "Pistes d’optimisation concrètes pour les agences du groupe",
       ],
     },
     {
@@ -572,12 +572,12 @@ function References() {
       industry: "Financial services",
       period: "Accenture | 2013",
       role: "Chef de projet Organisation / refonte des processus de la DSI",
-      context: "Transformation des processus opérationnels de la DSI et mise en place d'indicateurs de pilotage.",
+      context: "Transformation des processus opérationnels de la DSI et mise en place d’indicateurs de pilotage.",
       assignments: [
         "Analyse et modélisation des processus opérationnels de la DSI",
-        "Élaboration et mise en place de nouveaux KPI sur la base d'ITIL",
+        "Élaboration et mise en place de nouveaux KPI sur la base d’ITIL",
         "Suivi et coordination du chantier de transformation",
-        "Cadrage d'un cahier des charges pour la mise à jour du logiciel de gestion des achats",
+        "Cadrage d’un cahier des charges pour la mise à jour du logiciel de gestion des achats",
       ],
       outcomes: [
         "Processus DSI clarifiés et modélisés",
@@ -589,7 +589,7 @@ function References() {
       company: "Crédit Agricole Consumer Finance",
       industry: "Financial services",
       period: "Accenture | 2011",
-      role: "Responsable d'étude sur la gestion des partenariats",
+      role: "Responsable d’étude sur la gestion des partenariats",
       context: "Analyse des synergies possibles entre les partenariats Sofinco et Finaref.",
       assignments: [
         "Modélisation des processus AS-IS",
@@ -599,20 +599,20 @@ function References() {
       ],
       outcomes: [
         "Synergies potentielles identifiées entre deux périmètres applicatifs",
-        "Lecture fonctionnelle consolidée de l'existant",
-        "Base d'arbitrage produite pour les décisions d'organisation",
+        "Lecture fonctionnelle consolidée de l’existant",
+        "Base d’arbitrage produite pour les décisions d’organisation",
       ],
     },
     {
       company: "BNP Paribas BGL",
       industry: "Financial services",
       period: "Accenture | 2011",
-      role: "Business Analyst pour une solution d'octroi de crédit aux personnes morales",
-      context: "Cadrage fonctionnel, ergonomie et recette d'une solution bancaire d'octroi de crédit.",
+      role: "Business Analyst pour une solution d’octroi de crédit aux personnes morales",
+      context: "Cadrage fonctionnel, ergonomie et recette d’une solution bancaire d’octroi de crédit.",
       assignments: [
         "Analyse des enjeux business",
-        "Rédaction d'une partie des spécifications fonctionnelles",
-        "Étude des fonctionnalités, de l'ergonomie et des scénarios métiers",
+        "Rédaction d’une partie des spécifications fonctionnelles",
+        "Étude des fonctionnalités, de l’ergonomie et des scénarios métiers",
         "Élaboration de la stratégie de tests et participation à la recette",
       ],
       outcomes: [
@@ -625,16 +625,16 @@ function References() {
       company: "BNP Paribas Cash Management",
       industry: "Financial services",
       period: "Accenture | 2016",
-      role: "Implémentation des processus de KYC et d'intégration des clients",
-      context: "Optimisation des processus KYC et cadrage fonctionnel autour de l'implémentation de JIRA.",
+      role: "Implémentation des processus de KYC et d’intégration des clients",
+      context: "Optimisation des processus KYC et cadrage fonctionnel autour de l’implémentation de JIRA.",
       assignments: [
         "Revue intégrale des processus existants",
-        "Optimisation des processus KYC et d'intégration client",
-        "Rédaction des spécifications fonctionnelles pour l'implémentation de JIRA",
+        "Optimisation des processus KYC et d’intégration client",
+        "Rédaction des spécifications fonctionnelles pour l’implémentation de JIRA",
       ],
       outcomes: [
         "Processus KYC revus et rationalisés",
-        "Besoins fonctionnels rendus exploitables pour l'outillage",
+        "Besoins fonctionnels rendus exploitables pour l’outillage",
         "Coordination entre équipes métier, IT et delivery",
         "Socle de mise en œuvre clarifié pour JIRA",
       ],
@@ -646,10 +646,10 @@ function References() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Références</p>
-          <h2 id="references-title">Une base d&apos;expériences structurée par contexte, rôle et impact.</h2>
+          <h2 id="references-title">Une base d’expériences structurée par contexte, rôle et impact.</h2>
           <p>
             Les références sont organisées comme une base de missions : secteur,
-            rôle tenu, contexte d&apos;intervention, assignments clés et résultats observables.
+            rôle tenu, contexte d’intervention, assignments clés et résultats observables.
           </p>
         </div>
 
@@ -664,7 +664,7 @@ function References() {
 
         <div className="mt-8 grid gap-5 lg:grid-cols-2">
           {references.map((reference) => (
-            <article key={reference.company} className="notion-card motion-card min-h-0">
+            <article key={`${reference.company}-${reference.period}`} className="notion-card motion-card min-h-0">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p className="text-sm font-extrabold uppercase tracking-wide text-neutral-500">

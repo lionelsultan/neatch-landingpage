@@ -10,8 +10,8 @@ export default function ContactForm() {
             </h2>
             <p className="mb-8 text-lg leading-8 text-neutral-300">
               Si vous avez un sujet IT, produit, projet, agile ou delivery à cadrer,
-              piloter ou sécuriser, prenons un temps d&apos;échange. Nous clarifierons
-              le contexte, les enjeux, le niveau d&apos;urgence et le mode d&apos;intervention
+              piloter ou sécuriser, prenons un temps d’échange. Nous clarifierons
+              le contexte, les enjeux, le niveau d’urgence et le mode d’intervention
               le plus utile.
             </p>
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
                   <span className="block text-lg font-bold text-white">LinkedIn</span>
                   <span className="mt-1 block text-lg text-neutral-300 transition-colors group-hover:text-white">
                     Contacter Lionel Sultan
-                    <span className="sr-only"> sur LinkedIn, s&apos;ouvre dans un nouvel onglet</span>
+                    <span className="sr-only"> sur LinkedIn, s’ouvre dans un nouvel onglet</span>
                   </span>
                 </span>
               </a>

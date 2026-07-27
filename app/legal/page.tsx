@@ -24,7 +24,7 @@ export default function LegalPage() {
               href="/"
               className="text-sm font-semibold text-neutral-600 transition-colors hover:text-neutral-950"
             >
-              ← Retour à l&apos;accueil
+              ← Retour à l’accueil
             </Link>
           </div>
         </div>
@@ -99,8 +99,8 @@ export default function LegalPage() {
               Propriété intellectuelle
             </h2>
             <p className="text-neutral-600 leading-relaxed">
-              L&apos;ensemble de ce site relève de la législation française et
-              internationale sur le droit d&apos;auteur et la propriété
+              L’ensemble de ce site relève de la législation française et
+              internationale sur le droit d’auteur et la propriété
               intellectuelle. Tous les droits de reproduction sont réservés, y
               compris pour les documents téléchargeables et les représentations
               iconographiques et photographiques.
@@ -119,14 +119,14 @@ export default function LegalPage() {
             <p className="text-neutral-600 leading-relaxed">
               Conformément au Règlement Général sur la Protection des Données
               (RGPD) et à la loi Informatique et Libertés, vous disposez de
-              droits concernant vos données personnelles : droit d&apos;accès,
+              droits concernant vos données personnelles : droit d’accès,
               de rectification, de suppression, de limitation du traitement, de
-              portabilité et d&apos;opposition.
+              portabilité et d’opposition.
             </p>
             <p className="text-neutral-600 leading-relaxed mt-4">
               Pour exercer ces droits ou pour toute question relative à la
               protection de vos données, vous pouvez nous contacter à
-              l&apos;adresse :{" "}
+              l’adresse :{" "}
               <a
                 href="mailto:contact@neatch.com"
                 className="font-semibold text-neutral-950 underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950"
@@ -139,7 +139,7 @@ export default function LegalPage() {
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-neutral-950 mb-4">Cookies</h2>
             <p className="text-neutral-600 leading-relaxed">
-              Ce site ne dépose pas de cookies de mesure d&apos;audience, de
+              Ce site ne dépose pas de cookies de mesure d’audience, de
               personnalisation ou de publicité. Si des outils de mesure ou services
               tiers sont ajoutés ultérieurement, cette information sera mise à jour.
             </p>
@@ -147,13 +147,13 @@ export default function LegalPage() {
 
           <section className="mb-12">
             <h2 className="text-2xl font-bold text-neutral-950 mb-4">
-              Conditions générales d&apos;utilisation
+              Conditions générales d’utilisation
             </h2>
             <p className="text-neutral-600 leading-relaxed">
-              L&apos;utilisation de ce site implique l&apos;acceptation pleine
-              et entière des conditions générales d&apos;utilisation décrites
-              ci-après. Ces conditions d&apos;utilisation sont susceptibles
-              d&apos;être modifiées ou complétées à tout moment.
+              L’utilisation de ce site implique l’acceptation pleine
+              et entière des conditions générales d’utilisation décrites
+              ci-après. Ces conditions d’utilisation sont susceptibles
+              d’être modifiées ou complétées à tout moment.
             </p>
           </section>
 
@@ -169,11 +169,11 @@ export default function LegalPage() {
             </p>
             <p className="text-neutral-600 leading-relaxed mt-4">
               NEATCH E.U.R.L. ne pourra être tenue responsable des dommages
-              directs et indirects causés au matériel de l&apos;utilisateur,
-              lors de l&apos;accès au site, et résultant soit de
-              l&apos;utilisation d&apos;un matériel ne répondant pas aux
-              spécifications techniques requises, soit de l&apos;apparition
-              d&apos;un bug ou d&apos;une incompatibilité.
+              directs et indirects causés au matériel de l’utilisateur,
+              lors de l’accès au site, et résultant soit de
+              l’utilisation d’un matériel ne répondant pas aux
+              spécifications techniques requises, soit de l’apparition
+              d’un bug ou d’une incompatibilité.
             </p>
           </section>
 
@@ -182,8 +182,8 @@ export default function LegalPage() {
               Liens hypertextes
             </h2>
             <p className="text-neutral-600 leading-relaxed">
-              Ce site peut contenir des liens hypertextes vers d&apos;autres
-              sites. NEATCH E.U.R.L. n&apos;exerce aucun contrôle sur ces sites
+              Ce site peut contenir des liens hypertextes vers d’autres
+              sites. NEATCH E.U.R.L. n’exerce aucun contrôle sur ces sites
               et décline toute responsabilité quant à leur contenu.
             </p>
           </section>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const logoVariants = {
   lockup: {
     src: "/neatch-logo.png",
@@ -19,23 +21,25 @@ const logoVariants = {
 type BrandLogoProps = {
   className?: string;
   variant?: keyof typeof logoVariants;
+  priority?: boolean;
 };
 
 export default function BrandLogo({
   className = "",
   variant = "wordmark",
+  priority = false,
 }: BrandLogoProps) {
   const logo = logoVariants[variant];
 
   return (
-    <img
+    <Image
       data-brand-logo="neatch"
       data-logo-variant={variant}
       src={logo.src}
       alt="Neatch"
       width={logo.width}
       height={logo.height}
-      decoding="async"
+      priority={priority}
       className={`block object-contain ${className}`}
     />
   );

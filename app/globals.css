@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --brand-50: #fbfaf7;
-  --brand-100: #f4efe7;
-  --brand-200: #e7dfd2;
-  --brand-300: #d2c4b0;
-  --brand-400: #a9977f;
-  --brand-500: #6f6252;
-  --brand-600: #4f463b;
-  --brand-700: #37312a;
-  --brand-800: #24211d;
-  --brand-900: #171513;
-}
-
 html {
   scroll-behavior: smooth;
 }

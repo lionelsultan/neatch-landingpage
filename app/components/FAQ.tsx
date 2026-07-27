@@ -9,7 +9,7 @@ export default function FAQ() {
     {
       question: "Neatch est-elle une agence ou un cabinet de conseil ?",
       answer:
-        "Neatch est d'abord ma structure d'intervention personnelle. Le client échange avec la personne qui cadre, pilote et sécurise la mission. L'identification de consultants existe aussi, mais comme activité complémentaire quand une équipe doit être renforcée.",
+        "Neatch est d’abord ma structure d’intervention personnelle. Le client échange avec la personne qui cadre, pilote et sécurise la mission. L’identification de consultants existe aussi, mais comme activité complémentaire quand une équipe doit être renforcée.",
     },
     {
       question: "Sur quels sujets pouvez-vous intervenir directement ?",
@@ -34,12 +34,12 @@ export default function FAQ() {
     {
       question: "Comment qualifiez-vous les consultants ?",
       answer:
-        "Je regarde l’expérience réelle, la capacité à comprendre le contexte, la posture avec les équipes, le niveau d'autonomie, la clarté de communication et les situations déjà vécues. Mon expérience de mission me permet de challenger les réponses au-delà du CV.",
+        "Je regarde l’expérience réelle, la capacité à comprendre le contexte, la posture avec les équipes, le niveau d’autonomie, la clarté de communication et les situations déjà vécues. Mon expérience de mission me permet de challenger les réponses au-delà du CV.",
     },
     {
       question: "Comment démarre une collaboration ?",
       answer:
-        "Elle démarre par un échange de cadrage pour comprendre le contexte, le niveau d’urgence, les livrables attendus, les contraintes et les points de décision. Ensuite, je propose un mode d’intervention clair. Si le sujet demande de renforcer l’équipe, j'ajoute une démarche d’identification ciblée.",
+        "Elle démarre par un échange de cadrage pour comprendre le contexte, le niveau d’urgence, les livrables attendus, les contraintes et les points de décision. Ensuite, je propose un mode d’intervention clair. Si le sujet demande de renforcer l’équipe, j’ajoute une démarche d’identification ciblée.",
     },
     {
       question: "Pourquoi passer par vous pour identifier un consultant ?",

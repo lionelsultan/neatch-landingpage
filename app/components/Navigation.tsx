@@ -41,7 +41,7 @@ export default function Navigation() {
             className="inline-flex items-center transition-opacity hover:opacity-80"
             aria-label="Neatch - Accueil"
           >
-            <BrandLogo className="h-7 w-auto mix-blend-multiply sm:h-8" />
+            <BrandLogo priority className="h-7 w-auto mix-blend-multiply sm:h-8" />
           </Link>
 
           <div className="hidden items-center gap-8 lg:flex">

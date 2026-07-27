@@ -21,7 +21,7 @@ export default function Footer() {
             <p className="max-w-md text-neutral-600">
               Structure de Lionel Sultan pour intervenir personnellement sur
               les enjeux IT, produit et delivery : cadrage, pilotage,
-              gouvernance, arbitrages et sécurisation de l&apos;exécution.
+              gouvernance, arbitrages et sécurisation de l’exécution.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default function Footer() {
                   className="text-neutral-600 transition-colors hover:text-neutral-950"
                 >
                   LinkedIn
-                  <span className="sr-only"> (s&apos;ouvre dans un nouvel onglet)</span>
+                  <span className="sr-only"> (s’ouvre dans un nouvel onglet)</span>
                 </a>
               </li>
               <li>
