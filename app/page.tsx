@@ -16,64 +16,116 @@ const ArrowIcon = ({ className = "h-4 w-4" }: { className?: string }) => (
   </svg>
 );
 
+const iconPaths = {
+  target: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-4a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-3a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
+  spark: "M13 2 5 14h6l-1 8 8-12h-6l1-8Z",
+  network: "M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm3-15 6.5 10M8.7 17.2l6.6-10.4",
+  map: "M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Zm0 0V3m6 18V6",
+  building: "M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16m-8-12h4m-4 4h4m-4 4h4m-8 4h16m-4 0v-9h2a2 2 0 0 1 2 2v7",
+  users: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2m14-11a4 4 0 1 0-8 0m14 11v-2a4 4 0 0 0-3-3.87m-2-8.26a4 4 0 0 1 0 7.75",
+  compass: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm3-12-2 5-5 2 2-5 5-2Z",
+  layers: "m12 3 9 5-9 5-9-5 9-5Zm-7 9 7 4 7-4M5 16l7 4 7-4",
+  radar: "M12 20a8 8 0 1 0-8-8m8 8v-8l5.7-5.7M8.5 12a3.5 3.5 0 0 0 3.5 3.5",
+  shield: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Zm-3.5-10 2.5 2.5L16 9",
+  search: "m21 21-4.3-4.3M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z",
+  check: "M20 6 9 17l-5-5",
+  handshake: "M8 12h3l2 2a2 2 0 0 0 3 0l3-3M3 12l3-3 4 4m11-1-3-3-4 4M7 16l2 2a2 2 0 0 0 3 0l1-1",
+  briefcase: "M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1m-9 0h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm-2 5h18",
+  trophy: "M8 21h8m-4-4v4m6-17v5a6 6 0 0 1-12 0V4h12Zm0 2h3v2a3 3 0 0 1-3 3M6 6H3v2a3 3 0 0 0 3 3",
+  chevron: "m6 9 6 6 6-6",
+} as const;
+
+type IconName = keyof typeof iconPaths;
+
+function Icon({ name, className = "h-5 w-5" }: { name: IconName; className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.8}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path d={iconPaths[name]} />
+    </svg>
+  );
+}
+
 function WorkspacePreview() {
   const roadmap = [
-    { label: "Cadrage", value: "Enjeux clarifiés", tone: "bg-blue-100 text-blue-900" },
-    { label: "Pilotage", value: "Risques suivis", tone: "bg-amber-100 text-amber-900" },
-    { label: "Delivery", value: "Trajectoire tenue", tone: "bg-emerald-100 text-emerald-900" },
+    { label: "Cadrage", value: "Enjeux clarifiés", progress: "92%" },
+    { label: "Pilotage", value: "Risques suivis", progress: "76%" },
+    { label: "Delivery", value: "Trajectoire tenue", progress: "84%" },
   ];
 
   return (
-    <div className="notion-window motion-float" aria-label="Aperçu d’un espace de pilotage Neatch">
-      <div className="notion-window-bar">
-        <span />
-        <span />
-        <span />
-      </div>
-      <div className="p-5 sm:p-6">
-        <div className="mb-5 flex items-center justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-              Intervention terrain
-            </p>
-            <h3 className="mt-1 text-xl font-bold text-neutral-950">
-              Pilotage d’une mission Discovery &amp; Delivery
-            </h3>
-          </div>
-          <div className="rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-semibold text-neutral-700">
-            Cadrage, arbitrages, exécution
-          </div>
+    <div className="command-center motion-float" aria-label="Aperçu d’un espace de pilotage Neatch">
+      <div className="command-orbit command-orbit-one" />
+      <div className="command-orbit command-orbit-two" />
+      <div className="command-window">
+        <div className="command-window-bar">
+          <span />
+          <span />
+          <span />
+          <strong>Neatch OS</strong>
         </div>
-
-        <div className="grid gap-3 sm:grid-cols-3">
-          {roadmap.map((item) => (
-            <div key={item.label} className="mini-status-card rounded-lg border border-neutral-200 bg-neutral-50 p-3">
-              <div className="text-xs text-neutral-500">{item.label}</div>
-              <div className={`mt-2 inline-flex rounded-md px-2 py-1 text-xs font-semibold ${item.tone}`}>
-                {item.value}
-              </div>
+        <div className="p-5 sm:p-6">
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-white/50">
+                Intervention terrain
+              </p>
+              <h3 className="mt-1 text-xl font-bold text-white">
+                Mission Discovery &amp; Delivery
+              </h3>
             </div>
-          ))}
-        </div>
-
-        <div className="mt-5 rounded-lg border border-neutral-200 bg-white p-4">
-          <div className="mb-3 flex items-center justify-between">
-            <h3 className="font-semibold text-neutral-950">Points de vigilance</h3>
-            <span className="text-xs text-neutral-500">Suivi de mission</span>
+            <div className="rounded-md border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/70">
+              Live
+            </div>
           </div>
-          <div className="space-y-3">
-            {[
-              ["Objectifs, contraintes et dépendances", "Cadré", "bg-emerald-100 text-emerald-900"],
-              ["Coordination métier, produit et IT", "En cours", "bg-blue-100 text-blue-900"],
-              ["Décisions, risques et trajectoire", "Suivi", "bg-amber-100 text-amber-900"],
-            ].map(([task, state, tone]) => (
-              <div key={task} className="flex items-center justify-between gap-3 rounded-md border border-neutral-100 bg-stone-50 px-3 py-2">
-                <span className="text-sm text-neutral-800">{task}</span>
-                <span className={`shrink-0 rounded px-2 py-1 text-xs font-semibold ${tone}`}>{state}</span>
+
+          <div className="grid gap-3 sm:grid-cols-3">
+            {roadmap.map((item) => (
+              <div key={item.label} className="mini-status-card rounded-lg border border-white/10 bg-white/[0.07] p-3">
+                <div className="text-xs text-white/50">{item.label}</div>
+                <div className="mt-2 text-sm font-semibold text-white">{item.value}</div>
+                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10">
+                  <span className="status-progress block h-full rounded-full" style={{ width: item.progress }} />
+                </div>
               </div>
             ))}
           </div>
+
+          <div className="mt-5 rounded-lg border border-white/10 bg-black/20 p-4">
+            <div className="mb-3 flex items-center justify-between">
+              <h3 className="font-semibold text-white">Points de vigilance</h3>
+              <span className="text-xs text-white/50">Suivi de mission</span>
+            </div>
+            <div className="space-y-3">
+              {[
+                ["Objectifs, contraintes et dépendances", "Cadré"],
+                ["Coordination métier, produit et IT", "En cours"],
+                ["Décisions, risques et trajectoire", "Suivi"],
+              ].map(([task, state]) => (
+                <div key={task} className="flex items-center justify-between gap-3 rounded-md border border-white/10 bg-white/[0.06] px-3 py-2">
+                  <span className="text-sm text-white/75">{task}</span>
+                  <span className="shrink-0 rounded bg-white px-2 py-1 text-xs font-semibold text-neutral-950">{state}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+      </div>
+      <div className="command-card command-card-top">
+        <span>Risk burn-down</span>
+        <strong>-38%</strong>
+      </div>
+      <div className="command-card command-card-bottom">
+        <span>Décisions débloquées</span>
+        <strong>14</strong>
       </div>
     </div>
   );
@@ -81,50 +133,54 @@ function WorkspacePreview() {
 
 function Hero() {
   return (
-    <section className="hero-paper pt-24 md:pt-32" aria-labelledby="hero-title">
-      <div className="mx-auto max-w-7xl px-4 pb-14 pt-8 sm:px-6 md:pb-24 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+    <section className="hero-paper pt-24 md:pt-28" aria-labelledby="hero-title">
+      <div className="hero-media" aria-hidden="true">
+        <Image
+          src="/field/la-defense-bureau.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
+      <div className="mx-auto max-w-7xl px-4 pb-20 pt-10 sm:px-6 md:pb-28 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.03fr_0.97fr]">
           <div className="hero-copy">
-            <p className="mb-5 inline-flex rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-sm font-semibold text-neutral-700 shadow-sm">
+            <p className="mb-5 inline-flex rounded-md border border-white/15 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white/80 shadow-sm backdrop-blur-xl">
               Strategy, Product, GenAI, Project management
             </p>
             <h1
               id="hero-title"
-              className="max-w-4xl text-4xl font-black leading-[0.98] tracking-normal text-neutral-950 sm:text-6xl lg:text-7xl"
+              className="max-w-5xl text-5xl font-black leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl"
             >
-              Votre projet, sécurisé de bout en bout.
+              Neatch sécurise les missions digitales critiques.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
-              J’accompagne, en tant que freelance, les organisations sur la gestion de
-              leurs projets digitaux, quand il faut cadrer vite, remettre de la clarté,
-              piloter l’exécution et faire avancer les équipes dans des contextes complexes.
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">
+              Lionel Sultan intervient comme freelance senior pour cadrer vite,
+              orchestrer les décisions et garder les équipes produit, métier et IT
+              alignées quand le contexte devient complexe.
             </p>
-            <div className="mt-6 inline-flex items-center gap-3 rounded-lg border border-neutral-200 bg-white/80 px-3 py-2 shadow-sm backdrop-blur">
-              <Image
-                src="/lionel-sultan.png"
-                alt="Portrait de Lionel Sultan"
-                width={48}
-                height={48}
-                priority
-                className="h-12 w-12 rounded-md object-cover object-[center_35%]"
-              />
-              <div>
-                <p className="text-sm font-bold leading-tight text-neutral-950">
-                  Lionel Sultan
-                </p>
-                <p className="mt-0.5 text-xs font-semibold text-neutral-500">
-                  Strategy, Product, GenAI, Project management
-                </p>
-              </div>
-            </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a href="#contact" className="notion-button notion-button-primary">
                 Échanger sur votre contexte
                 <ArrowIcon />
               </a>
-              <a href="#principes" className="notion-button notion-button-secondary">
-                Principes fondateurs
+              <a href="#references" className="notion-button notion-button-secondary">
+                Voir les références
               </a>
+            </div>
+            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3">
+              {[
+                ["15 ans", "terrain"],
+                ["12", "équipes Dior"],
+                ["26", "missions"],
+              ].map(([value, label]) => (
+                <div key={label} className="hero-stat">
+                  <strong>{value}</strong>
+                  <span>{label}</span>
+                </div>
+              ))}
             </div>
           </div>
           <WorkspacePreview />
@@ -137,18 +193,21 @@ function Hero() {
 function Principles() {
   const principles = [
     {
+      icon: "target",
       tag: "Prestation personnelle",
       title: "Intervenir là où la mission doit avancer",
       description:
         "J’interviens directement sur les sujets exposés : transformation IT, Product Management, gouvernance agile, coordination multi-équipes et sécurisation du delivery.",
     },
     {
+      icon: "spark",
       tag: "Exigence terrain",
       title: "Cadrer, arbitrer et remettre du rythme",
       description:
         "Ma valeur vient de la compréhension rapide du contexte, de la capacité à clarifier les priorités et de décisions concrètes avec les équipes.",
     },
     {
+      icon: "network",
       tag: "Culture delivery",
       title: "Faire le lien entre stratégie et exécution",
       description:
@@ -166,7 +225,10 @@ function Principles() {
         <div className="grid gap-5 md:grid-cols-3">
           {principles.map((service) => (
             <article key={service.title} className="notion-card motion-card">
-              <span className="notion-chip">{service.tag}</span>
+              <div className="icon-badge">
+                <Icon name={service.icon as IconName} />
+              </div>
+              <span className="notion-chip mt-5">{service.tag}</span>
               <h3 className="mt-5 text-2xl font-bold leading-tight text-neutral-950">
                 {service.title}
               </h3>
@@ -182,16 +244,19 @@ function Principles() {
 function Audiences() {
   const audiences = [
     {
+      icon: "map",
       title: "Direction métier ou produit",
       description:
         "Vous devez clarifier une trajectoire, prioriser, structurer une roadmap ou remettre du lien entre besoin métier, produit et exécution.",
     },
     {
+      icon: "building",
       title: "DSI ou direction de programme",
       description:
         "Vous avez besoin d’un interlocuteur capable de comprendre les contraintes IT, les dépendances applicatives et les arbitrages de delivery.",
     },
     {
+      icon: "users",
       title: "Equipe projet ou transformation",
       description:
         "Vous voulez sécuriser une mission sensible, relancer une dynamique ou mettre de l’ordre dans un dispositif devenu trop flou.",
@@ -213,9 +278,14 @@ function Audiences() {
         <div className="grid gap-5 md:grid-cols-3">
           {audiences.map((audience) => (
             <article key={audience.title} className="notion-card motion-card min-h-0">
-              <h3 className="text-2xl font-bold leading-tight text-neutral-950">
-                {audience.title}
-              </h3>
+              <div className="mb-5 flex items-center gap-3">
+                <div className="icon-badge icon-badge-small">
+                  <Icon name={audience.icon as IconName} />
+                </div>
+                <h3 className="text-2xl font-bold leading-tight text-neutral-950">
+                  {audience.title}
+                </h3>
+              </div>
               <p className="mt-4 leading-7 text-neutral-700">{audience.description}</p>
             </article>
           ))}
@@ -229,6 +299,7 @@ function Method() {
   const steps = [
     {
       number: "01",
+      icon: "compass",
       title: "Comprendre",
       description: "Clarifier le contexte, les enjeux, les irritants, les contraintes et les décisions à obtenir.",
       image: {
@@ -238,11 +309,13 @@ function Method() {
     },
     {
       number: "02",
+      icon: "layers",
       title: "Structurer",
       description: "Transformer un contexte complexe en trajectoire lisible : priorités, gouvernance, rôles, dépendances et points de décision.",
     },
     {
       number: "03",
+      icon: "radar",
       title: "Piloter",
       description: "Animer les échanges utiles, suivre les risques, faire circuler l’information et maintenir le rythme d’exécution.",
       image: {
@@ -252,6 +325,7 @@ function Method() {
     },
     {
       number: "04",
+      icon: "shield",
       title: "Sécuriser",
       description: "Rendre les arbitrages visibles, stabiliser les livrables et aider les équipes à tenir une trajectoire crédible.",
     },
@@ -314,7 +388,12 @@ function Method() {
                   <div className="font-mono text-sm font-bold text-neutral-400">{step.number}</div>
                   <div className="grid gap-4 sm:grid-cols-[1fr_auto] sm:items-start">
                     <div>
-                      <h3 className="text-xl font-bold text-neutral-950">{step.title}</h3>
+                      <div className="flex items-center gap-3">
+                        <div className="icon-badge icon-badge-small">
+                          <Icon name={step.icon as IconName} />
+                        </div>
+                        <h3 className="text-xl font-bold text-neutral-950">{step.title}</h3>
+                      </div>
                       <p className="mt-1 text-neutral-700">{step.description}</p>
                     </div>
                     {step.image ? (
@@ -351,16 +430,19 @@ function Method() {
 function ConsultantIdentification() {
   const identificationPoints = [
     {
+      icon: "search",
       title: "Repérer les bons profils",
       description:
         "Quand une mission nécessite un renfort, je peux chercher dans mon réseau, sur LinkedIn ou sur les plateformes spécialisées pour faire émerger des consultants adaptés au contexte.",
     },
     {
+      icon: "check",
       title: "Qualifier avant de recommander",
       description:
         "Je challenge l’expérience, la posture, l’autonomie, la compréhension du besoin et la capacité réelle d’exécution avant toute mise en relation.",
     },
     {
+      icon: "handshake",
       title: "Respecter les canaux existants",
       description:
         "Si le bon profil vient d’une plateforme ou d’un partenaire, le cadre reste lisible : chacun garde son rôle, avec une logique d’apport transparente.",
@@ -390,7 +472,12 @@ function ConsultantIdentification() {
             <div className="grid gap-3">
               {identificationPoints.map((point) => (
                 <article key={point.title} className="rounded-lg border border-white/10 bg-white/[0.06] p-5">
-                  <h3 className="text-xl font-bold text-white">{point.title}</h3>
+                  <div className="mb-3 flex items-center gap-3">
+                    <div className="icon-badge-dark">
+                      <Icon name={point.icon as IconName} />
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{point.title}</h3>
+                  </div>
                   <p className="mt-2 leading-7 text-neutral-300">{point.description}</p>
                 </article>
               ))}
@@ -656,64 +743,89 @@ function References() {
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {referenceStats.map((stat) => (
             <div key={stat.label} className="rounded-lg border border-neutral-200 bg-stone-50 p-4">
+              <div className="mb-4 text-cyan-700">
+                <Icon name={stat.label.includes("budget") ? "briefcase" : "trophy"} />
+              </div>
               <div className="text-3xl font-black leading-none text-neutral-950">{stat.value}</div>
               <div className="mt-2 text-sm font-semibold text-neutral-600">{stat.label}</div>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+        <div className="mt-8 space-y-3">
           {references.map((reference) => (
-            <article key={`${reference.company}-${reference.period}`} className="notion-card motion-card min-h-0">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div>
-                  <p className="text-sm font-extrabold uppercase tracking-wide text-neutral-500">
-                    {reference.industry}
-                  </p>
-                  <h3 className="mt-2 text-2xl font-black leading-tight text-neutral-950">
-                    {reference.company}
-                  </h3>
+            <details key={`${reference.company}-${reference.period}`} className="reference-toggle notion-card motion-card min-h-0">
+              <summary className="reference-summary">
+                <div className="flex min-w-0 items-start gap-3">
+                  <div className="icon-badge icon-badge-small">
+                    <Icon name="briefcase" />
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-xl font-black leading-tight text-neutral-950 sm:text-2xl">
+                      {reference.company}
+                    </h3>
+                    <div className="mt-2 flex flex-wrap items-center gap-2 text-sm font-semibold text-neutral-600">
+                      <span>{reference.industry}</span>
+                      <span className="text-neutral-300" aria-hidden="true">/</span>
+                      <span>{reference.role}</span>
+                    </div>
+                  </div>
                 </div>
-                <span className="inline-flex w-fit rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-bold text-neutral-600">
-                  {reference.period}
-                </span>
-              </div>
+                <div className="reference-control flex shrink-0 items-center gap-2">
+                  <span className="hidden w-fit rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-bold text-neutral-600 sm:inline-flex">
+                    {reference.period}
+                  </span>
+                  <span className="reference-toggle-pill">
+                    <span className="reference-action">Voir le détail</span>
+                    <span className="reference-chevron" aria-hidden="true">
+                      <Icon name="chevron" className="h-4 w-4" />
+                    </span>
+                  </span>
+                </div>
+              </summary>
 
-              <div className="mt-5 rounded-lg border border-neutral-200 bg-stone-50 p-4">
-                <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">Rôle</p>
-                <p className="mt-2 font-bold leading-6 text-neutral-950">{reference.role}</p>
-                <p className="mt-3 leading-7 text-neutral-700">{reference.context}</p>
-              </div>
+              <div className="reference-panel">
+                <div className="mt-5 rounded-lg border border-neutral-200 bg-stone-50 p-4">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">Rôle</p>
+                    <span className="inline-flex w-fit rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-bold text-neutral-600 sm:hidden">
+                      {reference.period}
+                    </span>
+                  </div>
+                  <p className="mt-2 font-bold leading-6 text-neutral-950">{reference.role}</p>
+                  <p className="mt-3 leading-7 text-neutral-700">{reference.context}</p>
+                </div>
 
-              <div className="mt-5 grid gap-5 md:grid-cols-2">
-                <div>
-                  <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">
-                    Assignments clés
-                  </p>
-                  <ul className="mt-3 space-y-2 text-sm leading-6 text-neutral-700">
-                    {reference.assignments.map((assignment) => (
-                      <li key={assignment} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-950" />
-                        <span>{assignment}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">
-                    Résultats / impact
-                  </p>
-                  <ul className="mt-3 space-y-2 text-sm leading-6 text-neutral-700">
-                    {reference.outcomes.map((outcome) => (
-                      <li key={outcome} className="flex gap-2">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" />
-                        <span>{outcome}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="mt-5 grid gap-5 md:grid-cols-2">
+                  <div>
+                    <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">
+                      Assignments clés
+                    </p>
+                    <ul className="mt-3 space-y-2 text-sm leading-6 text-neutral-700">
+                      {reference.assignments.map((assignment) => (
+                        <li key={assignment} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-950" />
+                          <span>{assignment}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">
+                      Résultats / impact
+                    </p>
+                    <ul className="mt-3 space-y-2 text-sm leading-6 text-neutral-700">
+                      {reference.outcomes.map((outcome) => (
+                        <li key={outcome} className="flex gap-2">
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" />
+                          <span>{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </article>
+            </details>
           ))}
         </div>
       </div>

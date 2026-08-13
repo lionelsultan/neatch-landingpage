@@ -30,7 +30,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "border-b border-neutral-200 bg-white/90 backdrop-blur-xl" : "bg-white/80 backdrop-blur-xl"
+        isScrolled ? "border-b border-white/10 bg-neutral-950/82 shadow-2xl shadow-black/20 backdrop-blur-2xl" : "bg-neutral-950/18 backdrop-blur-xl"
       }`}
       aria-label="Navigation principale"
     >
@@ -38,10 +38,10 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="inline-flex items-center transition-opacity hover:opacity-80"
+            className="inline-flex h-10 items-center rounded-md bg-white px-3 shadow-sm transition hover:-translate-y-0.5 hover:bg-cyan-50"
             aria-label="Neatch - Accueil"
           >
-            <BrandLogo priority className="h-7 w-auto mix-blend-multiply sm:h-8" />
+            <BrandLogo priority className="h-6 w-auto mix-blend-multiply sm:h-7" />
           </Link>
 
           <div className="hidden items-center gap-8 lg:flex">
@@ -49,14 +49,14 @@ export default function Navigation() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-semibold text-neutral-700 transition-colors hover:text-neutral-950"
+                className="text-sm font-semibold text-white/70 transition-colors hover:text-white"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="rounded-md bg-neutral-950 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-neutral-800"
+              className="rounded-md bg-white px-4 py-2 text-sm font-semibold text-neutral-950 transition hover:-translate-y-0.5 hover:bg-cyan-100"
             >
               Échanger avec Lionel
             </a>
@@ -64,7 +64,7 @@ export default function Navigation() {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="rounded-md p-2 text-neutral-800 transition-colors hover:bg-neutral-100 lg:hidden"
+            className="rounded-md p-2 text-white transition-colors hover:bg-white/10 lg:hidden"
             aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isMobileMenuOpen}
             aria-controls={mobileMenuId}
@@ -98,14 +98,14 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <div
             id={mobileMenuId}
-            className="mt-2 rounded-lg border border-neutral-200 bg-white px-4 py-4 shadow-lg lg:hidden"
+            className="mt-2 rounded-lg border border-white/10 bg-neutral-950/95 px-4 py-4 shadow-2xl lg:hidden"
           >
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-3 font-semibold text-neutral-700 transition-colors hover:text-neutral-950"
+                className="block py-3 font-semibold text-white/75 transition-colors hover:text-white"
               >
                 {link.label}
               </a>
@@ -113,7 +113,7 @@ export default function Navigation() {
             <a
               href="#contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="mt-4 block rounded-md bg-neutral-950 px-5 py-3 text-center font-semibold text-white transition-colors hover:bg-neutral-800"
+              className="mt-4 block rounded-md bg-white px-5 py-3 text-center font-semibold text-neutral-950 transition-colors hover:bg-cyan-100"
             >
               Échanger avec Lionel
             </a>
