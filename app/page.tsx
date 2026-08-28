@@ -1,20 +1,14 @@
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import Navigation from "./components/Navigation";
 import FAQ from "./components/FAQ";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-
-const ArrowIcon = ({ className = "h-4 w-4" }: { className?: string }) => (
-  <svg
-    className={className}
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    aria-hidden="true"
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0-4 4m4-4H3" />
-  </svg>
-);
 
 const iconPaths = {
   target: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-4a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-3a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
@@ -54,121 +48,76 @@ function Icon({ name, className = "h-5 w-5" }: { name: IconName; className?: str
   );
 }
 
-function WorkspacePreview() {
-  const roadmap = [
-    { label: "Cadrage", value: "Enjeux clarifiés", progress: "92%" },
-    { label: "Pilotage", value: "Risques suivis", progress: "76%" },
-    { label: "Delivery", value: "Trajectoire tenue", progress: "84%" },
+function ExpertisePanel() {
+  const missions = [
+    ["Luxury", "Dior, Chanel"],
+    ["Energy", "EDF Renouvelables"],
+    ["Finance", "BNP Paribas, Société Générale"],
   ];
 
   return (
-    <div className="command-center motion-float" aria-label="Aperçu d’un espace de pilotage Neatch">
-      <div className="command-orbit command-orbit-one" />
-      <div className="command-orbit command-orbit-two" />
-      <div className="command-window">
-        <div className="command-window-bar">
-          <span />
-          <span />
-          <span />
-          <strong>Neatch OS</strong>
+    <aside className="expertise-panel" aria-label="Synthèse de l’expertise Neatch">
+      <div className="expertise-portrait">
+        <Image
+          src="/lionel-sultan.png"
+          alt="Lionel Sultan, fondateur de Neatch"
+          fill
+          sizes="(min-width: 1024px) 430px, 100vw"
+          className="object-cover"
+        />
+      </div>
+      <Card className="expertise-card">
+        <div>
+          <p className="section-kicker">Intervention senior</p>
+          <h2>Lionel Sultan</h2>
+          <p>
+            Cadrage, product management, gouvernance agile et sécurisation du
+            delivery pour des environnements exigeants.
+          </p>
         </div>
-        <div className="p-5 sm:p-6">
-          <div className="mb-5 flex items-center justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-white/50">
-                Intervention terrain
-              </p>
-              <h3 className="mt-1 text-xl font-bold text-white">
-                Mission Discovery &amp; Delivery
-              </h3>
+        <div className="expertise-list">
+          {missions.map(([sector, clients]) => (
+            <div key={sector}>
+              <span>{sector}</span>
+              <strong>{clients}</strong>
             </div>
-            <div className="rounded-md border border-white/10 bg-white/10 px-3 py-1.5 text-xs font-semibold text-white/70">
-              Live
-            </div>
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-3">
-            {roadmap.map((item) => (
-              <div key={item.label} className="mini-status-card rounded-lg border border-white/10 bg-white/[0.07] p-3">
-                <div className="text-xs text-white/50">{item.label}</div>
-                <div className="mt-2 text-sm font-semibold text-white">{item.value}</div>
-                <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-white/10">
-                  <span className="status-progress block h-full rounded-full" style={{ width: item.progress }} />
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-5 rounded-lg border border-white/10 bg-black/20 p-4">
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="font-semibold text-white">Points de vigilance</h3>
-              <span className="text-xs text-white/50">Suivi de mission</span>
-            </div>
-            <div className="space-y-3">
-              {[
-                ["Objectifs, contraintes et dépendances", "Cadré"],
-                ["Coordination métier, produit et IT", "En cours"],
-                ["Décisions, risques et trajectoire", "Suivi"],
-              ].map(([task, state]) => (
-                <div key={task} className="flex items-center justify-between gap-3 rounded-md border border-white/10 bg-white/[0.06] px-3 py-2">
-                  <span className="text-sm text-white/75">{task}</span>
-                  <span className="shrink-0 rounded bg-white px-2 py-1 text-xs font-semibold text-neutral-950">{state}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
-      <div className="command-card command-card-top">
-        <span>Risk burn-down</span>
-        <strong>-38%</strong>
-      </div>
-      <div className="command-card command-card-bottom">
-        <span>Décisions débloquées</span>
-        <strong>14</strong>
-      </div>
-    </div>
+      </Card>
+    </aside>
   );
 }
 
 function Hero() {
   return (
     <section className="hero-paper pt-24 md:pt-28" aria-labelledby="hero-title">
-      <div className="hero-media" aria-hidden="true">
-        <Image
-          src="/field/la-defense-bureau.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
-      <div className="mx-auto max-w-7xl px-4 pb-20 pt-10 sm:px-6 md:pb-28 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.03fr_0.97fr]">
+      <div className="mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 md:pb-24 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
           <div className="hero-copy">
-            <p className="mb-5 inline-flex rounded-md border border-white/15 bg-white/10 px-3 py-1.5 text-sm font-semibold text-white/80 shadow-sm backdrop-blur-xl">
-              Strategy, Product, GenAI, Project management
+            <p className="hero-eyebrow">
+              Strategy, Product, GenAI, Project Management
             </p>
             <h1
               id="hero-title"
-              className="max-w-5xl text-5xl font-black leading-[0.95] tracking-normal text-white sm:text-7xl lg:text-8xl"
+              className="max-w-5xl text-5xl font-black leading-[0.96] tracking-normal text-neutral-950 sm:text-7xl lg:text-8xl"
             >
-              Neatch sécurise les missions digitales critiques.
+              Sécuriser les missions digitales critiques.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75 sm:text-xl">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-700 sm:text-xl">
               Lionel Sultan intervient comme freelance senior pour cadrer vite,
               orchestrer les décisions et garder les équipes produit, métier et IT
               alignées quand le contexte devient complexe.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a href="#contact" className="notion-button notion-button-primary">
+              <Button asChild size="lg">
+                <a href="#contact">
                 Échanger sur votre contexte
-                <ArrowIcon />
-              </a>
-              <a href="#references" className="notion-button notion-button-secondary">
-                Voir les références
-              </a>
+                  <ArrowRight />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="#references">Voir les références</a>
+              </Button>
             </div>
             <div className="mt-8 grid max-w-xl grid-cols-3 gap-3">
               {[
@@ -176,14 +125,14 @@ function Hero() {
                 ["12", "équipes Dior"],
                 ["26", "missions"],
               ].map(([value, label]) => (
-                <div key={label} className="hero-stat">
+                <Card key={label} className="hero-stat">
                   <strong>{value}</strong>
                   <span>{label}</span>
-                </div>
+                </Card>
               ))}
             </div>
           </div>
-          <WorkspacePreview />
+          <ExpertisePanel />
         </div>
       </div>
     </section>
@@ -216,7 +165,7 @@ function Principles() {
   ];
 
   return (
-    <section id="principes" className="notion-section scroll-reveal bg-white" aria-labelledby="principes-title">
+    <section id="principes" className="site-section scroll-reveal bg-white" aria-labelledby="principes-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Principes fondateurs</p>
@@ -224,16 +173,20 @@ function Principles() {
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {principles.map((service) => (
-            <article key={service.title} className="notion-card motion-card">
-              <div className="icon-badge">
-                <Icon name={service.icon as IconName} />
-              </div>
-              <span className="notion-chip mt-5">{service.tag}</span>
-              <h3 className="mt-5 text-2xl font-bold leading-tight text-neutral-950">
-                {service.title}
-              </h3>
-              <p className="mt-4 leading-7 text-neutral-700">{service.description}</p>
-            </article>
+            <Card key={service.title} className="motion-card min-h-[270px] border-border/80 bg-card/90 shadow-sm">
+              <CardHeader>
+                <div className="icon-badge">
+                  <Icon name={service.icon as IconName} />
+                </div>
+                <Badge variant="secondary" className="mt-5 w-fit">{service.tag}</Badge>
+                <CardTitle className="mt-4 text-2xl font-bold leading-tight text-neutral-950">
+                  {service.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="leading-7 text-neutral-700">{service.description}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
@@ -264,7 +217,7 @@ function Audiences() {
   ];
 
   return (
-    <section id="audiences" className="notion-section scroll-reveal bg-stone-50" aria-labelledby="audiences-title">
+    <section id="audiences" className="site-section scroll-reveal bg-stone-50" aria-labelledby="audiences-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Pour qui</p>
@@ -277,17 +230,21 @@ function Audiences() {
         </div>
         <div className="grid gap-5 md:grid-cols-3">
           {audiences.map((audience) => (
-            <article key={audience.title} className="notion-card motion-card min-h-0">
-              <div className="mb-5 flex items-center gap-3">
-                <div className="icon-badge icon-badge-small">
-                  <Icon name={audience.icon as IconName} />
+            <Card key={audience.title} className="motion-card">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <div className="icon-badge icon-badge-small">
+                    <Icon name={audience.icon as IconName} />
+                  </div>
+                  <CardTitle className="text-2xl font-bold leading-tight text-neutral-950">
+                    {audience.title}
+                  </CardTitle>
                 </div>
-                <h3 className="text-2xl font-bold leading-tight text-neutral-950">
-                  {audience.title}
-                </h3>
-              </div>
-              <p className="mt-4 leading-7 text-neutral-700">{audience.description}</p>
-            </article>
+              </CardHeader>
+              <CardContent>
+                <p className="leading-7 text-neutral-700">{audience.description}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
@@ -354,7 +311,7 @@ function Method() {
   ];
 
   return (
-    <section id="methode" className="notion-section scroll-reveal bg-stone-50" aria-labelledby="methode-title">
+    <section id="methode" className="site-section scroll-reveal bg-stone-50" aria-labelledby="methode-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="section-heading mb-0">
@@ -367,7 +324,7 @@ function Method() {
             </p>
             <div className="mt-7 grid grid-cols-3 gap-2" aria-label="Illustrations de missions terrain">
               {fieldPhotos.map((photo) => (
-                <figure key={photo.src} className="method-photo overflow-hidden rounded-lg border border-neutral-200 bg-white shadow-sm">
+                <Card key={photo.src} className="method-photo overflow-hidden">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={photo.src}
@@ -377,11 +334,11 @@ function Method() {
                       className="object-cover"
                     />
                   </div>
-                </figure>
+                </Card>
               ))}
             </div>
           </div>
-          <div className="rounded-xl border border-neutral-200 bg-white p-4 shadow-sm">
+          <Card className="p-4">
             <ol className="divide-y divide-neutral-200" aria-label="Étapes de notre approche">
               {steps.map((step) => (
                 <li key={step.number} className="method-step grid gap-4 py-5 sm:grid-cols-[72px_1fr]">
@@ -397,7 +354,7 @@ function Method() {
                       <p className="mt-1 text-neutral-700">{step.description}</p>
                     </div>
                     {step.image ? (
-                      <div className="method-thumb relative h-20 w-32 overflow-hidden rounded-lg border border-neutral-200 bg-neutral-100">
+                      <Card className="method-thumb relative h-20 w-32 overflow-hidden bg-neutral-100">
                         <Image
                           src={step.image.src}
                           alt={step.image.alt}
@@ -405,21 +362,21 @@ function Method() {
                           sizes="(min-width: 640px) 128px, 100vw"
                           className="object-cover"
                         />
-                      </div>
+                      </Card>
                     ) : null}
                   </div>
                 </li>
               ))}
             </ol>
-          </div>
+          </Card>
         </div>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" role="list" aria-label="Indicateurs clés">
           {indicators.map(([value, label]) => (
-            <div key={label} className="metric-tile motion-card" role="listitem">
+            <Card key={label} className="metric-tile motion-card p-5" role="listitem">
               <div className="text-3xl font-black text-neutral-950">{value}</div>
               <div className="mt-1 text-sm text-neutral-600">{label}</div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
@@ -450,7 +407,7 @@ function ConsultantIdentification() {
   ];
 
   return (
-    <section id="identification" className="notion-section scroll-reveal bg-white" aria-labelledby="identification-title">
+    <section id="identification" className="site-section scroll-reveal bg-white" aria-labelledby="identification-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="dark-panel rounded-2xl border border-neutral-200 bg-neutral-950 p-6 text-white shadow-sm sm:p-8 lg:p-10">
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
@@ -471,7 +428,7 @@ function ConsultantIdentification() {
 
             <div className="grid gap-3">
               {identificationPoints.map((point) => (
-                <article key={point.title} className="rounded-lg border border-white/10 bg-white/[0.06] p-5">
+                <Card key={point.title} className="border-white/10 bg-white/[0.06] p-5 text-white">
                   <div className="mb-3 flex items-center gap-3">
                     <div className="icon-badge-dark">
                       <Icon name={point.icon as IconName} />
@@ -479,12 +436,13 @@ function ConsultantIdentification() {
                     <h3 className="text-xl font-bold text-white">{point.title}</h3>
                   </div>
                   <p className="mt-2 leading-7 text-neutral-300">{point.description}</p>
-                </article>
+                </Card>
               ))}
             </div>
           </div>
 
-          <div className="mt-8 grid gap-3 border-t border-white/10 pt-6 text-sm text-neutral-300 md:grid-cols-3">
+          <Separator className="mt-8 bg-white/10" />
+          <div className="mt-6 grid gap-3 text-sm text-neutral-300 md:grid-cols-3">
             <div>
               <span className="block font-bold text-white">Pour le client</span>
               moins de bruit, plus de profils réellement utiles.
@@ -729,7 +687,7 @@ function References() {
   ];
 
   return (
-    <section id="references" className="notion-section bg-white" aria-labelledby="references-title">
+    <section id="references" className="site-section bg-white" aria-labelledby="references-title">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="section-heading">
           <p className="section-kicker">Références</p>
@@ -742,20 +700,24 @@ function References() {
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {referenceStats.map((stat) => (
-            <div key={stat.label} className="rounded-lg border border-neutral-200 bg-stone-50 p-4">
+            <Card key={stat.label} className="bg-muted/50 p-4">
               <div className="mb-4 text-cyan-700">
                 <Icon name={stat.label.includes("budget") ? "briefcase" : "trophy"} />
               </div>
               <div className="text-3xl font-black leading-none text-neutral-950">{stat.value}</div>
               <div className="mt-2 text-sm font-semibold text-neutral-600">{stat.label}</div>
-            </div>
+            </Card>
           ))}
         </div>
 
-        <div className="mt-8 space-y-3">
+        <Accordion type="single" collapsible className="mt-8 space-y-3">
           {references.map((reference) => (
-            <details key={`${reference.company}-${reference.period}`} className="reference-toggle notion-card motion-card min-h-0">
-              <summary className="reference-summary">
+            <AccordionItem
+              key={`${reference.company}-${reference.period}`}
+              value={`${reference.company}-${reference.period}`}
+              className="reference-toggle motion-card rounded-lg border bg-card px-0 shadow-sm"
+            >
+              <AccordionTrigger className="reference-summary hover:no-underline [&>svg]:hidden">
                 <div className="flex min-w-0 items-start gap-3">
                   <div className="icon-badge icon-badge-small">
                     <Icon name="briefcase" />
@@ -772,9 +734,9 @@ function References() {
                   </div>
                 </div>
                 <div className="reference-control flex shrink-0 items-center gap-2">
-                  <span className="hidden w-fit rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-bold text-neutral-600 sm:inline-flex">
+                  <Badge variant="outline" className="hidden bg-background text-neutral-600 sm:inline-flex">
                     {reference.period}
-                  </span>
+                  </Badge>
                   <span className="reference-toggle-pill">
                     <span className="reference-action">Voir le détail</span>
                     <span className="reference-chevron" aria-hidden="true">
@@ -782,19 +744,19 @@ function References() {
                     </span>
                   </span>
                 </div>
-              </summary>
+              </AccordionTrigger>
 
-              <div className="reference-panel">
-                <div className="mt-5 rounded-lg border border-neutral-200 bg-stone-50 p-4">
+              <AccordionContent className="reference-panel text-base">
+                <Card className="mt-5 bg-muted/50 p-4">
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-xs font-extrabold uppercase tracking-wide text-neutral-500">Rôle</p>
-                    <span className="inline-flex w-fit rounded-md border border-neutral-200 bg-white px-3 py-1.5 text-xs font-bold text-neutral-600 sm:hidden">
+                    <Badge variant="outline" className="w-fit bg-background text-neutral-600 sm:hidden">
                       {reference.period}
-                    </span>
+                    </Badge>
                   </div>
                   <p className="mt-2 font-bold leading-6 text-neutral-950">{reference.role}</p>
                   <p className="mt-3 leading-7 text-neutral-700">{reference.context}</p>
-                </div>
+                </Card>
 
                 <div className="mt-5 grid gap-5 md:grid-cols-2">
                   <div>
@@ -824,10 +786,10 @@ function References() {
                     </ul>
                   </div>
                 </div>
-              </div>
-            </details>
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </div>
+        </Accordion>
       </div>
     </section>
   );

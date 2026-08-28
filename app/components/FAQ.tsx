@@ -1,10 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card } from "@/components/ui/card";
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const faqs = [
     {
       question: "Neatch est-elle une agence ou un cabinet de conseil ?",
@@ -49,7 +48,7 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="notion-section bg-stone-50" aria-labelledby="faq-title">
+    <section id="faq" className="site-section bg-stone-50" aria-labelledby="faq-title">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="section-kicker">FAQ</p>
@@ -61,64 +60,20 @@ export default function FAQ() {
           </p>
         </div>
 
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => {
-            const panelId = `faq-panel-${idx}`;
-            const buttonId = `faq-button-${idx}`;
-            const isOpen = openIndex === idx;
-
-            return (
-              <div
-                key={idx}
-                className="overflow-hidden rounded-lg border border-neutral-200 bg-white"
-              >
-                <h3>
-                  <button
-                    id={buttonId}
-                    onClick={() => setOpenIndex(isOpen ? null : idx)}
-                    className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-stone-50"
-                    aria-expanded={isOpen}
-                    aria-controls={panelId}
-                  >
-                    <span className="pr-4 font-bold text-neutral-950">
-                      {faq.question}
-                    </span>
-                    <svg
-                      className={`h-5 w-5 flex-shrink-0 text-neutral-500 transition-transform duration-200 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </button>
-                </h3>
-                <div
-                  id={panelId}
-                  role="region"
-                  aria-labelledby={buttonId}
-                  aria-hidden={!isOpen}
-                  className="accordion-content"
-                  data-open={isOpen}
-                >
-                  <div>
-                    <div className="px-5 pb-5 leading-7 text-neutral-700">
-                      {faq.answer}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <Accordion type="single" collapsible className="space-y-4">
+          {faqs.map((faq, idx) => (
+            <Card key={faq.question} className="overflow-hidden">
+              <AccordionItem value={`faq-${idx}`} className="border-b-0">
+                <AccordionTrigger className="px-5 py-5 text-base font-bold text-neutral-950 hover:bg-muted/60 hover:no-underline">
+                  <span className="pr-4">{faq.question}</span>
+                </AccordionTrigger>
+                <AccordionContent className="px-5 pb-5 text-base leading-7 text-neutral-700">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </Card>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
