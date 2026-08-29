@@ -1,7 +1,8 @@
 "use client";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function FAQ() {
   const faqs = [
@@ -48,26 +49,28 @@ export default function FAQ() {
   ];
 
   return (
-    <section id="faq" className="site-section bg-stone-50" aria-labelledby="faq-title">
+    <section id="faq" className="bg-muted/40 py-20 md:py-28" aria-labelledby="faq-title">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="section-kicker">FAQ</p>
-          <h2 id="faq-title" className="mb-4 text-4xl font-black leading-tight text-neutral-950 md:text-5xl">
-            Questions fréquentes
-          </h2>
-          <p className="text-lg text-neutral-700">
+        <Card className="mb-8">
+          <CardHeader className="text-center">
+            <Badge variant="secondary" className="mx-auto w-fit">FAQ</Badge>
+            <CardTitle id="faq-title" className="text-3xl md:text-5xl">
+              Questions fréquentes
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-center text-muted-foreground">
             Les points les plus souvent abordés lors des premiers échanges
-          </p>
-        </div>
+          </CardContent>
+        </Card>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="grid gap-4">
           {faqs.map((faq, idx) => (
-            <Card key={faq.question} className="overflow-hidden">
+            <Card key={faq.question}>
               <AccordionItem value={`faq-${idx}`} className="border-b-0">
-                <AccordionTrigger className="px-5 py-5 text-base font-bold text-neutral-950 hover:bg-muted/60 hover:no-underline">
+                <AccordionTrigger className="px-6 text-left hover:no-underline">
                   <span className="pr-4">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="px-5 pb-5 text-base leading-7 text-neutral-700">
+                <AccordionContent className="px-6 pb-6 text-muted-foreground">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

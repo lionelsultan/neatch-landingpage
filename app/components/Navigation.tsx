@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import BrandLogo from "./BrandLogo";
 
@@ -31,7 +32,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "border-b border-neutral-200 bg-white/88 shadow-sm backdrop-blur-2xl" : "bg-white/55 backdrop-blur-xl"
+        isScrolled ? "border-b bg-background/95 shadow-sm backdrop-blur" : "bg-background/80 backdrop-blur"
       }`}
       aria-label="Navigation principale"
     >
@@ -39,21 +40,17 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link
             href="/"
-            className="inline-flex h-10 items-center rounded-md bg-white px-3 shadow-sm ring-1 ring-neutral-200 transition hover:-translate-y-0.5 hover:bg-stone-50"
+            className="inline-flex h-10 items-center rounded-md"
             aria-label="Neatch - Accueil"
           >
-            <BrandLogo priority className="h-6 w-auto mix-blend-multiply sm:h-7" />
+            <BrandLogo priority className="h-6 w-auto sm:h-7" />
           </Link>
 
           <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-semibold text-neutral-600 transition-colors hover:text-neutral-950"
-              >
-                {link.label}
-              </a>
+              <Button asChild key={link.href} variant="ghost" size="sm">
+                <a href={link.href}>{link.label}</a>
+              </Button>
             ))}
             <Button asChild size="sm">
               <a href="#contact">Échanger avec Lionel</a>
@@ -73,14 +70,12 @@ export default function Navigation() {
               <div className="mt-8 grid gap-2">
                 {navLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
-                    <a
-                      href={link.href}
-                      className="rounded-md px-3 py-3 font-semibold text-neutral-700 transition-colors hover:bg-accent hover:text-accent-foreground"
-                    >
-                      {link.label}
-                    </a>
+                    <Button asChild variant="ghost" className="justify-start">
+                      <a href={link.href}>{link.label}</a>
+                    </Button>
                   </SheetClose>
                 ))}
+                <Separator className="my-2" />
                 <SheetClose asChild>
                   <Button asChild className="mt-4">
                     <a href="#contact">Échanger avec Lionel</a>
