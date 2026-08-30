@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,9 @@ import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger 
 import BrandLogo from "./BrandLogo";
 
 export default function Navigation() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const hrefFor = (hash: string) => (isHome ? hash : `/${hash}`);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -49,11 +53,11 @@ export default function Navigation() {
           <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
               <Button asChild key={link.href} variant="ghost" size="sm">
-                <a href={link.href}>{link.label}</a>
+                <a href={hrefFor(link.href)}>{link.label}</a>
               </Button>
             ))}
             <Button asChild size="sm">
-              <a href="#contact">Échanger avec Lionel</a>
+              <a href={hrefFor("#contact")}>Échanger avec Lionel</a>
             </Button>
           </div>
 
@@ -71,14 +75,14 @@ export default function Navigation() {
                 {navLinks.map((link) => (
                   <SheetClose asChild key={link.href}>
                     <Button asChild variant="ghost" className="justify-start">
-                      <a href={link.href}>{link.label}</a>
+                      <a href={hrefFor(link.href)}>{link.label}</a>
                     </Button>
                   </SheetClose>
                 ))}
                 <Separator className="my-2" />
                 <SheetClose asChild>
                   <Button asChild className="mt-4">
-                    <a href="#contact">Échanger avec Lionel</a>
+                    <a href={hrefFor("#contact")}>Échanger avec Lionel</a>
                   </Button>
                 </SheetClose>
               </div>

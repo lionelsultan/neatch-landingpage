@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const hrefFor = (hash: string) => (isHome ? hash : `/${hash}`);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -39,7 +43,7 @@ export default function Footer() {
               ].map(([href, label]) => (
                 <li key={href}>
                   <Button asChild variant="link" className="h-auto p-0">
-                    <a href={href}>{label}</a>
+                    <a href={hrefFor(href)}>{label}</a>
                   </Button>
                 </li>
               ))}
