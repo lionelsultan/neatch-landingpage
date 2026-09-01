@@ -734,7 +734,7 @@ function References() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="Références"
-          title="Une base d’expériences structurée par contexte, rôle et impact."
+          title="Mon expérience"
           description="Les références sont organisées comme une base de missions : secteur, rôle tenu, contexte d’intervention, assignments clés et résultats observables."
         />
 
