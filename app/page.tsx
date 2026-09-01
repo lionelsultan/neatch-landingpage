@@ -89,10 +89,6 @@ const methodSteps = [
     title: "Comprendre",
     description:
       "Clarifier le contexte, les enjeux, les irritants, les contraintes et les décisions à obtenir.",
-    image: {
-      src: "/field/workshop-campaign.jpg",
-      alt: "Workshop convivial autour d’une table de travail",
-    },
   },
   {
     number: "02",
@@ -107,10 +103,6 @@ const methodSteps = [
     title: "Piloter",
     description:
       "Animer les échanges utiles, suivre les risques, faire circuler l’information et maintenir le rythme d’exécution.",
-    image: {
-      src: "/field/entretien-rodeo.jpg",
-      alt: "Entretien professionnel dans une salle de réunion",
-    },
   },
   {
     number: "04",
@@ -123,16 +115,8 @@ const methodSteps = [
 
 const fieldPhotos = [
   {
-    src: "/field/la-defense-bureau.jpg",
-    alt: "Bureau de mission avec vue sur La Défense",
-  },
-  {
-    src: "/field/poste-travail.png",
-    alt: "Poste de travail utilisé pour piloter les missions",
-  },
-  {
-    src: "/field/bureau-vue-paris.jpg",
-    alt: "Espace de travail avec vue sur Paris",
+    src: "/field/workshop-campaign.jpg",
+    alt: "Workshop convivial autour d’une table de travail",
   },
 ];
 
@@ -165,129 +149,195 @@ const identificationPoints = [
 ];
 
 const referenceStats = [
-  { value: "26", label: "assignments documentés" },
+  { value: "14", label: "références client" },
   { value: "6", label: "secteurs couverts" },
   { value: "12", label: "équipes coordonnées chez Dior" },
-  { value: "Millions €", label: "de budgets pilotés" },
+  { value: "2,3 M€+", label: "de budgets pilotés" },
 ];
 
 const references = [
   {
     company: "Christian Dior Couture",
-    industry: "Luxury fashion",
-    period: "Depuis 2021",
-    role: "Release Train Engineer, Scrum Master, Product Management, Agile coaching",
+    industry: "Retail / Luxury",
+    period: "2021-Aujourd’hui",
+    role: "Release Train Engineer au sein de la DSI",
     context:
-      "Domaine Supply & Business Units, avec un dispositif de 12 équipes produit et IT.",
+      "Mission en cours sur le domaine Supply & Business Units, avec un dispositif de 12 équipes produit et IT.",
     assignments: [
-      "Release Train Engineer pour le domaine Supply & Business Units",
-      "Scrum Master pour Pricing Management et Distribution Planning",
-      "Product Management pour Merchandise Planning et Distribution Planning",
-      "Coaching agile des équipes Merchandise Planning et SCM Distribution Planning",
+      "Release Train Engineer pour l’ensemble du domaine Supply & Business Units",
+      "Mise en place d’agents autonomes GitHub Copilot pour aider au pilotage du delivery",
+      "Scrum Master de plusieurs équipes et coaching agile",
+      "Product Management pour les équipes Merchandise Planning",
+      "Gestion de projet supply chain sur Anaplan, de la conception au déploiement",
     ],
     outcomes: [
-      "Gouvernance de delivery structurée",
-      "Risques, dépendances et arbitrages rendus visibles",
-      "Trajectoire produit et supply mieux coordonnée",
+      "Coordination d’un dispositif de 12 équipes",
+      "Pilotage d’environ 1126 jours-homme sur un an",
+      "Budget géré de plus d’1 M€",
+      "Rôle reconnu par le client comme essentiel à la bonne conduite du projet",
     ],
   },
   {
     company: "CHANEL",
-    industry: "Luxury fashion",
-    period: "CRM IT Europe",
-    role: "Project Manager confirmé",
+    industry: "Retail / Luxury",
+    period: "2020",
+    role: "Senior Project Manager au sein de la direction CRM IT Europe",
     context:
-      "Déploiement international d’une application mobile CRM pour les équipes en boutique.",
+      "Mission de 7 mois sur un projet CRM mobile destiné aux équipes en boutique.",
     assignments: [
-      "Conception et rollout d’une application Salesforce Service Cloud",
-      "Pilotage projet, recette, coordination IT et métiers",
-      "Suivi budgétaire d’un programme de plus de 700 k€",
+      "Gestion de projet CRM",
+      "Accompagnement à la conception, à la recette et au déploiement",
+      "Déploiement d’une application mobile basée sur Salesforce Service Cloud",
+      "Coordination dans un contexte retail international et de pandémie mondiale",
     ],
     outcomes: [
       "Plus de 400 utilisateurs adressés en France et à l’international",
-      "Déploiement cadré avec les équipes terrain",
-      "Delivery sécurisé sur un contexte retail exigeant",
+      "Renforcement du lien entre vendeurs en boutique et clientèle",
+      "Budget projet de plus de 700 k€",
+    ],
+  },
+  {
+    company: "EXOLIS",
+    industry: "Healthcare",
+    period: "2020",
+    role: "Directeur de Projet, Product Manager, Scrum Master / Coach Agile",
+    context:
+      "Mission de 6 mois pour concevoir et déployer des solutions de télésuivi dans un contexte sanitaire contraint.",
+    assignments: [
+      "Conception et déploiement d’une solution de télésuivi basée sur Apache Cordova",
+      "Suivi administratif et social des cas contacts et patients COVID pour les ARS Normandie et Corse",
+      "Conception, paramétrage et déploiement d’une solution de télésuivi médical pour le Centre François Baclesse de Caen",
+      "Product Management sur la feuille de route du produit Engage",
+      "Coaching agile dans le cadre de la mise en place de Scrum",
+    ],
+    outcomes: [
+      "Application adaptée et déployée en moins de deux semaines",
+      "Conduite du changement menée auprès des ARS",
+      "Rôle de coach agile indiqué par le client comme déterminant pendant la surcharge de développement",
     ],
   },
   {
     company: "EDF Renouvelables",
     industry: "Energy",
-    period: "DSIN Groupe",
-    role: "Chef de Projet AMOA confirmé",
+    period: "2017-2020",
+    role: "Chef de Projet AMOA Senior au sein de la DSIN Groupe",
     context:
-      "Portefeuille d’applications métier pour les équipes terrain, maintenance et développement foncier.",
+      "Mission de 2,5 ans sur un portefeuille de projets métier, terrain, maintenance et contrôle interne.",
     assignments: [
-      "Blueprint, design, build et rollout d’un produit pour les Land Development Project Managers",
-      "Nouvelles fonctionnalités pour une application mobile de maintenance éolienne",
-      "Formalisation des besoins métier, wireframing et cadrage applicatif",
-      "Chantiers Salesforce Sales Cloud, K2, Xamarin, SAP Plant Maintenance / Cordova",
+      "Cadrage, conception et déploiement d’un projet Salesforce Sales Cloud d’envergure nationale",
+      "Conception et déploiement d’une solution K2 on-premise pour l’auto-évaluation de contrôle interne",
+      "Conception et déploiement de Smart Access sur Xamarin pour l’accès aux sites de maintenance",
+      "Product Owner d’une application mobile d’inspection terrain",
+      "Évolutions fonctionnelles et techniques d’une application de maintenance basée sur SAP Plant Maintenance et Cordova",
+      "Pilotage de chantiers applicatifs, infrastructures, systèmes et réseau lors de l’acquisition de Futuren",
     ],
     outcomes: [
-      "Besoins métier transformés en trajectoires produit lisibles",
-      "Applications terrain mieux alignées avec les usages opérationnels",
-      "Coordination renforcée entre métiers, IT et équipes de delivery",
+      "170 utilisateurs finaux accompagnés sur le projet Salesforce Sales Cloud",
+      "Budget projet de plus de 600 k€ hors licences",
+      "Réduction de plus de 80 % de la durée d’attente avant intervention sur site grâce à Smart Access",
+      "140 techniciens de maintenance concernés en France",
+      "190 techniciens de maintenance adressés sur le périmètre international",
     ],
   },
   {
-    company: "Hoppen / Exolis",
-    industry: "Healthcare",
-    period: "Pandémie COVID-19",
-    role: "Directeur de Projet, Product Manager, Scrum Master / Coach Agile",
+    company: "UNILEVER",
+    industry: "Consumer goods",
+    period: "04/2016-06/2017",
+    role: "Product Owner pour le lancement du premier site e-commerce d’Unilever",
     context:
-      "Mise en place rapide de solutions de télésuivi dans un contexte sanitaire contraint.",
+      "Mission réalisée chez Fabernovel Innovate, dans un contexte international Grande-Bretagne, Bulgarie et France.",
     assignments: [
-      "Software product design et rollout pour le Contact Tracing COVID-19",
-      "Coaching agile pour construire et déployer dans des délais courts",
-      "Roadmap produit Engage et conduite du changement",
+      "Gestion d’un projet e-commerce international",
+      "Coordination quotidienne des prestataires intégration, design et CRM",
+      "Rédaction des spécifications fonctionnelles générales et détaillées",
+      "Tests fonctionnels et support technique quotidien",
+      "Product management et optimisation du site existant",
     ],
     outcomes: [
-      "Déploiements réalisés en moins de deux semaines",
-      "Solutions mises à disposition des ARS Normandie et Corse",
-      "Rythme projet maintenu dans un contexte d’urgence",
+      "Lancement e-commerce structuré avec les équipes métier et techniques",
+      "Résolution de problématiques techniques liées à l’administration du site et à la supply chain",
+      "Nouvelles fonctionnalités cadrées avec les équipes métier",
     ],
   },
   {
-    company: "EY Fabernovel",
-    industry: "Retail, services, organisations internationales",
-    period: "Consulting digital",
-    role: "Consultant confirmé",
+    company: "MNH",
+    industry: "Healthcare / services",
+    period: "04/2016-06/2017",
+    role: "Chef de Projet dans le cadre d’un audit de startups",
     context:
-      "Missions de stratégie digitale, cadrage produit et design de nouveaux services.",
+      "Mission réalisée chez Fabernovel Innovate après le rachat de plusieurs startups par la MNH.",
     assignments: [
-      "Product Owner pour le lancement e-commerce T.O. by Lipton chez Unilever",
-      "Design d’une stratégie digitale pour la DSI de Keep Cool",
-      "Conception d’un produit logiciel pour l’organisation quotidienne des délégations de l’OECD",
-      "Design d’un nouveau programme de fidélité pour La Maison Plisson",
+      "Pré-audit technique de trois startups",
+      "Analyse des processus liés au PRA, à la cybersécurité et à la pérennité des solutions",
+      "Étude d’interopérabilité des systèmes d’information des sociétés acquises",
+      "Recommandation de solutions techniques pour favoriser l’interopérabilité",
     ],
     outcomes: [
-      "Offres digitales cadrées depuis les besoins jusqu’aux parcours",
-      "Roadmaps et arbitrages rendus exploitables par les équipes",
-      "Passage de l’intention stratégique au produit livrable",
+      "Lecture technique consolidée des startups auditées",
+      "Recommandations structurées pour préparer la création de nouvelles offres",
+      "Risques SI et cybersécurité rendus plus lisibles",
     ],
   },
   {
-    company: "Société Générale Banque de Détail",
+    company: "KEEP COOL",
+    industry: "Fitness / services",
+    period: "04/2016-06/2017",
+    role: "Définition d’une stratégie digitale pour l’optimisation du SI",
+    context:
+      "Mission réalisée chez Fabernovel Innovate sur l’audit du système d’information et des processus DSI.",
+    assignments: [
+      "Benchmark de solutions SI du marché sur la brique facturation",
+      "Audit du SI et des processus DSI",
+      "Formalisation de l’offre de refonte de la DSI",
+      "Réalisation de budgets, planning et choix d’un prestataire technique",
+    ],
+    outcomes: [
+      "Lancement d’une refonte du SI cadré à partir de l’audit",
+      "Recommandations formulées sur les solutions SI du marché",
+      "Trajectoire de refonte structurée avec budget, planning et prestataire",
+    ],
+  },
+  {
+    company: "BNP Paribas BNL",
     industry: "Financial services",
-    period: "Accenture | 2012",
-    role: "Conception du logiciel d’octroi de crédit utilisé en agence bancaire",
+    period: "2016",
+    role: "Optimisation de l’espace physique au sein des agences bancaires",
     context:
-      "Refonte d’un parcours d’octroi de crédit en agence, avec enjeux métier, ergonomie et coordination projet.",
+      "Mission de stratégie et innovation autour de l’expérience agence et des initiatives retail comparables.",
     assignments: [
-      "Analyse des enjeux business et rédaction des spécifications fonctionnelles",
-      "Étude des scénarios métiers, cinématiques et parcours utilisateur",
-      "Pilotage des ateliers métiers, UX et UI designers",
-      "Management d’une équipe de 4 consultants pour le benchmark et les prototypes HTML",
+      "Étude approfondie des initiatives de la concurrence",
+      "Benchmark des pratiques retail transposables au réseau bancaire",
+      "Formalisation de recommandations stratégiques pour l’optimisation des espaces",
     ],
     outcomes: [
-      "Parcours utilisateur optimisé pour les équipes en agence",
-      "Prototypes HTML produits pour sécuriser les choix fonctionnels",
-      "Suivi projet, allocation des ressources et pilotage budgétaire structurés",
+      "Quarante recommandations stratégiques élaborées",
+      "Vision benchmark structurée pour orienter les arbitrages",
+      "Pistes d’optimisation concrètes pour les agences du groupe",
+    ],
+  },
+  {
+    company: "BNP Paribas Cash Management",
+    industry: "Financial services",
+    period: "2016",
+    role: "Implémentation des processus de KYC et d’intégration des clients",
+    context:
+      "Optimisation des processus KYC et cadrage fonctionnel autour de l’implémentation de JIRA.",
+    assignments: [
+      "Revue intégrale des processus existants",
+      "Optimisation des processus KYC et d’intégration client",
+      "Rédaction des spécifications fonctionnelles pour l’implémentation de JIRA",
+    ],
+    outcomes: [
+      "Processus KYC revus et rationalisés",
+      "Besoins fonctionnels rendus exploitables pour l’outillage",
+      "Coordination entre équipes métier, IT et delivery",
+      "Socle de mise en œuvre clarifié pour JIRA",
     ],
   },
   {
     company: "Société Générale CIB / APTP",
     industry: "Financial services",
-    period: "Accenture | 2013-2015",
+    period: "2013-2015",
     role: "Construction d’une plateforme de back office post-trading",
     context:
       "Branchement d’une plateforme de back office sur les flux du front office et coordination avec des équipes techniques anglophones.",
@@ -304,27 +354,9 @@ const references = [
     ],
   },
   {
-    company: "BNP Paribas BNL",
-    industry: "Financial services",
-    period: "Accenture | 2016",
-    role: "Optimisation de l’espace physique au sein des agences bancaires",
-    context:
-      "Mission de stratégie et innovation autour de l’expérience agence et des initiatives retail comparables.",
-    assignments: [
-      "Étude approfondie des initiatives de la concurrence",
-      "Benchmark des pratiques retail transposables au réseau bancaire",
-      "Formalisation de recommandations stratégiques pour l’optimisation des espaces",
-    ],
-    outcomes: [
-      "Quarante recommandations stratégiques élaborées",
-      "Vision benchmark structurée pour orienter les arbitrages",
-      "Pistes d’optimisation concrètes pour les agences du groupe",
-    ],
-  },
-  {
     company: "Crédit Agricole Consumer Finance",
     industry: "Financial services",
-    period: "Accenture | 2013",
+    period: "2013",
     role: "Chef de projet Organisation / refonte des processus de la DSI",
     context:
       "Transformation des processus opérationnels de la DSI et mise en place d’indicateurs de pilotage.",
@@ -341,9 +373,28 @@ const references = [
     ],
   },
   {
+    company: "Société Générale Banque de Détail",
+    industry: "Financial services",
+    period: "2012",
+    role: "Conception du logiciel d’octroi de crédit utilisé en agence bancaire",
+    context:
+      "Refonte d’un parcours d’octroi de crédit en agence, avec enjeux métier, ergonomie et coordination projet.",
+    assignments: [
+      "Analyse des enjeux business et rédaction des spécifications fonctionnelles",
+      "Étude des scénarios métiers, cinématiques et parcours utilisateur",
+      "Pilotage des ateliers métiers, UX et UI designers",
+      "Management d’une équipe de 4 consultants pour le benchmark et les prototypes HTML",
+    ],
+    outcomes: [
+      "Parcours utilisateur optimisé pour les équipes en agence",
+      "Prototypes HTML produits pour sécuriser les choix fonctionnels",
+      "Suivi budgétaire, allocation des ressources et pilotage projet structurés",
+    ],
+  },
+  {
     company: "Crédit Agricole Consumer Finance",
     industry: "Financial services",
-    period: "Accenture | 2011",
+    period: "2011",
     role: "Responsable d’étude sur la gestion des partenariats",
     context:
       "Analyse des synergies possibles entre les partenariats Sofinco et Finaref.",
@@ -362,7 +413,7 @@ const references = [
   {
     company: "BNP Paribas BGL",
     industry: "Financial services",
-    period: "Accenture | 2011",
+    period: "2011",
     role: "Business Analyst pour une solution d’octroi de crédit aux personnes morales",
     context:
       "Cadrage fonctionnel, ergonomie et recette d’une solution bancaire d’octroi de crédit.",
@@ -376,25 +427,6 @@ const references = [
       "Spécifications et scénarios métiers formalisés",
       "Stratégie de recette structurée",
       "Qualité fonctionnelle sécurisée avant mise à disposition",
-    ],
-  },
-  {
-    company: "BNP Paribas Cash Management",
-    industry: "Financial services",
-    period: "Accenture | 2016",
-    role: "Implémentation des processus de KYC et d’intégration des clients",
-    context:
-      "Optimisation des processus KYC et cadrage fonctionnel autour de l’implémentation de JIRA.",
-    assignments: [
-      "Revue intégrale des processus existants",
-      "Optimisation des processus KYC et d’intégration client",
-      "Rédaction des spécifications fonctionnelles pour l’implémentation de JIRA",
-    ],
-    outcomes: [
-      "Processus KYC revus et rationalisés",
-      "Besoins fonctionnels rendus exploitables pour l’outillage",
-      "Coordination entre équipes métier, IT et delivery",
-      "Socle de mise en œuvre clarifié pour JIRA",
     ],
   },
 ];
@@ -579,7 +611,7 @@ function Method() {
               title="Le travail invisible qui sécurise l’intervention."
               description="La valeur vient de la capacité à comprendre vite, structurer sans alourdir, faire parler les bons interlocuteurs et transformer les décisions en exécution concrète."
             />
-            <div className="grid grid-cols-3 gap-2" aria-label="Illustrations de missions terrain">
+            <div className="grid gap-2" aria-label="Illustration de mission terrain">
               {fieldPhotos.map((photo) => (
                 <Card key={photo.src}>
                   <CardContent className="p-0">
@@ -588,7 +620,7 @@ function Method() {
                         src={photo.src}
                         alt={photo.alt}
                         fill
-                        sizes="(min-width: 1024px) 120px, 30vw"
+                        sizes="(min-width: 1024px) 520px, 100vw"
                         className="object-cover"
                       />
                     </div>
@@ -615,19 +647,6 @@ function Method() {
                           </div>
                           <CardDescription>{step.description}</CardDescription>
                         </CardHeader>
-                        {step.image ? (
-                          <CardContent>
-                            <div className="relative aspect-video overflow-hidden rounded-md">
-                              <Image
-                                src={step.image.src}
-                                alt={step.image.alt}
-                                fill
-                                sizes="(min-width: 1024px) 520px, 100vw"
-                                className="object-cover"
-                              />
-                            </div>
-                          </CardContent>
-                        ) : null}
                       </Card>
                     </li>
                   );
@@ -739,8 +758,8 @@ function References() {
           {references.map((reference) => (
             <Card key={`${reference.company}-${reference.period}`}>
               <AccordionItem value={`${reference.company}-${reference.period}`} className="border-b-0">
-                <AccordionTrigger className="px-6 text-left hover:no-underline">
-                  <div className="grid gap-2">
+                <AccordionTrigger className="justify-start gap-4 px-6 text-left hover:no-underline">
+                  <div className="grid min-w-0 flex-1 gap-2">
                     <div className="flex items-center gap-3">
                       <BriefcaseBusiness className="h-5 w-5 text-muted-foreground" />
                       <span className="text-xl font-semibold text-foreground">
@@ -751,7 +770,10 @@ function References() {
                       {reference.industry} · {reference.role}
                     </span>
                   </div>
-                  <Badge variant="outline" className="ml-4 hidden sm:inline-flex">
+                  <Badge
+                    variant="outline"
+                    className="ml-auto hidden min-w-32 shrink-0 justify-center whitespace-nowrap sm:inline-flex"
+                  >
                     {reference.period}
                   </Badge>
                 </AccordionTrigger>
