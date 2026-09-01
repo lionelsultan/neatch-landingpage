@@ -151,7 +151,7 @@ const identificationPoints = [
 const referenceStats = [
   { value: "14", label: "références client" },
   { value: "6", label: "secteurs couverts" },
-  { value: "12", label: "équipes coordonnées chez Dior" },
+  { value: "12", label: "équipes coordonnées sur le domaine Supply & Business Units" },
   { value: "2,3 M€+", label: "de budgets pilotés" },
 ];
 
@@ -165,14 +165,14 @@ const references = [
       "Mission en cours sur le domaine Supply & Business Units, avec un dispositif de 12 équipes produit et IT.",
     assignments: [
       "Release Train Engineer pour l’ensemble du domaine Supply & Business Units",
-      "Mise en place d’agents autonomes GitHub Copilot pour aider au pilotage du delivery",
+      "Mise en place d’agents autonomes GitHub Copilot, avec GitHub Actions et GitHub Agents, pour aider au pilotage du delivery",
       "Scrum Master de plusieurs équipes et coaching agile",
       "Product Management pour les équipes Merchandise Planning",
-      "Gestion de projet supply chain sur Anaplan, de la conception au déploiement",
+      "Gestion de projet supply chain basé sur Anaplan, de la conception au déploiement",
     ],
     outcomes: [
       "Coordination d’un dispositif de 12 équipes",
-      "Pilotage d’environ 1126 jours-homme sur un an",
+      "Pilotage d’environ 1 126 jours-homme sur un an",
       "Budget géré de plus d’1 M€",
       "Rôle reconnu par le client comme essentiel à la bonne conduite du projet",
     ],
@@ -188,7 +188,7 @@ const references = [
       "Gestion de projet CRM",
       "Accompagnement à la conception, à la recette et au déploiement",
       "Déploiement d’une application mobile basée sur Salesforce Service Cloud",
-      "Coordination dans un contexte retail international et de pandémie mondiale",
+      "Coordination dans un contexte international et de pandémie mondiale",
     ],
     outcomes: [
       "Plus de 400 utilisateurs adressés en France et à l’international",
@@ -206,7 +206,7 @@ const references = [
     assignments: [
       "Conception et déploiement d’une solution de télésuivi basée sur Apache Cordova",
       "Suivi administratif et social des cas contacts et patients COVID pour les ARS Normandie et Corse",
-      "Conception, paramétrage et déploiement d’une solution de télésuivi médical pour le Centre François Baclesse de Caen",
+      "Conception, paramétrage manuel et déploiement d’une solution de télésuivi médical pour le Centre François Baclesse de Caen",
       "Product Management sur la feuille de route du produit Engage",
       "Coaching agile dans le cadre de la mise en place de Scrum",
     ],
@@ -236,7 +236,7 @@ const references = [
       "Budget projet de plus de 600 k€ hors licences",
       "Réduction de plus de 80 % de la durée d’attente avant intervention sur site grâce à Smart Access",
       "140 techniciens de maintenance concernés en France",
-      "190 techniciens de maintenance adressés sur le périmètre international",
+      "190 techniciens de maintenance concernés en Italie, Grèce et France",
     ],
   },
   {
@@ -263,7 +263,7 @@ const references = [
     company: "MNH",
     industry: "Healthcare / services",
     period: "04/2016-06/2017",
-    role: "Chef de Projet dans le cadre d’un audit de startups",
+    role: "Chef de Projet dans le cadre d’un audit d’une startup",
     context:
       "Mission réalisée chez Fabernovel Innovate après le rachat de plusieurs startups par la MNH.",
     assignments: [
@@ -301,7 +301,7 @@ const references = [
     company: "BNP Paribas BNL",
     industry: "Financial services",
     period: "2016",
-    role: "Optimisation de l’espace physique au sein des agences bancaires",
+    role: "Optimisation de l’espace physique au sein des agences bancaires du groupe",
     context:
       "Mission de stratégie et innovation autour de l’expérience agence et des initiatives retail comparables.",
     assignments: [
@@ -411,7 +411,7 @@ const references = [
     ],
   },
   {
-    company: "BNP Paribas BGL",
+    company: "BGL BNP Paribas",
     industry: "Financial services",
     period: "2011",
     role: "Business Analyst pour une solution d’octroi de crédit aux personnes morales",
@@ -426,7 +426,7 @@ const references = [
     outcomes: [
       "Spécifications et scénarios métiers formalisés",
       "Stratégie de recette structurée",
-      "Qualité fonctionnelle sécurisée avant mise à disposition",
+      "Participation à l’exécution de la recette",
     ],
   },
 ];
@@ -485,7 +485,7 @@ function Hero() {
             <div className="mt-8 grid max-w-xl grid-cols-3 gap-3">
               {[
                 ["15 ans", "terrain"],
-                ["12", "équipes Dior"],
+                ["12", "équipes Supply & BU"],
                 ["26", "missions"],
               ].map(([value, label]) => (
                 <Card key={label}>
@@ -521,7 +521,7 @@ function Hero() {
             </CardHeader>
             <CardContent className="grid gap-3">
               {[
-                ["Luxury", "Dior, Chanel"],
+                ["Luxury", "Christian Dior Couture, Chanel"],
                 ["Energy", "EDF Renouvelables"],
                 ["Finance", "BNP Paribas, Société Générale"],
               ].map(([sector, clients]) => (
@@ -735,7 +735,7 @@ function References() {
         <SectionHeading
           eyebrow="Références"
           title="Mon expérience"
-          description="Les références sont organisées comme une base de missions : secteur, rôle tenu, contexte d’intervention, assignments clés et résultats observables."
+          description="Les références sont organisées comme une base de missions : secteur, rôle tenu, contexte d’intervention, travaux clés et résultats observables."
         />
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -791,7 +791,7 @@ function References() {
                   <div className="mt-5 grid gap-5 md:grid-cols-2">
                     <Card>
                       <CardHeader>
-                        <CardTitle className="text-lg">Assignments clés</CardTitle>
+                        <CardTitle className="text-lg">Travaux clés</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <ul className="grid gap-2 text-sm text-muted-foreground">
