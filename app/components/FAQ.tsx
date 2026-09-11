@@ -29,7 +29,7 @@ export default function FAQ() {
     {
       question: "Quels profils pouvez-vous identifier ?",
       answer:
-        "Principalement des chefs de projet, Product Owners, Product Managers, Scrum Masters, profils PMO, delivery managers ou consultants transformation. L’objectif est de trouver une personne adaptée au contexte, pas seulement un intitulé de poste.",
+        "Principalement des chefs de projet, Product Owners, Product Managers, profils PMO, delivery managers ou consultants transformation. L’objectif est de trouver une personne adaptée au contexte, pas seulement un intitulé de poste.",
     },
     {
       question: "Comment qualifiez-vous les consultants ?",

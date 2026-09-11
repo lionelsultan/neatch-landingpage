@@ -9,7 +9,7 @@ export const references = [
     assignments: [
       "Release Train Engineer pour l’ensemble du domaine Supply & Business Units",
       "Mise en place d’agents autonomes GitHub Copilot, avec GitHub Actions et GitHub Agents, pour aider au pilotage du delivery",
-      "Scrum Master de plusieurs équipes et coaching agile",
+      "Coaching agile de plusieurs équipes",
       "Product Management pour les équipes Merchandise Planning",
       "Gestion de projet supply chain basé sur Anaplan, de la conception au déploiement",
     ],
@@ -43,7 +43,7 @@ export const references = [
     company: "EXOLIS",
     industry: "Healthcare",
     period: "2020",
-    role: "Directeur de Projet, Product Manager, Scrum Master / Coach Agile",
+    role: "Directeur de Projet, Product Manager / Coach Agile",
     context:
       "Mission de 6 mois pour concevoir et déployer des solutions de télésuivi dans un contexte sanitaire contraint.",
     assignments: [

@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     "delivery",
     "release train engineer",
     "product owner",
-    "scrum master",
     "product manager",
     "chef de projet",
     "recrutement",
