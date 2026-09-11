@@ -27,7 +27,7 @@ La proposition associe un fond encre verte `#091411`, un texte ivoire `#F1F4E9` 
 
 Le portrait devient une signature humaine sous la promesse. Les références apparaissent immédiatement après l’introduction. Les expertises s’organisent en colonnes ouvertes ; les missions combinent une grande étude de cas et deux exemples courts. La méthode prend la forme d’un parcours en quatre étapes.
 
-Accroche proposée : « Transformer la complexité en mouvement. » Le paragraphe qui suit précise le métier et les missions digitales critiques, afin que le traitement abstrait reste compréhensible.
+Accroche retenue : « Transformer les décisions en résultats. » Le paragraphe qui suit précise le métier et les missions digitales critiques, afin que le traitement abstrait reste compréhensible.
 
 Je recommande l’ambiance sombre comme direction principale. La variante claire sert à comparer le degré de rupture avec l’identité actuelle. Le sélecteur de thème est un outil de présentation ; sa présence dans le site final reste facultative.
 
