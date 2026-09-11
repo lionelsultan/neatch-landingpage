@@ -26,7 +26,7 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#principes", label: "Principes" },
+    { href: "#expertise", label: "Expertise" },
     { href: "#methode", label: "Méthode" },
     { href: "#references", label: "Références" },
     { href: "#faq", label: "FAQ" },

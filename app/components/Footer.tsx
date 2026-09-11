@@ -35,10 +35,10 @@ export default function Footer() {
             <h3 className="mb-4 font-bold">Navigation</h3>
             <ul className="grid gap-2">
               {[
-                ["#principes", "Principes fondateurs"],
+                ["#expertise", "Principes fondateurs"],
                 ["#methode", "Méthode"],
                 ["#references", "Références"],
-                ["#identification", "Identification"],
+                ["#faq", "Identification"],
                 ["#faq", "FAQ"],
               ].map(([href, label]) => (
                 <li key={href}>

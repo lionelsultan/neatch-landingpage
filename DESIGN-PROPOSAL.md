@@ -1,5 +1,7 @@
 # Neatch — Proposition de direction artistique
 
+> Mise en production du 11 septembre 2026 : Glacier éditorial est désormais intégré à `app/page.tsx` et servi à la racine `/`. Les maquettes historiques sont archivées dans `docs/design-proposals/` ; leurs anciennes URL redirigent vers l’accueil. Les chemins et états décrits ci-dessous documentent les étapes de conception.
+
 Étude du 10 septembre 2026, fondée sur le code et le rendu local du site actuel.
 
 Maquette : `/concept-neatch.html` (lancer `npm run dev -- --port 3010`, puis ouvrir `http://localhost:3010/concept-neatch.html`). Le bouton ◐ compare les ambiances sombre et claire.
