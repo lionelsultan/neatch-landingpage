@@ -58,3 +58,47 @@
 .editorial-site .hero .person img{flex-shrink:0}
 .editorial-site footer .wrap span{line-height:1.6}
 @media(max-width:700px){.editorial-site .reference-columns{grid-template-columns:1fr;gap:20px}.editorial-site .reference-entry>summary{flex-wrap:wrap;gap:6px}.editorial-site footer .wrap{flex-wrap:wrap}}
+
+/* Contemporary studio: warm paper, graphite and deep turquoise. */
+.editorial-site{--bg:#172627;--surface:#203536;--fg:#f6f3eb;--muted:#b7c9c6;--line:#3c5553;--accent:#73c8bd;--ink:#142827;--font-editorial:"Helvetica Neue",Helvetica,Arial,sans-serif}
+.editorial-site.light{--bg:#f7f5ee;--surface:#eeece3;--fg:#232827;--muted:#606c68;--line:#d6dcd4;--accent:#087f80;--ink:#fff;--grid:transparent}
+.editorial-site .wrap{width:min(1360px,90%)}
+.editorial-site header{border:0}.editorial-site nav{height:100px}
+.editorial-site .nav-cta{border-radius:3px;border-color:var(--accent);color:var(--accent)}
+.editorial-site .hero{background:none}.editorial-site .hero:before{display:none}
+.editorial-site .hero-inner{grid-template-columns:1.15fr 1fr;gap:7%;padding:45px 0 60px;align-items:center}
+.editorial-site h1{font-family:var(--font-reading);font-size:clamp(48px,5.8vw,88px);font-weight:750;line-height:.99;letter-spacing:-.065em;margin:32px 0}
+.editorial-site h1 span{font-family:Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.065em}
+.editorial-site .intro{max-width:470px;font-size:17px;line-height:1.7}
+.editorial-site .primary,.editorial-site.light .primary{border-radius:3px;background:var(--accent);color:var(--ink);padding:19px 23px}
+.editorial-site .person{display:none}
+.editorial-site .studio-portrait{background:#087f80;color:#fff;position:relative;padding:25px 28px 30px;overflow:hidden;transform:rotate(2deg);animation:studio-enter .8s ease both}
+.editorial-site .portrait-top{display:flex;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.12em;font-weight:600}
+.editorial-site .portrait-top span:last-child{font-size:26px}
+.editorial-site .portrait-frame{width:78%;margin:24px auto 0;aspect-ratio:1;overflow:hidden;border-radius:0;clip-path:polygon(16% 0,100% 0,100% 84%,84% 100%,0 100%,0 16%);background:#eee}
+.editorial-site .portrait-frame img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);mix-blend-mode:multiply;display:block}
+.editorial-site .portrait-caption{display:flex;justify-content:space-between;font-size:11px;line-height:1.5;margin:22px 0}
+.editorial-site .portrait-caption span:last-child{text-align:right}
+.editorial-site .portrait-name{font-size:clamp(48px,6vw,85px);font-weight:750;letter-spacing:-.07em;line-height:.88}.editorial-site .portrait-name span{display:block;margin-left:22%;font-family:Georgia,serif;font-style:italic;font-weight:400}
+.editorial-site .hero-bottom{padding:22px 0}.editorial-site .clients{background:transparent;padding:32px 0 40px}
+.editorial-site .section{padding:100px 0}.editorial-site .section-head h2,.editorial-site .contact h2{font-family:var(--font-reading);font-size:clamp(34px,4.3vw,60px);font-weight:700;line-height:1.06;letter-spacing:-.055em}
+.editorial-site .section-head .mono{color:var(--accent)}
+.editorial-site .services{display:block;border-bottom:0}
+.editorial-site .service,.editorial-site .service+.service{display:grid;grid-template-columns:190px 1.1fr 1fr;gap:14px 32px;padding:35px 0;border-left:0;border-bottom:1px solid var(--line);align-items:start;transition:padding .25s,background .25s}
+.editorial-site .service:hover{background:var(--surface);padding-left:15px;padding-right:15px}
+.editorial-site .service-number{font-size:11px;color:var(--accent);padding-top:8px}
+.editorial-site .service-icon{display:none}.editorial-site .service h3{font-size:29px;font-weight:600;line-height:1.15;margin:0;letter-spacing:-.04em}
+.editorial-site .service p{margin:0}.editorial-site .service .tag{grid-column:3;border:0;padding:0;margin:0;font-size:11px}
+.editorial-site .work{border:0}.editorial-site .cases{grid-template-columns:1fr 1fr;gap:0 48px}
+.editorial-site .case,.editorial-site .case.featured{border:0;border-top:2px solid var(--accent);border-radius:0;background:transparent;padding:28px 0}
+.editorial-site .case.featured{grid-row:span 2}.editorial-site .case.featured h3{font-family:var(--font-reading);font-size:clamp(32px,3.4vw,48px);font-weight:650;letter-spacing:-.05em;margin:40px 0 20px}
+.editorial-site .result strong{font-family:var(--font-reading);font-size:56px;font-weight:650;letter-spacing:-.06em}
+.editorial-site .case.small h3{font-size:25px;font-weight:600}.editorial-site .case.small .highlight{font-size:15px;font-weight:600}
+.editorial-site .method-grid{gap:25px}.editorial-site .step h3{font-size:24px;font-weight:600}
+.editorial-site .contact-box{border:0;border-radius:0;background:var(--accent);color:var(--ink);padding:55px}
+.editorial-site .contact .eyebrow,.editorial-site .contact p{color:var(--ink)}.editorial-site .contact .dot{background:var(--ink)}
+.editorial-site .contact .primary{background:var(--bg);color:var(--fg)}.editorial-site .contact .text-link{border-color:currentColor}
+@keyframes studio-enter{from{opacity:0;transform:translateY(18px) rotate(0)}to{opacity:1;transform:translateY(0) rotate(2deg)}}
+@media(max-width:1000px){.editorial-site .hero-inner{gap:35px}.editorial-site h1{font-size:clamp(44px,6vw,65px)}.editorial-site .service,.editorial-site .service+.service{grid-template-columns:140px 1fr 1fr;gap:14px 22px}.editorial-site .service h3{font-size:24px}.editorial-site .contact-box{display:block}.editorial-site .contact-links{align-items:flex-start;margin-top:28px}}
+@media(max-width:700px){.editorial-site .wrap{width:88%}.editorial-site nav{height:80px}.editorial-site .hero-inner{grid-template-columns:1fr;gap:45px;padding:35px 0 40px}.editorial-site h1{font-size:clamp(46px,11.6vw,76px)}.editorial-site .studio-portrait{max-width:420px;width:94%;margin:auto;padding:22px}.editorial-site .portrait-name{font-size:68px}.editorial-site .section{padding:65px 0}.editorial-site .section-head h2,.editorial-site .contact h2{font-size:36px}.editorial-site .service,.editorial-site .service+.service{grid-template-columns:1fr;padding:28px 0;gap:16px}.editorial-site .service h3{margin:0;font-size:28px}.editorial-site .service .tag{grid-column:1}.editorial-site .cases{grid-template-columns:1fr}.editorial-site .case.featured{grid-row:auto}.editorial-site .case.featured h3{font-size:36px}.editorial-site .result strong{font-size:43px}.editorial-site .contact-box{padding:32px 24px}.editorial-site .contact{padding:0 0 55px}.editorial-site .nav-cta{max-width:170px}.editorial-site .reference-entry>summary span{flex-shrink:1}}
+@media(prefers-reduced-motion:reduce){.editorial-site .studio-portrait{animation:none}.editorial-site .service{transition:none}}
