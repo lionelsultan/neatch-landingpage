@@ -62,10 +62,10 @@ export default function LegalPage() {
               </div>
               <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
-                  <span className="font-medium text-foreground">Hébergeur :</span> Cloudflare, Inc. (Cloudflare Workers)
+                  <span className="font-medium text-foreground">Hébergeur :</span> Vercel Inc.
                 </p>
                 <p>
-                  <span className="font-medium text-foreground">Adresse :</span> 101 Townsend Street, San Francisco, CA 94107, États-Unis
+                  <span className="font-medium text-foreground">Adresse :</span> 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis
                 </p>
               </div>
             </section>
@@ -183,7 +183,7 @@ export default function LegalPage() {
           </div>
 
           
-          <p className="font-mono text-xs text-muted-foreground">Dernière mise à jour : 17 septembre 2026</p>
+          <p className="font-mono text-xs text-muted-foreground">Dernière mise à jour : 8 octobre 2026</p>
         </div>
       </main>
       <Footer /></>
