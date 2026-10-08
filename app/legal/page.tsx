@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import "../editorial.css";
-import "./legal.css";
 
 export const metadata: Metadata = {
   title: "Mentions légales | Neatch",
@@ -13,68 +13,68 @@ export const metadata: Metadata = {
 
 export default function LegalPage() {
   return (
-    <div className="editorial-site light legal-site"><header><nav className="wrap" aria-label="Navigation principale"><Link href="/" aria-label="Neatch, accueil"><Image className="logo" src="/neatch-logo-wordmark.png" alt="Neatch" width={119} height={31} /></Link><div className="nav-links"><Link href="/#expertise">Expertise</Link><Link href="/#references">Missions</Link><Link href="/#methode">Approche</Link></div><Link className="nav-cta" href="/#contact">Discuter d’un programme ↗</Link></nav></header>
-      <main id="main-content" className="legal-main wrap">
-        <div className="legal-content">
-          <Link className="legal-back text-link" href="/">← Retour à l’accueil</Link><div className="legal-heading"><span className="mono muted">Neatch E.U.R.L. / Informations légales</span>
-          <h1 className="legal-title">
+    <><Navigation />
+      <main id="main-content" className="mx-auto max-w-4xl px-6 py-16 md:py-24">
+        <div className="space-y-10">
+          <Button asChild variant="outline"><Link href="/">← Retour à l’accueil</Link></Button><div className="space-y-4"><span className="font-mono text-xs text-muted-foreground">Neatch E.U.R.L. / Informations légales</span>
+          <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
             Mentions légales
           </h1><p>Les informations relatives à l’éditeur du site, à son utilisation et à la protection de vos données.</p></div>
 
-          <div className="legal-sections">
-            <section className="legal-section">
-              <div className="legal-section-heading">
+          <div className="space-y-8">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Éditeur du site</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
-                  <span className="legal-label">Raison sociale :</span> NEATCH E.U.R.L.
+                  <span className="font-medium text-foreground">Raison sociale :</span> NEATCH E.U.R.L.
                 </p>
                 <p>
-                  <span className="legal-label">Forme juridique :</span> Entreprise
+                  <span className="font-medium text-foreground">Forme juridique :</span> Entreprise
                   Unipersonnelle à Responsabilité Limitée
                 </p>
                 <p>
-                  <span className="legal-label">SIREN :</span> 831282066
+                  <span className="font-medium text-foreground">SIREN :</span> 831282066
                 </p>
                 <p>
-                  <span className="legal-label">SIRET du siège :</span> 83128206600024
+                  <span className="font-medium text-foreground">SIRET du siège :</span> 83128206600024
                 </p>
                 <p>
-                  <span className="legal-label">Email :</span>{" "}
+                  <span className="font-medium text-foreground">Email :</span>{" "}
                   <a
                     href="mailto:contact@neatch.com"
-                    className="legal-link"
+                    className="text-foreground underline underline-offset-4"
                   >
                     contact@neatch.com
                   </a>
                 </p>
                 <p>
-                  <span className="legal-label">Directeur de la publication :</span> Lionel
+                  <span className="font-medium text-foreground">Directeur de la publication :</span> Lionel
                   Sultan
                 </p>
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Hébergement</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
-                  <span className="legal-label">Hébergeur :</span> Cloudflare, Inc. (Cloudflare Workers)
+                  <span className="font-medium text-foreground">Hébergeur :</span> Cloudflare, Inc. (Cloudflare Workers)
                 </p>
                 <p>
-                  <span className="legal-label">Adresse :</span> 101 Townsend Street, San Francisco, CA 94107, États-Unis
+                  <span className="font-medium text-foreground">Adresse :</span> 101 Townsend Street, San Francisco, CA 94107, États-Unis
                 </p>
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Propriété intellectuelle</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
                   L’ensemble de ce site relève de la législation française et internationale sur le droit
                   d’auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y
@@ -88,11 +88,11 @@ export default function LegalPage() {
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Protection des données personnelles</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
                   Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi
                   Informatique et Libertés, vous disposez de droits concernant vos données personnelles : droit
@@ -104,7 +104,7 @@ export default function LegalPage() {
                   pouvez nous contacter à l’adresse :{" "}
                   <a
                     href="mailto:contact@neatch.com"
-                    className="legal-link"
+                    className="text-foreground underline underline-offset-4"
                   >
                     contact@neatch.com
                   </a>
@@ -112,11 +112,11 @@ export default function LegalPage() {
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Cookies</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
                   Ce site ne dépose pas de cookies de mesure d’audience, de personnalisation ou de publicité.
                   Si des outils de mesure ou services tiers sont ajoutés ultérieurement, cette information sera
@@ -125,11 +125,11 @@ export default function LegalPage() {
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Conditions générales d’utilisation</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
                   L’utilisation de ce site implique l’acceptation pleine et entière des conditions générales
                   d’utilisation décrites ci-après. Ces conditions d’utilisation sont susceptibles d’être
@@ -138,11 +138,11 @@ export default function LegalPage() {
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Limitation de responsabilité</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
                   Les informations contenues sur ce site sont aussi précises que possible et le site est
                   périodiquement remis à jour, mais peut toutefois contenir des inexactitudes, des omissions ou
@@ -157,11 +157,11 @@ export default function LegalPage() {
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Liens hypertextes</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
                   Ce site peut contenir des liens hypertextes vers d’autres sites. NEATCH E.U.R.L. n’exerce
                   aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
@@ -169,11 +169,11 @@ export default function LegalPage() {
               </div>
             </section>
 
-            <section className="legal-section">
-              <div className="legal-section-heading">
+            <section className="border-t pt-8">
+              <div className="mb-4 text-xl font-semibold tracking-tight">
                 <h2>Droit applicable</h2>
               </div>
-              <div className="legal-section-body">
+              <div className="space-y-3 text-sm leading-7 text-muted-foreground">
                 <p>
                   Les présentes mentions légales sont régies par le droit français. En cas de litige, les
                   tribunaux français seront seuls compétents.
@@ -183,9 +183,9 @@ export default function LegalPage() {
           </div>
 
           
-          <p className="legal-date">Dernière mise à jour : 17 septembre 2026</p>
+          <p className="font-mono text-xs text-muted-foreground">Dernière mise à jour : 17 septembre 2026</p>
         </div>
       </main>
-      <footer><div className="wrap"><Link href="/" aria-label="Neatch, accueil"><Image className="logo" src="/neatch-logo-wordmark.png" alt="Neatch" width={86} height={22} /></Link><span>© 2026 Neatch · Transformation &amp; Delivery.</span><Link href="/#faq">Questions fréquentes</Link><a href="mailto:contact@neatch.com">Contact ↗</a></div></footer></div>
+      <Footer /></>
   );
 }

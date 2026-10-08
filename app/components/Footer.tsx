@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import BrandLogo from "./BrandLogo";
+import { siteNavigation } from "../data/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -14,7 +15,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t bg-background py-14 text-foreground" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
             <Link
@@ -22,7 +23,7 @@ export default function Footer() {
               className="mb-5 inline-flex"
               aria-label="Neatch - Accueil"
             >
-              <BrandLogo variant="lockup" className="h-24 w-auto" />
+              <BrandLogo variant="wordmark" className="h-6 w-auto" />
             </Link>
             <p className="max-w-md text-muted-foreground">
               Structure indépendante de Lionel Sultan pour piloter les
@@ -34,16 +35,10 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-bold">Navigation</h3>
             <ul className="grid gap-2">
-              {[
-                ["#expertise", "Expertise"],
-                ["#methode", "Méthode"],
-                ["#references", "Références"],
-                ["#ai-delivery", "AI-enabled Delivery"],
-                ["#faq", "FAQ"],
-              ].map(([href, label]) => (
+              {siteNavigation.map(({ href, label, number }) => (
                 <li key={href}>
-                  <Button asChild variant="link" className="h-auto p-0">
-                    <a href={hrefFor(href)}>{label}</a>
+                  <Button asChild variant="link">
+                    <a href={hrefFor(href)}><span className="font-mono text-xs text-muted-foreground">{number}</span>{label}</a>
                   </Button>
                 </li>
               ))}
@@ -54,12 +49,12 @@ export default function Footer() {
             <h3 className="mb-4 font-bold">Contact</h3>
             <ul className="grid gap-2">
               <li>
-                <Button asChild variant="link" className="h-auto p-0">
+                <Button asChild variant="link">
                   <a href="mailto:contact@neatch.com">contact@neatch.com</a>
                 </Button>
               </li>
               <li>
-                <Button asChild variant="link" className="h-auto p-0">
+                <Button asChild variant="link">
                   <a
                     href="https://linkedin.com/in/lionelsultan"
                     target="_blank"
@@ -71,7 +66,7 @@ export default function Footer() {
                 </Button>
               </li>
               <li>
-                <Button asChild variant="link" className="h-auto p-0">
+                <Button asChild variant="link">
                   <a href="/legal">Mentions légales</a>
                 </Button>
               </li>

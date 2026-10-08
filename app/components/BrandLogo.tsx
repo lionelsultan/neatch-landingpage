@@ -40,7 +40,7 @@ export default function BrandLogo({
       width={logo.width}
       height={logo.height}
       priority={priority}
-      className={`block object-contain ${className}`}
+      className={`block object-contain grayscale dark:invert ${className}`}
     />
   );
 }

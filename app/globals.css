@@ -4,24 +4,48 @@
 
 @layer base {
   :root {
-    --background: 45 29% 97%;
-    --foreground: 220 48% 17%;
+    --brand: 190.877 100% 33.529%;
+    color-scheme: light;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
     --card: 0 0% 100%;
-    --card-foreground: 220 48% 17%;
-    --primary: 220 48% 17%;
+    --card-foreground: 0 0% 9%;
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 218 31% 95%;
-    --secondary-foreground: 220 48% 17%;
-    --muted: 218 31% 95%;
-    --muted-foreground: 218 16% 40%;
-    --accent: 218 31% 95%;
-    --accent-foreground: 220 48% 17%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 98%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    --border: 217 26% 86%;
-    --input: 217 26% 86%;
-    --ring: 220 48% 17%;
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 190.877 100% 33.529%;
     --radius: 0.5rem;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 93%;
+    --primary: 0 0% 93%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 93%;
+    --muted: 0 0% 9%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 0 0% 14%;
+    --accent-foreground: 0 0% 93%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --brand: 190.877 100% 45%;
+    --ring: var(--brand);
   }
 
   * {
@@ -30,6 +54,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
 
   body {
@@ -60,4 +85,32 @@
 
 .skip-link:focus {
   top: 0;
+}
+
+/* Each diagram animates when entering the viewport, then settles. */
+.delivery-diagram-flow { stroke-dasharray: 1; stroke-dashoffset: 0; }
+.delivery-diagram[data-active="true"] .delivery-diagram-flow {
+  animation: delivery-flow 2s ease-out both;
+}
+.delivery-diagram[data-active="true"] .delivery-diagram-node {
+  animation: delivery-node 2.2s ease-out both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes delivery-flow {
+  from { stroke-dashoffset: 1; opacity: 0.15; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes delivery-node {
+  0% { opacity: 0.25; transform: scale(0.6); }
+  55% { opacity: 1; transform: scale(1.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .delivery-diagram[data-active="true"] .delivery-diagram-flow,
+  .delivery-diagram[data-active="true"] .delivery-diagram-node { animation: none; }
+}
+
+@media (min-width: 1024px) {
+  html { scroll-padding-top: 11rem; }
 }
