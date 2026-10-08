@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Pause, Play } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 type Variant = "converge" | "sequence" | "reporting" | "risks" | "decisions";
 
@@ -34,6 +36,7 @@ const drawings: Record<Variant, { paths: string[]; nodes: number[][] }> = {
 export default function DeliveryDiagram({ variant = "converge" }: { variant?: Variant }) {
   const ref = useRef<SVGSVGElement>(null);
   const [visible, setVisible] = useState(false);
+  const [paused, setPaused] = useState(false);
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
@@ -45,7 +48,8 @@ export default function DeliveryDiagram({ variant = "converge" }: { variant?: Va
   const { paths, nodes } = drawings[variant];
 
   return (
-    <svg ref={ref} data-active={visible} data-diagram={variant} viewBox="0 0 360 176" fill="none" aria-hidden="true" focusable="false" className="delivery-diagram my-6 block h-auto w-full text-brand" strokeLinecap="round" strokeLinejoin="round">
+    <div>
+    <svg ref={ref} data-active={visible} data-paused={paused} data-diagram={variant} viewBox="0 0 360 176" fill="none" aria-hidden="true" focusable="false" className="delivery-diagram my-6 block h-auto w-full text-brand" strokeLinecap="round" strokeLinejoin="round">
       {paths.map((d, index) => (
         <g key={d}>
           <path d={d} stroke="hsl(var(--border))" strokeWidth="1.5" />
@@ -58,9 +62,14 @@ export default function DeliveryDiagram({ variant = "converge" }: { variant?: Va
           <circle className="delivery-diagram-node" cx={cx} cy={cy} r="3" fill="currentColor" style={{ animationDelay: `${index * 0.2}s` }} />
         </g>
       ))}
+      {variant === "converge" && paths.slice(0, 3).map((path, index) => (
+        <circle key={`particle-${index}`} className="delivery-particle" r="3.5" fill="currentColor" stroke="hsl(var(--card))" strokeWidth="1" style={{ offsetPath: `path("${path.replace("H208", "H336")}")`, animationDelay: `${index * -2}s` }} />
+      ))}
       {variant === "sequence" && ["Diagnose", "Structure", "Operate", "Automate"].map((label, index) => (
         <text key={label} x={nodes[index][0]} y="124" textAnchor="middle" fill="hsl(var(--muted-foreground))" stroke="none" className="font-mono text-[10px]">{label}</text>
       ))}
     </svg>
+    {variant === "converge" && <div className="flex justify-end motion-reduce:hidden"><Button variant="ghost" size="sm" onClick={() => setPaused(value => !value)} aria-pressed={paused} aria-label={paused ? "Reprendre l’animation du delivery" : "Mettre en pause l’animation du delivery"}>{paused ? <Play /> : <Pause />}<span className="text-xs">{paused ? "Reprendre" : "Pause"}</span></Button></div>}
+    </div>
   );
 }

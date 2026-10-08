@@ -114,3 +114,27 @@
 @media (min-width: 1024px) {
   html { scroll-padding-top: 11rem; }
 }
+
+/* Moving signals keep the convergence diagram alive while it is visible. */
+.delivery-particle {
+  offset-distance: 0%;
+  opacity: 0;
+  animation: delivery-particle 6s linear infinite;
+  animation-play-state: paused;
+}
+.delivery-diagram[data-active="true"][data-paused="false"] .delivery-particle {
+  animation-play-state: running;
+}
+@keyframes delivery-particle {
+  0% { offset-distance: 0%; opacity: 0; }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .delivery-particle { animation: none; opacity: 0; }
+}
+.delivery-diagram[data-paused="true"] .delivery-diagram-flow,
+.delivery-diagram[data-paused="true"] .delivery-diagram-node {
+  animation-play-state: paused;
+}

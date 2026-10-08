@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "NEATCH | Transformation, Gouvernance & Delivery",
     description:
-      "Piloter les transformations complexes. Livrer ce qui compte. Gouvernance et delivery de programmes ERP, data, IA et intégration.",
+      "Piloter vos projets complexes. Livrer ce qui compte. Gouvernance et delivery de programmes ERP, data, IA et intégration.",
     url: "/",
     siteName: "Neatch",
     locale: "fr_FR",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "NEATCH | Transformation, Gouvernance & Delivery",
     description:
-      "Piloter les transformations complexes. Livrer ce qui compte.",
+      "Piloter vos projets complexes. Livrer ce qui compte.",
   },
   robots: {
     index: true,
